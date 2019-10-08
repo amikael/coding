@@ -102,7 +102,7 @@ parser.add_argument('--all', action='count', help='Do not print stats anything b
 parser.add_argument('--nonx', action='count', help='Do not print stats anything but noncrossing graphs')
 parser.add_argument('--proj', action='count', help='Do not print stats anything but projective graphs')
 parser.add_argument('--tests', action='count', help='Run implicit unit tests')
-parser.add_argument('--version', action='count', help='Run implicit unit tests')
+parser.add_argument('--version', action='count', help='Print version number')
 args = parser.parse_args()
 
 if args.version:
