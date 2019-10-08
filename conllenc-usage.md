@@ -6,31 +6,35 @@
 - based on depconv v.0.1 (c) 2015-2019 Anssi Yli-Jyrä (and Carlos Gómez-Rodríguez)
 - supporting also graph property annotation, codestring extraction and statistics
    
-## Usage: conllenc.py [-h] [--trace] [--decode] [--copy] [--indices] [--deprel]
+## Usage: 
+
+       conllenc.py [-h] [--trace] [--decode] [--copy] [--indices] [--deprel]
                    [--pos] [--conll] [--string] [--prop] [--stat] [--all]
                    [--nonx] [--proj] [--tests] [--version]
                    [filename [filename ...]]
 
 ## Positional arguments:
-  filename    The name of the file to transform
+
+       filename    The name of the file to transform
 
 ## Optional arguments:
-  -h, --help  show this help message and exit
-  --trace     Print command line switches in the beginning
-  --decode    Decode heads from MISC field
-  --copy      Keep both supertags and heads
-  --indices   Add edge indices to printed brackets
-  --deprel    Print also the arc label
-  --pos       Print also the POS tag
-  --conll     Produce the CoNLL format
-  --string    Produce the one-line encoding format
-  --prop      Print computed properties for each graph
-  --stat      Print statistics at the end
-  --all       Do not print stats anything but all graphs
-  --nonx      Do not print stats anything but noncrossing graphs
-  --proj      Do not print stats anything but projective graphs
-  --tests     Run implicit unit tests
-  --version   Run implicit unit tests
+
+- -h, --help  show this help message and exit
+- --trace     Print command line switches in the beginning
+- --decode    Decode heads from MISC field
+- --copy      Keep both supertags and heads
+- --indices   Add edge indices to printed brackets
+- --deprel    Print also the arc label
+- --pos       Print also the POS tag
+- --conll     Produce the CoNLL format
+- --string    Produce the one-line encoding format
+- --prop      Print computed properties for each graph
+- --stat      Print statistics at the end
+- --all       Do not print stats anything but all graphs
+- --nonx      Do not print stats anything but noncrossing graphs
+- --proj      Do not print stats anything but projective graphs
+- --tests     Run implicit unit tests
+- --version   Run implicit unit tests
 
 ## Typical usage:
 
@@ -43,13 +47,13 @@
 
 ### input file:
 
-> 1	From	from	ADP	IN	_	3	case	_	_
-> 2	the	the	DET	DT	-	3	det	_	_
-> 3	AP	AP	PROPN	NNP	-	4	obl	_	_
-> 4	comes	come	VERB	VBZ	-	0	root	_	_
-> 5	this	this	DET	DT	-	6	det	_	_
-> 6	story	story	NOUN	NN	-	4	nsubj	_	_
-> 7	:	:	PUNCT	:	_	4	punct	_	_
+     1	From	from	ADP	IN	_	3	case	_	_
+     2	the	the	DET	DT	-	3	det	_	_
+     3	AP	AP	PROPN	NNP	-	4	obl	_	_
+     4	comes	come	VERB	VBZ	-	0	root	_	_
+     5	this	this	DET	DT	-	6	det	_	_
+     6	story	story	NOUN	NN	-	4	nsubj	_	_
+     7	:	:	PUNCT	:	_	4	punct	_	_
 
 ### Typical output with --conll:
 
