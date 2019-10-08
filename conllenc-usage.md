@@ -34,7 +34,7 @@
 - --nonx      Do not print stats anything but noncrossing graphs
 - --proj      Do not print stats anything but projective graphs
 - --tests     Run implicit unit tests
-- --version   Run implicit unit tests
+- --version   Print version number
 
 ## Typical usage:
 
