@@ -10,7 +10,7 @@ This is a "supertag encoder and decoder of dependency graphs in the CoNLL-U form
 - based on depconv v.0.1 (c) 2015-2019 Anssi Yli-Jyrä (and Carlos Gómez-Rodríguez)
 - supporting also graph property annotation, codestring extraction and statistics
 
-See [User's manual](http://github.com/amikael/coding/conllenc-usage.md)
+See [User's manual](https://github.com/amikael/coding/blob/master/conllenc-usage.md)
 
 ### further scripts
 
