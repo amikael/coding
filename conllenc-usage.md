@@ -38,10 +38,13 @@
 
 ## Typical usage:
 
-  conllenc.py          en-ud-dev.conllu           --conll > en-ud-dev.supertags.conllu
-  conllenc.py --decode en-ud-dev.supertags.conllu --conll > en-ud-dev.restored.conllu
-  conllenc.py --stat   en-ud-dev.conllu
-  conllenc.py          en-ud-dev.conllu --string  --conll | egrep '^$|# codestring = '
+     conllenc.py          en-ud-dev.conllu           --conll > en-ud-dev.supertags.conllu
+     
+     conllenc.py --decode en-ud-dev.supertags.conllu --conll > en-ud-dev.restored.conllu
+     
+     conllenc.py --stat   en-ud-dev.conllu
+     
+     conllenc.py          en-ud-dev.conllu --string  --conll | egrep '^$|# codestring = '
 
 ## Typical files
 
