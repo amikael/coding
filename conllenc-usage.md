@@ -47,62 +47,69 @@
 
 ### input file:
 
-     1	From	from	ADP	IN	_	3	case	_	_
-     2	the	the	DET	DT	-	3	det	_	_
-     3	AP	AP	PROPN	NNP	-	4	obl	_	_
-     4	comes	come	VERB	VBZ	-	0	root	_	_
-     5	this	this	DET	DT	-	6	det	_	_
-     6	story	story	NOUN	NN	-	4	nsubj	_	_
-     7	:	:	PUNCT	:	_	4	punct	_	_
+   1	From	from	ADP	IN	_	3	case	_	_
+   2	the	the	DET	DT	-	3	det	_	_
+   3	AP	AP	PROPN	NNP	-	4	obl	_	_
+   4	comes	come	VERB	VBZ	-	0	root	_	_
+   5	this	this	DET	DT	-	6	det	_	_
+   6	story	story	NOUN	NN	-	4	nsubj	_	_
+   7	:	:	PUNCT	:	_	4	punct	_	_
 
 ### Typical output with --conll:
 
-> 1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
-> 2	the	the	DET	DT	_	0	det	_	SuperTag]⁰[<
-> 3	AP	AP	PROPN	NNP	_	0	obl	_	SuperTag⟧⟦
-> 4	comes	come	VERB	VBZ	_	0	root	_	SuperTag⟧⟦
-> 5	this	this	DET	DT	_	0	det	_	SuperTag⟦
-> 6	story	story	NOUN	NN	_	0	nsubj	_	SuperTag⟧]>[⁰
-> 7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>
+   1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
+   2	the	the	DET	DT	_	0	det	_	SuperTag]⁰[<
+   3	AP	AP	PROPN	NNP	_	0	obl	_	SuperTag⟧⟦
+   4	comes	come	VERB	VBZ	_	0	root	_	SuperTag⟧⟦
+   5	this	this	DET	DT	_	0	det	_	SuperTag⟦
+   6	story	story	NOUN	NN	_	0	nsubj	_	SuperTag⟧]>[⁰
+   7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>
 
 ### Typical output with --conll --indices --deprel:
 
-> 1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
-> 2	the	the	DET	DT	_	0	det	_	SuperTag]⁰[<det(2,3)
-> 3	AP	AP	PROPN	NNP	_	0	obl	_	SuperTag⟧case(1,3)⟦
-> 4	comes	come	VERB	VBZ	_	0	root	_	SuperTag⟧obl(3,4)⟦
-> 5	this	this	DET	DT	_	0	det	_	SuperTag⟦
-> 6	story	story	NOUN	NN	_	0	nsubj	_	SuperTag⟧det(5,6)]>nsubj(4,6)[⁰
-> 7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>punct(4,7)
+   1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
+   2	the	the	DET	DT	_	0	det	_	SuperTag]⁰[<det(2,3)
+   3	AP	AP	PROPN	NNP	_	0	obl	_	SuperTag⟧case(1,3)⟦
+   4	comes	come	VERB	VBZ	_	0	root	_	SuperTag⟧obl(3,4)⟦
+   5	this	this	DET	DT	_	0	det	_	SuperTag⟦
+   6	story	story	NOUN	NN	_	0	nsubj	_	SuperTag⟧det(5,6)]>nsubj(4,6)[⁰
+   7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>punct(4,7)
 
 ### Typical output with --conll --string and egrep post-filtering and with --deprel --pos --indices options:
 
-> codestring =  _From ⟦· ]⁰ _the [< · ⟧ _AP ⟦· ⟧ _comes ⟦· _this ⟦· ⟧ ]> _story [⁰ · ⟧> _:
+   codestring =  _From ⟦· ]⁰ _the [< · ⟧ _AP ⟦· ⟧ _comes ⟦· _this ⟦· ⟧ ]> _story [⁰ · ⟧> _:
 
-> codestring =  ADP.IN_From ⟦· ]⁰ DET.DT_the [<det(2,3) · ⟧case(1,3) PROPN.NNP_AP ⟦· ⟧obl(3,4) 
->  VERB.VBZ_comes ⟦· DET.DT_this ⟦· ⟧det(5,6) ]>nsubj(4,6) NOUN.NN_story [⁰ · ⟧>punct(4,7) PUNCT.:_:
+   codestring =  ADP.IN_From ⟦· ]⁰ DET.DT_the [<det(2,3) · ⟧case(1,3) PROPN.NNP_AP ⟦· ⟧obl(3,4) 
+   VERB.VBZ_comes ⟦· DET.DT_this ⟦· ⟧det(5,6) ]>nsubj(4,6) NOUN.NN_story [⁰ · ⟧>punct(4,7) PUNCT.:_:
 
 ### Combining options:
 
 - enrich the input with codestring, properties, supertags and commandline options:
-> conllenc.py --conll --string --prop --copy --trace en_lines-ud-dev.conllu 
+
+    conllenc.py --conll --string --prop --copy --trace en_lines-ud-dev.conllu 
 
 -  get subsets with --nonx --proj
-> conllenc.py --conll --string --prop --copy --trace en_lines-ud-dev.conllu --proj
+
+    conllenc.py --conll --string --prop --copy --trace en_lines-ud-dev.conllu --proj
 
 - print all statistics:
-> conllenc.py --stat en_lines-ud-dev.conllu 
+
+    conllenc.py --stat en_lines-ud-dev.conllu 
 
 - get less statistics with --all --nonx --proj
 
 - move head links to supertags:
-> conllenc.py --conll en_lines-ud-dev.conllu > supertags.conllu
+
+    conllenc.py --conll en_lines-ud-dev.conllu > supertags.conllu
+
 - get richer supertags with --pos --deprel --indices
-> conllenc.py --conll en_lines-ud-dev.conllu --deprel --ind
+
+    conllenc.py --conll en_lines-ud-dev.conllu --deprel --ind
 
 - and back to head links:
-> cat supertags.conllu | conllenc.py - --decode --conll 
-> cat supertags.conllu | conllenc.py - --decode --conll | diff - en_lines-ud-dev.conllu
+
+   cat supertags.conllu | conllenc.py - --decode --conll 
+   cat supertags.conllu | conllenc.py - --decode --conll | diff - en_lines-ud-dev.conllu
    
 - run additional internal unit tests with --tests 
 
