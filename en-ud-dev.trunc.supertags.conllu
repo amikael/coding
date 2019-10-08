@@ -1,0 +1,1145 @@
+# newdoc id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0001
+# text = From the AP comes this story :
+1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+3	AP	AP	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧⟦
+4	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+5	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+6	story	story	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]>[⁰
+7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0002
+# text = President Bush on Tuesday nominated two individuals to replace retiring jurists on federal courts in the Washington area.
+1	President	President	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	Bush	Bush	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+3	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧]⁰[<
+5	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+6	two	two	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+7	individuals	individual	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧]>[⁰
+8	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+9	replace	replace	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧]>[⁰⟦
+10	retiring	retire	VERB	VBG	VerbForm=Ger	0	amod	_	SuperTag]⁰[<
+11	jurists	jurist	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧>⟦
+12	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<
+13	federal	federal	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+14	courts	court	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+15	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+17	Washington	Washington	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+18	area	area	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+19	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0003
+# text = Bush nominated Jennifer M. Anderson for a 15-year term as associate judge of the Superior Court of the District of Columbia, replacing Steffen W. Graae.
+1	Bush	Bush	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+3	Jennifer	Jennifer	PROPN	NNP	Number=Sing	0	obj	_	SuperTag]>[⁰⟦
+4	M.	M.	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+5	Anderson	Anderson	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>
+6	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+7	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+8	15	15	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+9	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+10	year	year	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧]⁰[<
+11	term	term	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+12	as	as	ADP	IN	_	0	case	_	SuperTag]⁰[<
+13	associate	associate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+14	judge	judge	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+17	Superior	Superior	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+18	Court	Court	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+19	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+20	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+21	District	District	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+22	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+23	Columbia	Columbia	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+24	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+25	replacing	replace	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>[⁰⟦
+26	Steffen	Steffen	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧>⟦
+27	W.	W.	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+28	Graae	Graae	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag⟧>
+29	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0004
+# text = ***
+1	***	***	PUNCT	NFP	_	0	root	_	SuperTag
+
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0005
+# text = Bush also nominated A. Noel Anketell Kramer for a 15-year term as associate judge of the District of Columbia Court of Appeals, replacing John Montague Steadman.
+1	Bush	Bush	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	also	also	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+3	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+4	A.	A.	PROPN	NNP	Number=Sing	0	obj	_	SuperTag]>[⁰⟦
+5	Noel	Noel	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+6	Anketell	Anketell	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+7	Kramer	Kramer	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>
+8	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+9	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+10	15	15	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+11	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+12	year	year	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧]⁰[<
+13	term	term	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+14	as	as	ADP	IN	_	0	case	_	SuperTag]⁰[<
+15	associate	associate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+16	judge	judge	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+17	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+19	District	District	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+21	Columbia	Columbia	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+22	Court	Court	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+23	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+24	Appeals	Appeals	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+26	replacing	replace	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>[⁰⟦
+27	John	John	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧>⟦
+28	Montague	Montague	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+29	Steadman	Steadman	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag⟧>
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0001
+# text = The sheikh in wheel-chair has been attacked with a F-16-launched bomb.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	sheikh	sheikh	NOUN	NN	Number=Sing	0	nsubj:pass	_	SuperTag⟧⟦
+3	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+4	wheel	wheel	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<
+5	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+6	chair	chair	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	0	aux:pass	_	SuperTag]⁰[<
+9	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+10	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+11	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+12	F	f	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+13	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+14	16	16	NUM	CD	NumType=Card	0	compound	_	SpaceAfter=No|SuperTag]>[⁰
+15	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+16	launched	launch	VERB	VBN	Tense=Past|VerbForm=Part	0	acl	_	SuperTag⟧]⁰[<
+17	bomb	bomb	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+18	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0002
+# text = He could be killed years ago and the israelians have all the reasons, since he founded and he is the spiritual leader of Hamas, but they didn't.
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj:pass	_	SuperTag⟦
+2	could	could	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+3	be	be	AUX	VB	VerbForm=Inf	0	aux:pass	_	SuperTag]⁰[<
+4	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+5	years	year	NOUN	NNS	Number=Plur	0	obl:tmod	_	SuperTag⟦
+6	ago	ago	ADV	RB	_	0	advmod	_	SuperTag⟧]>[⁰
+7	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+8	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+9	israelians	israelians	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	conj	_	SuperTag⟧]>[⁰⟦
+11	all	all	DET	PDT	_	0	det:predet	_	SuperTag⟦
+12	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+13	reasons	reason	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+15	since	since	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+17	founded	found	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧>⟦
+18	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+19	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+21	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+22	spiritual	spiritual	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+23	leader	leader	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>⟦
+24	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+25	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+26	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+27	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+29	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	conj	_	SpaceAfter=No|SuperTag⟧]>[⁰⟦
+30	n't	not	PART	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>
+31	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0003
+# text = Today's incident proves that Sharon has lost his patience and his hope in peace.
+1	Today	today	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+3	incident	incident	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+4	proves	prove	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+5	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+6	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag]⁰[<
+7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+8	lost	lose	VERB	VBN	Tense=Past|VerbForm=Part	0	ccomp	_	SuperTag⟧]>[⁰⟦
+9	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+10	patience	patience	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+11	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+12	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+13	hope	hope	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>⟦
+14	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+15	peace	peace	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0004
+# text = Nervous people make mistakes, so I suppose there will be a wave of succesfull arab attacks.
+1	Nervous	nervous	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+2	people	people	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧⟦
+3	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+4	mistakes	mistake	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag]>[⁰
+5	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+6	so	so	ADV	RB	_	0	advmod	_	SuperTag⟦
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+8	suppose	suppose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧]>[⁰⟦
+9	there	there	PRON	EX	_	0	expl	_	SuperTag]⁰[<
+10	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+11	be	be	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧>⟦
+12	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+13	wave	wave	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧>⟦
+14	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+15	succesfull	succesfull	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+16	arab	arab	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+17	attacks	attack	NOUN	NNS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+18	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0005
+# text = A la guerre c'est comme a la guerre!
+1	A	a	X	FW	Foreign=Yes	0	root	_	SuperTag⟦
+2	la	la	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+3	guerre	guerre	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+4	c'est	c'est	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+5	comme	comme	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+6	a	a	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+7	la	la	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>[⁰
+8	guerre	guerre	X	FW	Foreign=Yes	0	flat:foreign	_	SpaceAfter=No|SuperTag]>[⁰
+9	!	!	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0001
+# text = In the eastern city of Baqubah, guerrillas detonated a car bomb outside a police station, killing several people.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+3	eastern	eastern	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+4	city	city	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+6	Baqubah	Baqubah	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧]>[⁰
+7	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+8	guerrillas	guerrilla	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<
+9	detonated	detonate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+10	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+11	car	car	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+12	bomb	bomb	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+13	outside	outside	ADP	IN	_	0	case	_	SuperTag⟦
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+15	police	police	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+16	station	station	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+18	killing	kill	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>[⁰⟦
+19	several	several	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+20	people	people	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag⟧>
+21	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0002
+# text = The US lost yet another helicopter to hostile fire near Habbaniyah in the Sunni heartland, but this time the crew was safe.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	US	US	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+3	lost	lose	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+4	yet	yet	ADV	RB	_	0	advmod	_	SuperTag⟦
+5	another	another	DET	DT	_	0	det	_	SuperTag]⁰[<
+6	helicopter	helicopter	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+7	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+8	hostile	hostile	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+9	fire	fire	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+10	near	near	ADP	IN	_	0	case	_	SuperTag]⁰[<
+11	Habbaniyah	Habbaniyah	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+12	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+13	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+14	Sunni	sunni	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+15	heartland	heartland	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+16	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+17	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+18	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+19	time	time	NOUN	NN	Number=Sing	0	obl:tmod	_	SuperTag⟧]⁰[<
+20	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+21	crew	crew	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+23	safe	safe	ADJ	JJ	Degree=Pos	0	conj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+24	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0003
+# text = In Fallujah, hundreds of demonstrators came out against US troops when they briefly arrested a yound newlywed bride.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧⟦
+3	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+4	hundreds	hundred	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+6	demonstrators	demonstrator	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>
+7	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+8	out	out	ADV	RB	_	0	advmod	_	SuperTag]>[⁰
+9	against	against	ADP	IN	_	0	case	_	SuperTag⟦
+10	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+11	troops	troops	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰
+12	when	when	ADV	WRB	PronType=Int	0	mark	_	SuperTag⟦
+13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+14	briefly	briefly	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+15	arrested	arrest	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧]>[⁰⟦
+16	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+17	yound	yound	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+18	newlywed	newlywed	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+19	bride	bride	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>
+20	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0004
+# text = (I hope that the US army got an enormous amount of information from her relatives, because otherwise this move was a bad, bad tradeoff).
+1	(	(	PUNCT	-LRB-	_	0	punct	_	SpaceAfter=No|SuperTag⟦
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+3	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+4	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+6	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+7	army	army	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+8	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	ccomp	_	SuperTag⟧]>[⁰⟦
+9	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+10	enormous	enormous	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+11	amount	amount	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+12	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+13	information	information	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>
+14	from	from	ADP	IN	_	0	case	_	SuperTag]⁰[<
+15	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+16	relatives	relative	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+18	because	because	SCONJ	IN	_	0	mark	_	SuperTag⟦
+19	otherwise	otherwise	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+20	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+21	move	move	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+24	bad	bad	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag]⁰[<
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+26	bad	bad	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+27	tradeoff	tradeoff	NOUN	NN	Number=Sing	0	advcl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+28	)	)	PUNCT	-RRB-	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+29	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0005
+# text = The US troops fired into the hostile crowd, killing 4.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+3	troops	troops	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧⟦
+4	fired	fire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+5	into	into	ADP	IN	_	0	case	_	SuperTag⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+7	hostile	hostile	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+8	crowd	crowd	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+10	killing	kill	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>[⁰⟦
+11	4	4	NUM	CD	NumType=Card	0	obj	_	SpaceAfter=No|SuperTag⟧>
+12	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0006
+# text = It seems clear to me that the manhunt for high Baath officials in the Sunni heartland is being done wrong, or at least in ways that are bad for US standing with local Iraqis.
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	expl	_	SuperTag⟦
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+3	clear	clear	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]>[⁰
+4	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	0	obl	_	SuperTag⟧]>[⁰
+6	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+7	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+8	manhunt	manhunt	NOUN	NN	Number=Sing	0	nsubj:pass	_	SuperTag⟧]⁰[<⟦
+9	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+10	high	high	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+11	Baath	Baath	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+12	officials	official	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+14	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+15	Sunni	sunni	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+16	heartland	heartland	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>
+17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+18	being	be	AUX	VBG	VerbForm=Ger	0	aux:pass	_	SuperTag]⁰[<
+19	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	csubj	_	SuperTag⟧]>[⁰⟦
+20	wrong	wrong	ADV	RB	_	0	xcomp	_	SpaceAfter=No|SuperTag⟧>⟦
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+22	or	or	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+23	at	at	ADV	RB	_	0	advmod	_	SuperTag]⁰[<⟦
+24	least	least	ADV	RBS	Degree=Sup	0	fixed	_	SuperTag⟧>
+25	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+26	ways	way	NOUN	NNS	Number=Plur	0	conj	_	SuperTag⟧>⟦
+27	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<
+28	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+29	bad	bad	ADJ	JJ	Degree=Pos	0	acl:relcl	_	SuperTag⟧>⟦
+30	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<
+31	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+32	standing	standing	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>⟦
+33	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<
+34	local	local	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+35	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+36	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0001
+# text = Google has finally had an analyst day -- a chance to present the company's story to the (miniscule number of) people who haven't heard it.
+1	Google	Google	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+3	finally	finally	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+5	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+6	analyst	analyst	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+7	day	day	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+8	--	--	PUNCT	:	_	0	punct	_	SuperTag]>[⁰
+9	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+10	chance	chance	NOUN	NN	Number=Sing	0	appos	_	SuperTag⟧>⟦
+11	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+12	present	present	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>⟦
+13	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+14	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧⟦
+15	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+16	story	story	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+17	to	to	ADP	IN	_	0	case	_	SuperTag]⁰[<
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+19	(	(	PUNCT	-LRB-	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+20	miniscule	miniscule	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+21	number	number	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>⟦
+22	of	of	ADP	IN	_	0	case	_	SpaceAfter=No|SuperTag]⁰[<
+23	)	)	PUNCT	-RRB-	_	0	punct	_	SuperTag]⁰[<
+24	people	people	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+25	who	who	PRON	WP	PronType=Rel	0	nsubj	_	SuperTag]⁰[<
+26	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<
+27	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+28	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	acl:relcl	_	SuperTag⟧>⟦
+29	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	obj	_	SpaceAfter=No|SuperTag⟧>
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0002
+# text = Usually, these are just a chance for the suckups to suck up, but this time people are actually concerned about the company's plans.
+1	Usually	usually	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟦
+2	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+3	these	these	PRON	DT	Number=Plur|PronType=Dem	0	nsubj	_	SuperTag]⁰[<
+4	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+5	just	just	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+7	chance	chance	NOUN	NN	Number=Sing	0	root	_	SuperTag⟧⟦
+8	for	for	SCONJ	IN	_	0	mark	_	SuperTag⟦
+9	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+10	suckups	suckup	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+11	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+12	suck	suck	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧]>[⁰⟦
+13	up	up	ADP	RP	_	0	compound:prt	_	SpaceAfter=No|SuperTag⟧>
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+15	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+16	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+17	time	time	NOUN	NN	Number=Sing	0	obl:tmod	_	SuperTag⟧]⁰[<
+18	people	people	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<
+19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+20	actually	actually	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+21	concerned	concerned	ADJ	JJ	Degree=Pos	0	conj	_	SuperTag⟧]>[⁰⟦
+22	about	about	ADP	IN	_	0	case	_	SuperTag]⁰[<
+23	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+24	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧]⁰[<⟦
+25	's	's	PART	POS	_	0	case	_	SuperTag⟧>
+26	plans	plan	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>
+27	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0003
+# text = They work on Wall Street, after all, so when they hear a company who's stated goals include "Don't be evil," they imagine a company who's eventually history will be "Don't be profitable."
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag⟦
+2	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+3	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+4	Wall	Wall	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+5	Street	Street	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+6	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+7	after	after	ADV	IN	_	0	case	_	SuperTag⟦
+8	all	all	ADV	RB	_	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+10	so	so	ADV	RB	_	0	advmod	_	SuperTag⟦
+11	when	when	ADV	WRB	PronType=Int	0	mark	_	SuperTag⟦
+12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+13	hear	hear	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	advcl	_	SuperTag⟧]⁰[<⟦
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+15	company	company	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+16	who's	who's	PRON	WP$	PronType=Int	0	nmod:poss	_	SuperTag⟦
+17	stated	state	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<
+18	goals	goal	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+19	include	include	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>⟦
+20	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+21	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<
+22	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+23	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+24	evil	evil	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧>
+25	,	,	PUNCT	,	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+26	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>
+27	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+28	imagine	imagine	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧]>[⁰⟦
+29	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+30	company	company	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+31	who's	who's	PRON	WP$	PronType=Int	0	nmod:poss	_	SuperTag⟦
+32	eventually	eventually	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+33	history	history	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+34	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+35	be	be	VERB	VB	VerbForm=Inf	0	acl:relcl	_	SuperTag⟧>⟦
+36	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+37	Do	do	AUX	VB	VerbForm=Inf	0	aux	_	SpaceAfter=No|SuperTag]⁰[<
+38	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+39	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<
+40	profitable	profitable	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧>
+41	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+42	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0004
+# text = It's not quite as freewheeling an environment as you'd imagine: Sergey Brin has actually created a mathematical 'proof' that the company's self-driven research strategy, which gives employees one day a week to do research projects on their own, is a good, respectable idea .
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SpaceAfter=No|SuperTag⟦
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+3	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+4	quite	quite	ADV	RB	_	0	advmod	_	SuperTag⟦
+5	as	as	ADV	RB	_	0	advmod	_	SuperTag⟧⟦
+6	freewheeling	freewheeling	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]]⁰[<[⁰
+7	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰]⁰[<[⁰
+8	environment	environment	NOUN	NN	Number=Sing	0	root	_	SuperTag]⁰⟧[⁰⟦
+9	as	as	SCONJ	IN	_	0	mark	_	SuperTag]⁰]⁰[<[⁰
+10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	0	nsubj	_	SpaceAfter=No|SuperTag]⁰]⁰[<[⁰
+11	'd	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰]⁰[<[⁰
+12	imagine	imagine	VERB	VB	VerbForm=Inf	0	advcl	_	SpaceAfter=No|SuperTag]⁰⟧>[⁰
+13	:	:	PUNCT	:	_	0	punct	_	SuperTag]>[⁰
+14	Sergey	Sergey	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+15	Brin	Brin	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+16	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+17	actually	actually	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+18	created	create	VERB	VBN	Tense=Past|VerbForm=Part	0	parataxis	_	SuperTag⟧]>[⁰⟦
+19	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+20	mathematical	mathematical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+21	'	'	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+22	proof	proof	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>⟦
+23	'	'	PUNCT	''	_	0	punct	_	SuperTag]>[⁰
+24	that	that	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+25	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+26	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧⟦
+27	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+28	self	self	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+29	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+30	driven	drive	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag⟧]⁰[<
+31	research	research	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+32	strategy	strategy	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧]⁰[<⟦
+33	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+34	which	which	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<
+35	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>⟦
+36	employees	employee	NOUN	NNS	Number=Plur	0	iobj	_	SuperTag]>[⁰
+37	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<
+38	day	day	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+39	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+40	week	week	NOUN	NN	Number=Sing	0	nmod:tmod	_	SuperTag⟧]>[⁰
+41	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+42	do	do	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>⟦
+43	research	research	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟦
+44	projects	project	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧]>[⁰
+45	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<
+46	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+47	own	own	ADJ	JJ	Degree=Pos	0	obl	_	SpaceAfter=No|SuperTag⟧>
+48	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+49	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+50	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+51	good	good	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag]⁰[<
+52	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+53	respectable	respectable	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+54	idea	idea	NOUN	NN	Number=Sing	0	acl	_	SuperTag⟧>
+55	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0005
+# text = Read the entire article; there's a punchline, too.
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+3	entire	entire	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+4	article	article	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+5	;	;	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+6	there	there	PRON	EX	_	0	expl	_	SpaceAfter=No|SuperTag⟦
+7	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧]>[⁰⟦
+8	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+9	punchline	punchline	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+10	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+11	too	too	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>
+12	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0001
+# text = My opinion piece on the implications of Arafat's passing for al-Qaeda has appeared at Newsday.
+1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag⟦
+2	opinion	opinion	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+3	piece	piece	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+4	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+6	implications	implication	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰⟦
+7	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+8	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<⟦
+9	's	's	PART	POS	_	0	case	_	SuperTag⟧>
+10	passing	passing	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+11	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<
+12	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<
+13	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+14	Qaeda	Qaeda	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>
+15	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+16	appeared	appear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+17	at	at	ADP	IN	_	0	case	_	SuperTag⟦
+18	Newsday	Newsday	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+19	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0002
+# text = Excerpt:
+1	Excerpt	excerpt	NOUN	NN	Number=Sing	0	root	_	SpaceAfter=No|SuperTag⟦
+2	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0003
+# text = "Arafat's secular nationalism was supple enough to compromise with Israel and to imagine a two-state solution, even if the road of negotiations remained rocky.
+1	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag⟦
+2	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+3	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+4	secular	secular	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+5	nationalism	nationalism	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+7	supple	supple	ADJ	JJ	Degree=Pos	0	root	_	SuperTag⟧⟦
+8	enough	enough	ADV	RB	_	0	advmod	_	SuperTag]>[⁰
+9	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+10	compromise	compromise	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧]>[⁰⟦
+11	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+12	Israel	Israel	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧]>[⁰
+13	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+14	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+15	imagine	imagine	VERB	VB	VerbForm=Inf	0	conj	_	SuperTag⟧>⟦
+16	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+17	two	two	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+18	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+19	state	state	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧]⁰[<
+20	solution	solution	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+22	even	even	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+23	if	if	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+25	road	road	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<⟦
+26	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+27	negotiations	negotiation	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>
+28	remained	remain	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧>⟦
+29	rocky	rocky	ADJ	JJ	Degree=Pos	0	xcomp	_	SpaceAfter=No|SuperTag⟧>
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0004
+# text = The continued Israeli colonization of the occupied Palestinian territories during the 1990s helped, along with terrorist attacks by radical groups such as Hamas, to derail the peace process, which Sharon had always opposed.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	continued	continue	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<
+3	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+4	colonization	colonization	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+7	occupied	occupy	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<
+8	Palestinian	Palestinian	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+9	territories	territories	PROPN	NNPS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+10	during	during	ADP	IN	_	0	case	_	SuperTag⟦
+11	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+12	1990s	1990	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+13	helped	help	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No|SuperTag⟧⟦
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+15	along	along	ADP	IN	_	0	case	_	SuperTag⟦
+16	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<
+17	terrorist	terrorist	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+18	attacks	attack	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧]>[⁰⟦
+19	by	by	ADP	IN	_	0	case	_	SuperTag]⁰[<
+20	radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+21	groups	group	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+22	such	such	ADJ	JJ	Degree=Pos	0	case	_	SuperTag]⁰[<⟦
+23	as	as	ADP	IN	_	0	fixed	_	SuperTag⟧>
+24	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+26	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+27	derail	derail	VERB	VB	VerbForm=Inf	0	xcomp	_	SuperTag⟧]>[⁰⟦
+28	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+29	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+30	process	process	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>⟦
+31	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+32	which	which	PRON	WDT	PronType=Rel	0	obj	_	SuperTag]⁰[<
+33	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag]⁰[<
+34	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+35	always	always	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+36	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	0	acl:relcl	_	SpaceAfter=No|SuperTag⟧>
+37	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0005
+# text = Arafat's death creates a vacuum in Palestinian leadership that will not soon be filled.
+1	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+3	death	death	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+4	creates	create	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+5	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+6	vacuum	vacuum	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+7	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+8	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+9	leadership	leadership	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+10	that	that	PRON	WDT	PronType=Rel	0	nsubj:pass	_	SuperTag]⁰[<
+11	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+12	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+13	soon	soon	ADV	RB	Degree=Pos	0	advmod	_	SuperTag]⁰[<
+14	be	be	AUX	VB	VerbForm=Inf	0	aux:pass	_	SuperTag]⁰[<
+15	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	acl:relcl	_	SpaceAfter=No|SuperTag⟧>
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0006
+# text = Sharon's assassination of major Hamas leaders has also weakened authority structures in that party.
+1	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>[⁰
+3	assassination	assassination	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+4	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+5	major	major	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+6	Hamas	Hamas	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+7	leaders	leader	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+9	also	also	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+10	weakened	weaken	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+11	authority	authority	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟦
+12	structures	structure	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧]>[⁰⟦
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+14	that	that	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag]⁰[<
+15	party	party	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0007
+# text = If the Israelis and the Palestinian leadership cannot find a way to reinvigorate the peace process, cells of radical young Palestinians may grow up that look to bin Laden for their cues.
+1	If	if	SCONJ	IN	_	0	mark	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+3	Israelis	Israelis	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<⟦
+4	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+6	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+7	leadership	leadership	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>
+8	can	can	AUX	MD	VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<
+9	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+10	find	find	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧⟦
+11	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+12	way	way	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+13	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+14	reinvigorate	reinvigorate	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>⟦
+15	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+16	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+17	process	process	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>
+18	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+19	cells	cell	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+21	radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+22	young	young	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+23	Palestinians	Palestinians	PROPN	NNPS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+24	may	may	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰]⁰[<[⁰
+25	grow	grow	VERB	VB	VerbForm=Inf	0	root	_	SuperTag]⁰⟧[⁰⟦
+26	up	up	ADP	RP	_	0	compound:prt	_	SuperTag]>[⁰
+27	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰]⁰[<[⁰
+28	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag]⁰⟧>[⁰⟦
+29	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+30	bin	bin	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+31	Laden	Laden	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>
+32	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<
+33	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+34	cues	cue	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>
+35	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0008
+# text = Even if local Palestinian leaders remain strong enough to keep al-Qaida out, the festering Israeli-Palestinian struggle remains among the best recruiting posters for al-Qaida with young Muslim men.
+1	Even	even	ADV	RB	_	0	advmod	_	SuperTag⟦
+2	if	if	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+3	local	local	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+4	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+5	leaders	leader	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+6	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	advcl	_	SuperTag⟧⟦
+7	strong	strong	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+8	enough	enough	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]]>[⁰[⁰
+9	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+10	keep	keep	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧>⟦
+11	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+12	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+13	Qaida	Qaida	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+14	out	out	ADV	RB	_	0	xcomp	_	SpaceAfter=No|SuperTag⟧>
+15	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+17	festering	fester	VERB	VBG	VerbForm=Ger	0	amod	_	SuperTag]⁰[<
+18	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag⟦
+19	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+20	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰[<
+21	struggle	struggle	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+22	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+23	among	among	ADP	IN	_	0	case	_	SuperTag⟦
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+25	best	best	ADJ	JJS	Degree=Sup	0	amod	_	SuperTag]⁰[<
+26	recruiting	recruiting	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+27	posters	poster	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧]>[⁰⟦
+28	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<
+29	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<
+30	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+31	Qaida	Qaida	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>
+32	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+33	young	young	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+34	Muslim	muslim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+35	men	man	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+36	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0009
+# text = Resolving this conflict would be the most effective weapon the United States could deploy in its war on terror."
+1	Resolving	resolve	VERB	VBG	VerbForm=Ger	0	csubj	_	SuperTag⟦
+2	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+3	conflict	conflict	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+4	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+5	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+7	most	most	ADV	RBS	_	0	advmod	_	SuperTag⟦
+8	effective	effective	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰[<
+9	weapon	weapon	NOUN	NN	Number=Sing	0	root	_	SuperTag⟧⟦
+10	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+11	United	United	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+12	States	States	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+13	could	could	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+14	deploy	deploy	VERB	VB	VerbForm=Inf	0	acl:relcl	_	SuperTag⟧]>[⁰⟦
+15	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+16	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<
+17	war	war	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>⟦
+18	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<
+19	terror	terror	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+20	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+21	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0001
+# text = Xinhua reports that a wide range of Iraqi political forces on Tuesday condemned Sharon's murder of Sheikh Ahmed Yassin, a religious leader of Hamas, the day before.
+1	Xinhua	Xinhua	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+3	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+4	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+5	wide	wide	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+6	range	range	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<⟦
+7	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+8	Iraqi	iraqi	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+9	political	political	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+10	forces	force	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>
+11	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+12	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧]⁰[<
+13	condemned	condemn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	ccomp	_	SuperTag⟧]>[⁰⟦
+14	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<⟦
+15	's	's	PART	POS	_	0	case	_	SuperTag⟧>
+16	murder	murder	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+17	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+18	Sheikh	Sheikh	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰⟦
+19	Ahmed	Ahmed	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+20	Yassin	Yassin	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>[⁰
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+22	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+23	religious	religious	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+24	leader	leader	NOUN	NN	Number=Sing	0	appos	_	SuperTag⟧>⟦
+25	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+26	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+27	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+28	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+29	day	day	NOUN	NN	Number=Sing	0	nmod:tmod	_	SuperTag⟧>⟦
+30	before	before	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>
+31	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0002
+# text = The Board of Muslim clerics in Fallujah, 50 km west of Baghdad, "condemned the assassination and promised immediate revenge against the coalition soldiers in Iraq."
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	Board	board	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+3	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+4	Muslim	muslim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+5	clerics	cleric	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+6	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+7	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧]>[⁰⟦
+8	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰]⁰[<[⁰
+9	50	50	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+10	km	km	NOUN	NNS	Number=Plur	0	obl:npmod	_	SuperTag⟧]⁰[<
+11	west	west	ADV	RB	_	0	advmod	_	SuperTag⟧>⟦
+12	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+13	Baghdad	Baghdad	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+15	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+16	condemned	condemn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+17	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+18	assassination	assassination	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+19	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+20	promised	promise	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	conj	_	SuperTag⟧]>[⁰⟦
+21	immediate	immediate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+22	revenge	revenge	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+23	against	against	ADP	IN	_	0	case	_	SuperTag]⁰[<
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+25	coalition	coalition	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+26	soldiers	soldier	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+27	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+28	Iraq	Iraq	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+29	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+30	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0003
+# text = Ash-Sharq al-Awsat reports that Fallujah was closed Tuesday in a general strike.
+1	Ash	Ash	PROPN	NNP	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟦
+2	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+3	Sharq	Sharq	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+4	al	al	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>[⁰
+5	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+6	Awsat	Awsat	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+7	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+8	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+9	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	nsubj:pass	_	SuperTag]⁰[<
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	aux:pass	_	SuperTag]⁰[<
+11	closed	close	VERB	VBN	Tense=Past|VerbForm=Part	0	ccomp	_	SuperTag⟧]>[⁰⟦
+12	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl:tmod	_	SuperTag]>[⁰
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+15	general	general	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+16	strike	strike	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>
+17	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0004
+# text = US troops there clashed with guerrillas in a fight that left one Iraqi dead.
+1	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag⟦
+2	troops	troops	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧⟦
+3	there	there	ADV	RB	PronType=Dem	0	advmod	_	SuperTag]>[⁰
+4	clashed	clash	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+5	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+6	guerrillas	guerrilla	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧]>[⁰
+7	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+8	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+9	fight	fight	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+10	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<
+11	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>⟦
+12	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+13	Iraqi	Iraqi	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+14	dead	dead	ADJ	JJ	Degree=Pos	0	xcomp	_	SpaceAfter=No|SuperTag⟧>
+15	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0005
+# text = In Ramadi, there was a big demonstration.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	Ramadi	Ramadi	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧⟦
+3	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+4	there	there	PRON	EX	_	0	expl	_	SuperTag]⁰[<
+5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+7	big	big	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+8	demonstration	demonstration	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧]>[⁰
+9	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0006
+# text = Radical Shiite cleric Muqtada al-Sadr said the attack was "criminal" and that "the Zionists have left only one choice for the Arabs, that of fighting and jihad".
+1	Radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+2	Shiite	shiite	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+3	cleric	cleric	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧⟦
+4	Muqtada	Muqtada	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+5	al	al	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>[⁰
+6	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+7	Sadr	Sadr	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>[⁰
+8	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+9	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+10	attack	attack	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+12	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+13	criminal	criminal	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧]>[⁰⟦
+14	"	"	PUNCT	''	_	0	punct	_	SuperTag]>[⁰
+15	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+16	that	that	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+17	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+19	Zionists	Zionists	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+20	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+21	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	conj	_	SuperTag⟧>⟦
+22	only	only	ADV	RB	_	0	advmod	_	SuperTag⟦
+23	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<
+24	choice	choice	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+25	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+26	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+27	Arabs	Arabs	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧]>[⁰
+28	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+29	that	that	PRON	DT	Number=Sing|PronType=Dem	0	appos	_	SuperTag⟧>⟦
+30	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+31	fighting	fighting	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+32	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+33	jihad	jihad	NOUN	NN	Number=Sing	0	conj	_	SpaceAfter=No|SuperTag⟧>
+34	"	"	PUNCT	''	_	0	punct	_	SpaceAfter=No|SuperTag⟧>
+35	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0007
+# text = The interim Governing Council issued a communique saying, "It is a proof of the emptiness of the Israeli authority and a destruction of the peace endeavors in the region . . .
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	interim	interim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+3	Governing	Governing	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<
+4	Council	Council	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+5	issued	issue	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+7	communique	communique	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰⟦
+8	saying	say	VERB	VBG	VerbForm=Ger	0	acl	_	SpaceAfter=No|SuperTag⟧>⟦
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+10	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+11	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<
+13	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+14	proof	proof	NOUN	NN	Number=Sing	0	ccomp	_	SuperTag⟧>⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+17	emptiness	emptiness	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>⟦
+18	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+19	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+20	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+21	authority	authority	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+22	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+24	destruction	destruction	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>⟦
+25	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+26	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+27	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+28	endeavors	endeavor	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>⟦
+29	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+30	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+31	region	region	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>
+32	.	.	PUNCT	.	_	0	punct	_	SuperTag]>[⁰
+33	.	.	PUNCT	.	_	0	punct	_	SuperTag]>[⁰
+34	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0008
+# text = This operation would only consolidate the terrorist acts in the world and would not bring peace to the region," the message claimed.
+1	This	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+2	operation	operation	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧⟦
+3	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+4	only	only	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+5	consolidate	consolidate	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+7	terrorist	terrorist	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+8	acts	act	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧]>[⁰⟦
+9	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+10	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+11	world	world	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>
+12	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+13	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+14	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<
+15	bring	bring	VERB	VB	VerbForm=Inf	0	conj	_	SuperTag⟧]>[⁰⟦
+16	peace	peace	NOUN	NN	Number=Sing	0	obj	_	SuperTag]>[⁰
+17	to	to	ADP	IN	_	0	case	_	SuperTag]⁰[<
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+19	region	region	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>
+20	,	,	PUNCT	,	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+21	"	"	PUNCT	''	_	0	punct	_	SuperTag]⁰[<
+22	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+23	message	message	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+24	claimed	claim	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No|SuperTag⟧⟦
+25	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0009
+# text = Xinhua alleged that "Many of the Iraqis, who suffer the American occupation of Iraq, relate their case with that of the Palestinian people, under the Israeli occupation."
+1	Xinhua	Xinhua	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	alleged	allege	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧⟦
+3	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+4	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<
+5	Many	many	ADJ	JJ	Degree=Pos	0	nsubj	_	SuperTag]⁰[<⟦
+6	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+7	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+8	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>⟦
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+10	who	who	PRON	WP	PronType=Rel	0	nsubj	_	SuperTag]⁰[<
+11	suffer	suffer	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>⟦
+12	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+13	American	american	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+14	occupation	occupation	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+16	Iraq	Iraq	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+18	relate	relate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	ccomp	_	SuperTag⟧]>[⁰⟦
+19	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag⟦
+20	case	case	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧]>[⁰
+21	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<
+22	that	that	PRON	DT	Number=Sing|PronType=Dem	0	obl	_	SuperTag⟧>⟦
+23	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+25	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+26	people	people	NOUN	NNS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>⟦
+27	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+28	under	under	ADP	IN	_	0	case	_	SuperTag]⁰[<
+29	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+30	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+31	occupation	occupation	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+32	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>[⁰
+33	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>
+
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0010
+# text = In an apparently unrelated incidents, some eleven Iraqis were killed by snipers on Tuesday, including a group of police trainees in a bus near Hilla and two police in Kirkuk.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+3	apparently	apparently	ADV	RB	_	0	advmod	_	SuperTag⟦
+4	unrelated	unrelated	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰[<
+5	incidents	incident	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧⟦
+6	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+7	some	some	DET	DT	_	0	det	_	SuperTag⟦
+8	eleven	eleven	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<
+9	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nsubj:pass	_	SuperTag⟧]⁰[<
+10	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	aux:pass	_	SuperTag]⁰[<
+11	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	SuperTag⟧⟦
+12	by	by	ADP	IN	_	0	case	_	SuperTag⟦
+13	snipers	sniper	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧]>[⁰
+14	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+15	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧]>[⁰
+16	,	,	PUNCT	,	_	0	punct	_	SuperTag]>[⁰
+17	including	include	VERB	VBG	VerbForm=Ger	0	case	_	SuperTag⟦
+18	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+19	group	group	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]>[⁰⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+21	police	police	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+22	trainees	trainee	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧]>[⁰
+23	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+24	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+25	bus	bus	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+26	near	near	ADP	IN	_	0	case	_	SuperTag⟦
+27	Hilla	Hilla	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧]>[⁰
+28	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+29	two	two	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<
+30	police	police	NOUN	NNS	Number=Plur	0	conj	_	SuperTag⟧>⟦
+31	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<
+32	Kirkuk	Kirkuk	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>
+33	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+
+# newdoc id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900
+# sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0001
+# text = Ever since the first whispers about Google's IPO, most investors have feared that the stock would come public at such a ridiculously high price that, even with a spectacularly profitable business model and some nearly flawless execution, the price would be too high for investors to make a real profit.
+1	Ever	ever	ADV	RB	_	0	advmod	_	SuperTag⟦
+2	since	since	ADP	IN	_	0	case	_	SuperTag]⁰[<
+3	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<
+4	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	0	amod	_	SuperTag]⁰[<
+5	whispers	whisper	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧⟦
+6	about	about	ADP	IN	_	0	case	_	SuperTag⟦
+7	Google	Google	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<⟦
+8	's	's	PART	POS	_	0	case	_	SuperTag⟧>
+9	IPO	ipo	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧]>[⁰
+10	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+11	most	most	ADJ	JJS	Degree=Sup	0	amod	_	SuperTag⟦
+12	investors	investor	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧]⁰[<
+13	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+14	feared	fear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧⟦
+15	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+17	stock	stock	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+18	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+19	come	come	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧]>[⁰⟦
+20	public	public	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]>[⁰
+21	at	at	ADP	IN	_	0	case	_	SuperTag]⁰[<
+22	such	such	DET	PDT	_	0	det:predet	_	SuperTag]⁰[<⟦
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰]⁰[<[⁰
+24	ridiculously	ridiculously	ADV	RB	_	0	advmod	_	SuperTag⟦
+25	high	high	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰]⁰[<[⁰
+26	price	price	NOUN	NN	Number=Sing	0	obl	_	SuperTag]⁰⟧>[⁰
+27	that	that	SCONJ	IN	_	0	mark	_	SpaceAfter=No|SuperTag]⁰[<
+28	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+29	even	even	ADV	RB	_	0	advmod	_	SuperTag⟦
+30	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<
+31	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+32	spectacularly	spectacularly	ADV	RB	_	0	advmod	_	SuperTag⟦
+33	profitable	profitable	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰[<
+34	business	business	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<
+35	model	model	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧]⁰[<⟦
+36	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<
+37	some	some	DET	DT	_	0	det	_	SuperTag]⁰[<
+38	nearly	nearly	ADV	RB	_	0	advmod	_	SuperTag⟦
+39	flawless	flawless	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧]⁰[<
+40	execution	execution	NOUN	NN	Number=Sing	0	conj	_	SpaceAfter=No|SuperTag⟧>
+41	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<
+42	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+43	price	price	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧]⁰[<
+44	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<
+45	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<
+46	too	too	ADV	RB	_	0	advmod	_	SuperTag]⁰[<
+47	high	high	ADJ	JJ	Degree=Pos	0	advcl	_	SuperTag⟧>⟦
+48	for	for	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<
+49	investors	investor	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<
+50	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<
+51	make	make	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧>⟦
+52	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<
+53	real	real	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<
+54	profit	profit	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>
+55	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>
+

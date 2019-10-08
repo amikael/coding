@@ -1,0 +1,1367 @@
+# codestring =  ADP.IN_From ⟦· ]⁰ DET.DT_the [<det(2,3) · ⟧case(1,3) PROPN.NNP_AP ⟦· ⟧obl(3,4) VERB.VBZ_comes ⟦· DET.DT_this ⟦· ⟧det(5,6) ]>nsubj(4,6) NOUN.NN_story [⁰ · ⟧>punct(4,7) PUNCT.:_: 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0001
+# stack_1_size = 2
+# stack_2_size = 1
+# text = From the AP comes this story :
+1	From	from	ADP	IN	_	0	case	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(2,3)
+3	AP	AP	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧case(1,3)⟦
+4	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧obl(3,4)⟦
+5	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+6	story	story	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(5,6)]>nsubj(4,6)[⁰
+7	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>punct(4,7)
+
+# codestring =  PROPN.NNP_President ⟦· ]>flat(1,2) PROPN.NNP_Bush [⁰ · ADP.IN_on ⟦· ⟧case(3,4) ]⁰ PROPN.NNP_Tuesday [<obl(4,5) · ⟧nsubj(1,5) VERB.VBD_nominated ⟦· NUM.CD_two ⟦· ⟧nummod(6,7) ]>obj(5,7) NOUN.NNS_individuals [⁰ · PART.TO_to ⟦· ⟧mark(8,9) ]>advcl(5,9) VERB.VB_replace [⁰ ⟦· ]⁰ VERB.VBG_retiring [<amod(10,11) · ⟧>obj(9,11) NOUN.NNS_jurists ⟦· ]⁰ ADP.IN_on [<case(12,14) · ]⁰ ADJ.JJ_federal [<amod(13,14) · ⟧>nmod(11,14) NOUN.NNS_courts ⟦· ]⁰ ADP.IN_in [<case(15,18) · ]⁰ DET.DT_the [<det(16,18) · ]⁰ PROPN.NNP_Washington [<compound(17,18) · ⟧>nmod(14,18) NOUN.NN_area · ⟧>punct(5,19) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0002
+# stack_1_size = 2
+# stack_2_size = 1
+# text = President Bush on Tuesday nominated two individuals to replace retiring jurists on federal courts in the Washington area.
+1	President	President	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	Bush	Bush	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(1,2)[⁰
+3	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+4	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧case(3,4)]⁰[<obl(4,5)
+5	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,5)⟦
+6	two	two	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+7	individuals	individual	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧nummod(6,7)]>obj(5,7)[⁰
+8	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+9	replace	replace	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧mark(8,9)]>advcl(5,9)[⁰⟦
+10	retiring	retire	VERB	VBG	VerbForm=Ger	0	amod	_	SuperTag]⁰[<amod(10,11)
+11	jurists	jurist	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧>obj(9,11)⟦
+12	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<case(12,14)
+13	federal	federal	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(13,14)
+14	courts	court	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(11,14)⟦
+15	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(15,18)
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(16,18)
+17	Washington	Washington	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(17,18)
+18	area	area	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(14,18)
+19	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(5,19)
+
+# codestring =  PROPN.NNP_Bush ⟦· ⟧nsubj(1,2) VERB.VBD_nominated ⟦· ]>obj(2,3) PROPN.NNP_Jennifer [⁰ ⟦· ]>flat(3,4) PROPN.NNP_M. [⁰ · ⟧>flat(3,5) PROPN.NNP_Anderson · ADP.IN_for ⟦· ]⁰ DET.DT_a [<det(7,11) · NUM.CD_15 ⟦· ]⁰ PUNCT.HYPH_- [<punct(9,10) · ⟧nummod(8,10) ]⁰ NOUN.NN_year [<compound(10,11) · ⟧case(6,11) ]>obl(2,11) NOUN.NN_term [⁰ ⟦· ]⁰ ADP.IN_as [<case(12,14) · ]⁰ ADJ.JJ_associate [<amod(13,14) · ⟧>nmod(11,14) NOUN.NN_judge ⟦· ]⁰ ADP.IN_of [<case(15,18) · ]⁰ DET.DT_the [<det(16,18) · ]⁰ PROPN.NNP_Superior [<compound(17,18) · ⟧>nmod(14,18) PROPN.NNP_Court ⟦· ]⁰ ADP.IN_of [<case(19,21) · ]⁰ DET.DT_the [<det(20,21) · ⟧>nmod(18,21) PROPN.NNP_District ⟦· ]⁰ ADP.IN_of [<case(22,23) · ⟧>nmod(21,23) PROPN.NNP_Columbia · ]>punct(2,24) PUNCT.,_, [⁰ · ]>advcl(2,25) VERB.VBG_replacing [⁰ ⟦· ⟧>obj(25,26) PROPN.NNP_Steffen ⟦· ]>flat(26,27) PROPN.NNP_W. [⁰ · ⟧>flat(26,28) PROPN.NNP_Graae · ⟧>punct(2,29) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0003
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Bush nominated Jennifer M. Anderson for a 15-year term as associate judge of the Superior Court of the District of Columbia, replacing Steffen W. Graae.
+1	Bush	Bush	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,2)⟦
+3	Jennifer	Jennifer	PROPN	NNP	Number=Sing	0	obj	_	SuperTag]>obj(2,3)[⁰⟦
+4	M.	M.	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(3,4)[⁰
+5	Anderson	Anderson	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>flat(3,5)
+6	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+7	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(7,11)
+8	15	15	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+9	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(9,10)
+10	year	year	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧nummod(8,10)]⁰[<compound(10,11)
+11	term	term	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(6,11)]>obl(2,11)[⁰⟦
+12	as	as	ADP	IN	_	0	case	_	SuperTag]⁰[<case(12,14)
+13	associate	associate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(13,14)
+14	judge	judge	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(11,14)⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(15,18)
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(16,18)
+17	Superior	Superior	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(17,18)
+18	Court	Court	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(14,18)⟦
+19	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(19,21)
+20	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(20,21)
+21	District	District	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(18,21)⟦
+22	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(22,23)
+23	Columbia	Columbia	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(21,23)
+24	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(2,24)[⁰
+25	replacing	replace	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>advcl(2,25)[⁰⟦
+26	Steffen	Steffen	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧>obj(25,26)⟦
+27	W.	W.	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(26,27)[⁰
+28	Graae	Graae	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag⟧>flat(26,28)
+29	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(2,29)
+
+# codestring =  PUNCT.NFP_*** 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0004
+# stack_1_size = 0
+# stack_2_size = 0
+# text = ***
+1	***	***	PUNCT	NFP	_	0	root	_	SuperTag
+
+# codestring =  PROPN.NNP_Bush ⟦· ]⁰ ADV.RB_also [<advmod(2,3) · ⟧nsubj(1,3) VERB.VBD_nominated ⟦· ]>obj(3,4) PROPN.NNP_A. [⁰ ⟦· ]>flat(4,5) PROPN.NNP_Noel [⁰ · ]>flat(4,6) PROPN.NNP_Anketell [⁰ · ⟧>flat(4,7) PROPN.NNP_Kramer · ADP.IN_for ⟦· ]⁰ DET.DT_a [<det(9,13) · NUM.CD_15 ⟦· ]⁰ PUNCT.HYPH_- [<punct(11,12) · ⟧nummod(10,12) ]⁰ NOUN.NN_year [<compound(12,13) · ⟧case(8,13) ]>obl(3,13) NOUN.NN_term [⁰ ⟦· ]⁰ ADP.IN_as [<case(14,16) · ]⁰ ADJ.JJ_associate [<amod(15,16) · ⟧>nmod(13,16) NOUN.NN_judge ⟦· ]⁰ ADP.IN_of [<case(17,19) · ]⁰ DET.DT_the [<det(18,19) · ⟧>nmod(16,19) PROPN.NNP_District ⟦· ]⁰ ADP.IN_of [<case(20,22) · ]⁰ PROPN.NNP_Columbia [<compound(21,22) · ⟧>nmod(19,22) PROPN.NNP_Court ⟦· ]⁰ ADP.IN_of [<case(23,24) · ⟧>nmod(22,24) PROPN.NNPS_Appeals · ]>punct(3,25) PUNCT.,_, [⁰ · ]>advcl(3,26) VERB.VBG_replacing [⁰ ⟦· ⟧>obj(26,27) PROPN.NNP_John ⟦· ]>flat(27,28) PROPN.NNP_Montague [⁰ · ⟧>flat(27,29) PROPN.NNP_Steadman · ⟧>punct(3,30) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_nominations_20041117172713_ENG_20041117_172713-0005
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Bush also nominated A. Noel Anketell Kramer for a 15-year term as associate judge of the District of Columbia Court of Appeals, replacing John Montague Steadman.
+1	Bush	Bush	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	also	also	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(2,3)
+3	nominated	nominate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,3)⟦
+4	A.	A.	PROPN	NNP	Number=Sing	0	obj	_	SuperTag]>obj(3,4)[⁰⟦
+5	Noel	Noel	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(4,5)[⁰
+6	Anketell	Anketell	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(4,6)[⁰
+7	Kramer	Kramer	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>flat(4,7)
+8	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+9	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(9,13)
+10	15	15	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+11	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(11,12)
+12	year	year	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧nummod(10,12)]⁰[<compound(12,13)
+13	term	term	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(8,13)]>obl(3,13)[⁰⟦
+14	as	as	ADP	IN	_	0	case	_	SuperTag]⁰[<case(14,16)
+15	associate	associate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(15,16)
+16	judge	judge	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(13,16)⟦
+17	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(17,19)
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(18,19)
+19	District	District	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(16,19)⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(20,22)
+21	Columbia	Columbia	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(21,22)
+22	Court	Court	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(19,22)⟦
+23	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(23,24)
+24	Appeals	Appeals	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(22,24)
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(3,25)[⁰
+26	replacing	replace	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>advcl(3,26)[⁰⟦
+27	John	John	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧>obj(26,27)⟦
+28	Montague	Montague	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(27,28)[⁰
+29	Steadman	Steadman	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag⟧>flat(27,29)
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(3,30)
+
+# codestring =  DET.DT_The ⟦· ⟧det(1,2) NOUN.NN_sheikh ⟦· ADP.IN_in ⟦· ]⁰ NOUN.NN_wheel [<compound(4,6) · ]⁰ PUNCT.HYPH_- [<punct(5,6) · ⟧case(3,6) ]>nmod(2,6) NOUN.NN_chair [⁰ · ]⁰ AUX.VBZ_has [<aux(7,9) · ]⁰ AUX.VBN_been [<aux:pass(8,9) · ⟧nsubj:pass(2,9) VERB.VBN_attacked ⟦· ADP.IN_with ⟦· ]⁰ DET.DT_a [<det(11,17) · NOUN.NN_F ⟦· ]>punct(12,13) PUNCT.HYPH_- [⁰ · ]>compound(12,14) NUM.CD_16 [⁰ · ]⁰ PUNCT.HYPH_- [<punct(15,16) · ⟧compound(12,16) ]⁰ VERB.VBN_launched [<acl(16,17) · ⟧case(10,17) ]>obl(9,17) NOUN.NN_bomb [⁰ · ⟧>punct(9,18) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0001
+# stack_1_size = 3
+# stack_2_size = 1
+# text = The sheikh in wheel-chair has been attacked with a F-16-launched bomb.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	sheikh	sheikh	NOUN	NN	Number=Sing	0	nsubj:pass	_	SuperTag⟧det(1,2)⟦
+3	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+4	wheel	wheel	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<compound(4,6)
+5	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(5,6)
+6	chair	chair	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧case(3,6)]>nmod(2,6)[⁰
+7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(7,9)
+8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	0	aux:pass	_	SuperTag]⁰[<aux:pass(8,9)
+9	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧nsubj:pass(2,9)⟦
+10	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+11	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(11,17)
+12	F	f	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+13	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(12,13)[⁰
+14	16	16	NUM	CD	NumType=Card	0	compound	_	SpaceAfter=No|SuperTag]>compound(12,14)[⁰
+15	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(15,16)
+16	launched	launch	VERB	VBN	Tense=Past|VerbForm=Part	0	acl	_	SuperTag⟧compound(12,16)]⁰[<acl(16,17)
+17	bomb	bomb	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(10,17)]>obl(9,17)[⁰
+18	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(9,18)
+
+# codestring =  PRON.PRP_He ⟦· ]⁰ AUX.MD_could [<aux(2,4) · ]⁰ AUX.VB_be [<aux:pass(3,4) · ⟧nsubj:pass(1,4) VERB.VBN_killed ⟦· NOUN.NNS_years ⟦· ⟧obl:tmod(5,6) ]>advmod(4,6) ADV.RB_ago [⁰ · CCONJ.CC_and ⟦· DET.DT_the ⟦· ⟧det(8,9) ]⁰ PROPN.NNPS_israelians [<nsubj(9,10) · ⟧cc(7,10) ]>conj(4,10) VERB.VBP_have [⁰ ⟦· DET.PDT_all ⟦· ]⁰ DET.DT_the [<det(12,13) · ⟧det:predet(11,13) ]>obj(10,13) NOUN.NNS_reasons [⁰ · ]>punct(10,14) PUNCT.,_, [⁰ · ]⁰ SCONJ.IN_since [<mark(15,17) · ]⁰ PRON.PRP_he [<nsubj(16,17) · ⟧>advcl(10,17) VERB.VBD_founded ⟦· ]⁰ CCONJ.CC_and [<cc(18,23) · ]⁰ PRON.PRP_he [<nsubj(19,23) · ]⁰ AUX.VBZ_is [<cop(20,23) · ]⁰ DET.DT_the [<det(21,23) · ]⁰ ADJ.JJ_spiritual [<amod(22,23) · ⟧>conj(17,23) NOUN.NN_leader ⟦· ]⁰ ADP.IN_of [<case(24,25) · ⟧>nmod(23,25) PROPN.NNP_Hamas · PUNCT.,_, ⟦· ]⁰ CCONJ.CC_but [<cc(27,29) · ]⁰ PRON.PRP_they [<nsubj(28,29) · ⟧punct(26,29) ]>conj(4,29) VERB.VBD_did [⁰ ⟦· ⟧>advmod(29,30) PART.RB_n't · ⟧>punct(4,31) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0002
+# stack_1_size = 3
+# stack_2_size = 1
+# text = He could be killed years ago and the israelians have all the reasons, since he founded and he is the spiritual leader of Hamas, but they didn't.
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj:pass	_	SuperTag⟦
+2	could	could	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(2,4)
+3	be	be	AUX	VB	VerbForm=Inf	0	aux:pass	_	SuperTag]⁰[<aux:pass(3,4)
+4	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧nsubj:pass(1,4)⟦
+5	years	year	NOUN	NNS	Number=Plur	0	obl:tmod	_	SuperTag⟦
+6	ago	ago	ADV	RB	_	0	advmod	_	SuperTag⟧obl:tmod(5,6)]>advmod(4,6)[⁰
+7	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+8	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+9	israelians	israelians	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧det(8,9)]⁰[<nsubj(9,10)
+10	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	conj	_	SuperTag⟧cc(7,10)]>conj(4,10)[⁰⟦
+11	all	all	DET	PDT	_	0	det:predet	_	SuperTag⟦
+12	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(12,13)
+13	reasons	reason	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag⟧det:predet(11,13)]>obj(10,13)[⁰
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(10,14)[⁰
+15	since	since	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(15,17)
+16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(16,17)
+17	founded	found	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧>advcl(10,17)⟦
+18	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(18,23)
+19	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(19,23)
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(20,23)
+21	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(21,23)
+22	spiritual	spiritual	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(22,23)
+23	leader	leader	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>conj(17,23)⟦
+24	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(24,25)
+25	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(23,25)
+26	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+27	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(27,29)
+28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(28,29)
+29	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	conj	_	SpaceAfter=No|SuperTag⟧punct(26,29)]>conj(4,29)[⁰⟦
+30	n't	not	PART	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>advmod(29,30)
+31	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,31)
+
+# codestring =  NOUN.NN_Today ⟦· ]>case(1,2) PART.POS_'s [⁰ · ⟧nmod:poss(1,3) NOUN.NN_incident ⟦· ⟧nsubj(3,4) VERB.VBZ_proves ⟦· SCONJ.IN_that ⟦· ]⁰ PROPN.NNP_Sharon [<nsubj(6,8) · ]⁰ AUX.VBZ_has [<aux(7,8) · ⟧mark(5,8) ]>ccomp(4,8) VERB.VBN_lost [⁰ ⟦· ]⁰ PRON.PRP$_his [<nmod:poss(9,10) · ⟧>obj(8,10) NOUN.NN_patience ⟦· ]⁰ CCONJ.CC_and [<cc(11,13) · ]⁰ PRON.PRP$_his [<nmod:poss(12,13) · ⟧>conj(10,13) NOUN.NN_hope ⟦· ]⁰ ADP.IN_in [<case(14,15) · ⟧>nmod(13,15) NOUN.NN_peace · ⟧>punct(4,16) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0003
+# stack_1_size = 2
+# stack_2_size = 1
+# text = Today's incident proves that Sharon has lost his patience and his hope in peace.
+1	Today	today	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>case(1,2)[⁰
+3	incident	incident	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(1,3)⟦
+4	proves	prove	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(3,4)⟦
+5	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+6	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag]⁰[<nsubj(6,8)
+7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(7,8)
+8	lost	lose	VERB	VBN	Tense=Past|VerbForm=Part	0	ccomp	_	SuperTag⟧mark(5,8)]>ccomp(4,8)[⁰⟦
+9	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(9,10)
+10	patience	patience	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(8,10)⟦
+11	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(11,13)
+12	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(12,13)
+13	hope	hope	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>conj(10,13)⟦
+14	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(14,15)
+15	peace	peace	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(13,15)
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,16)
+
+# codestring =  ADJ.JJ_Nervous ⟦· ⟧amod(1,2) NOUN.NNS_people ⟦· ⟧nsubj(2,3) VERB.VBP_make ⟦· ]>obj(3,4) NOUN.NNS_mistakes [⁰ · ]>punct(3,5) PUNCT.,_, [⁰ · ADV.RB_so ⟦· ]⁰ PRON.PRP_I [<nsubj(7,8) · ⟧advmod(6,8) ]>parataxis(3,8) VERB.VBP_suppose [⁰ ⟦· ]⁰ PRON.EX_there [<expl(9,11) · ]⁰ AUX.MD_will [<aux(10,11) · ⟧>ccomp(8,11) VERB.VB_be ⟦· ]⁰ DET.DT_a [<det(12,13) · ⟧>nsubj(11,13) NOUN.NN_wave ⟦· ]⁰ ADP.IN_of [<case(14,17) · ]⁰ ADJ.JJ_succesfull [<amod(15,17) · ]⁰ ADJ.JJ_arab [<amod(16,17) · ⟧>nmod(13,17) NOUN.NNS_attacks · ⟧>punct(3,18) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0004
+# stack_1_size = 2
+# stack_2_size = 1
+# text = Nervous people make mistakes, so I suppose there will be a wave of succesfull arab attacks.
+1	Nervous	nervous	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+2	people	people	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧amod(1,2)⟦
+3	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(2,3)⟦
+4	mistakes	mistake	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag]>obj(3,4)[⁰
+5	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(3,5)[⁰
+6	so	so	ADV	RB	_	0	advmod	_	SuperTag⟦
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(7,8)
+8	suppose	suppose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧advmod(6,8)]>parataxis(3,8)[⁰⟦
+9	there	there	PRON	EX	_	0	expl	_	SuperTag]⁰[<expl(9,11)
+10	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(10,11)
+11	be	be	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧>ccomp(8,11)⟦
+12	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(12,13)
+13	wave	wave	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧>nsubj(11,13)⟦
+14	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(14,17)
+15	succesfull	succesfull	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(15,17)
+16	arab	arab	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(16,17)
+17	attacks	attack	NOUN	NNS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(13,17)
+18	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(3,18)
+
+# codestring =  X.FW_A ⟦· ]>flat:foreign(1,2) X.FW_la [⁰ · ]>flat:foreign(1,3) X.FW_guerre [⁰ · ]>flat:foreign(1,4) X.FW_c'est [⁰ · ]>flat:foreign(1,5) X.FW_comme [⁰ · ]>flat:foreign(1,6) X.FW_a [⁰ · ]>flat:foreign(1,7) X.FW_la [⁰ · ]>flat:foreign(1,8) X.FW_guerre [⁰ · ⟧>punct(1,9) PUNCT.._! 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_gettingpolitical_20030906235000_ENG_20030906_235000-0005
+# stack_1_size = 1
+# stack_2_size = 1
+# text = A la guerre c'est comme a la guerre!
+1	A	a	X	FW	Foreign=Yes	0	root	_	SuperTag⟦
+2	la	la	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,2)[⁰
+3	guerre	guerre	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,3)[⁰
+4	c'est	c'est	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,4)[⁰
+5	comme	comme	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,5)[⁰
+6	a	a	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,6)[⁰
+7	la	la	X	FW	Foreign=Yes	0	flat:foreign	_	SuperTag]>flat:foreign(1,7)[⁰
+8	guerre	guerre	X	FW	Foreign=Yes	0	flat:foreign	_	SpaceAfter=No|SuperTag]>flat:foreign(1,8)[⁰
+9	!	!	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(1,9)
+
+# codestring =  ADP.IN_In ⟦· ]⁰ DET.DT_the [<det(2,4) · ]⁰ ADJ.JJ_eastern [<amod(3,4) · ⟧case(1,4) NOUN.NN_city ⟦· ADP.IN_of ⟦· ⟧case(5,6) ]>nmod(4,6) PROPN.NNP_Baqubah [⁰ · ]⁰ PUNCT.,_, [<punct(7,9) · ]⁰ NOUN.NNS_guerrillas [<nsubj(8,9) · ⟧obl(4,9) VERB.VBD_detonated ⟦· DET.DT_a ⟦· ]⁰ NOUN.NN_car [<compound(11,12) · ⟧det(10,12) ]>obj(9,12) NOUN.NN_bomb [⁰ · ADP.IN_outside ⟦· ]⁰ DET.DT_a [<det(14,16) · ]⁰ NOUN.NN_police [<compound(15,16) · ⟧case(13,16) ]>obl(9,16) NOUN.NN_station [⁰ · ]>punct(9,17) PUNCT.,_, [⁰ · ]>advcl(9,18) VERB.VBG_killing [⁰ ⟦· ]⁰ ADJ.JJ_several [<amod(19,20) · ⟧>obj(18,20) NOUN.NNS_people · ⟧>punct(9,21) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0001
+# stack_1_size = 2
+# stack_2_size = 1
+# text = In the eastern city of Baqubah, guerrillas detonated a car bomb outside a police station, killing several people.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(2,4)
+3	eastern	eastern	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(3,4)
+4	city	city	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(1,4)⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+6	Baqubah	Baqubah	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧case(5,6)]>nmod(4,6)[⁰
+7	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(7,9)
+8	guerrillas	guerrilla	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<nsubj(8,9)
+9	detonated	detonate	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧obl(4,9)⟦
+10	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+11	car	car	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(11,12)
+12	bomb	bomb	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(10,12)]>obj(9,12)[⁰
+13	outside	outside	ADP	IN	_	0	case	_	SuperTag⟦
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(14,16)
+15	police	police	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(15,16)
+16	station	station	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(13,16)]>obl(9,16)[⁰
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(9,17)[⁰
+18	killing	kill	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>advcl(9,18)[⁰⟦
+19	several	several	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(19,20)
+20	people	people	NOUN	NNS	Number=Plur	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(18,20)
+21	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(9,21)
+
+# codestring =  DET.DT_The ⟦· ⟧det(1,2) PROPN.NNP_US ⟦· ⟧nsubj(2,3) VERB.VBD_lost ⟦· ADV.RB_yet ⟦· ]⁰ DET.DT_another [<det(5,6) · ⟧advmod(4,6) ]>obj(3,6) NOUN.NN_helicopter [⁰ · ADP.IN_to ⟦· ]⁰ ADJ.JJ_hostile [<amod(8,9) · ⟧case(7,9) ]>obl(3,9) NOUN.NN_fire [⁰ ⟦· ]⁰ ADP.IN_near [<case(10,11) · ⟧>nmod(9,11) PROPN.NNP_Habbaniyah ⟦· ]⁰ ADP.IN_in [<case(12,15) · ]⁰ DET.DT_the [<det(13,15) · ]⁰ ADJ.JJ_Sunni [<amod(14,15) · ⟧>nmod(11,15) NOUN.NN_heartland · PUNCT.,_, ⟦· ]⁰ CCONJ.CC_but [<cc(17,23) · DET.DT_this ⟦· ⟧det(18,19) ]⁰ NOUN.NN_time [<obl:tmod(19,23) · DET.DT_the ⟦· ⟧det(20,21) ]⁰ NOUN.NN_crew [<nsubj(21,23) · ]⁰ AUX.VBD_was [<cop(22,23) · ⟧punct(16,23) ]>conj(3,23) ADJ.JJ_safe [⁰ · ⟧>punct(3,24) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0002
+# stack_1_size = 3
+# stack_2_size = 1
+# text = The US lost yet another helicopter to hostile fire near Habbaniyah in the Sunni heartland, but this time the crew was safe.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	US	US	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧det(1,2)⟦
+3	lost	lose	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(2,3)⟦
+4	yet	yet	ADV	RB	_	0	advmod	_	SuperTag⟦
+5	another	another	DET	DT	_	0	det	_	SuperTag]⁰[<det(5,6)
+6	helicopter	helicopter	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧advmod(4,6)]>obj(3,6)[⁰
+7	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+8	hostile	hostile	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(8,9)
+9	fire	fire	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(7,9)]>obl(3,9)[⁰⟦
+10	near	near	ADP	IN	_	0	case	_	SuperTag]⁰[<case(10,11)
+11	Habbaniyah	Habbaniyah	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(9,11)⟦
+12	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(12,15)
+13	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(13,15)
+14	Sunni	sunni	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(14,15)
+15	heartland	heartland	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(11,15)
+16	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+17	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(17,23)
+18	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+19	time	time	NOUN	NN	Number=Sing	0	obl:tmod	_	SuperTag⟧det(18,19)]⁰[<obl:tmod(19,23)
+20	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+21	crew	crew	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(20,21)]⁰[<nsubj(21,23)
+22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(22,23)
+23	safe	safe	ADJ	JJ	Degree=Pos	0	conj	_	SpaceAfter=No|SuperTag⟧punct(16,23)]>conj(3,23)[⁰
+24	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(3,24)
+
+# codestring =  ADP.IN_In ⟦· ⟧case(1,2) PROPN.NNP_Fallujah ⟦· ]⁰ PUNCT.,_, [<punct(3,7) · ]⁰ NOUN.NNS_hundreds [<nsubj(4,7) ⟦· ]⁰ ADP.IN_of [<case(5,6) · ⟧>nmod(4,6) NOUN.NNS_demonstrators · ⟧obl(2,7) VERB.VBD_came ⟦· ]>advmod(7,8) ADV.RB_out [⁰ · ADP.IN_against ⟦· ]⁰ PROPN.NNP_US [<compound(10,11) · ⟧case(9,11) ]>obl(7,11) NOUN.NN_troops [⁰ · ADV.WRB_when ⟦· ]⁰ PRON.PRP_they [<nsubj(13,15) · ]⁰ ADV.RB_briefly [<advmod(14,15) · ⟧mark(12,15) ]>advcl(7,15) VERB.VBD_arrested [⁰ ⟦· ]⁰ DET.DT_a [<det(16,19) · ]⁰ ADJ.JJ_yound [<amod(17,19) · ]⁰ ADJ.JJ_newlywed [<amod(18,19) · ⟧>obj(15,19) NOUN.NN_bride · ⟧>punct(7,20) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0003
+# stack_1_size = 2
+# stack_2_size = 1
+# text = In Fallujah, hundreds of demonstrators came out against US troops when they briefly arrested a yound newlywed bride.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(1,2)⟦
+3	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(3,7)
+4	hundreds	hundred	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<nsubj(4,7)⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(5,6)
+6	demonstrators	demonstrator	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(4,6)
+7	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧obl(2,7)⟦
+8	out	out	ADV	RB	_	0	advmod	_	SuperTag]>advmod(7,8)[⁰
+9	against	against	ADP	IN	_	0	case	_	SuperTag⟦
+10	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(10,11)
+11	troops	troops	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(9,11)]>obl(7,11)[⁰
+12	when	when	ADV	WRB	PronType=Int	0	mark	_	SuperTag⟦
+13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(13,15)
+14	briefly	briefly	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(14,15)
+15	arrested	arrest	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧mark(12,15)]>advcl(7,15)[⁰⟦
+16	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(16,19)
+17	yound	yound	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(17,19)
+18	newlywed	newlywed	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(18,19)
+19	bride	bride	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(15,19)
+20	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(7,20)
+
+# codestring =  PUNCT.-LRB-_( ⟦· ]⁰ PRON.PRP_I [<nsubj(2,3) · ⟧punct(1,3) VERB.VBP_hope ⟦· SCONJ.IN_that ⟦· DET.DT_the ⟦· ]⁰ PROPN.NNP_US [<compound(6,7) · ⟧det(5,7) ]⁰ NOUN.NN_army [<nsubj(7,8) · ⟧mark(4,8) ]>ccomp(3,8) VERB.VBD_got [⁰ ⟦· DET.DT_an ⟦· ]⁰ ADJ.JJ_enormous [<amod(10,11) · ⟧det(9,11) ]>obj(8,11) NOUN.NN_amount [⁰ ⟦· ]⁰ ADP.IN_of [<case(12,13) · ⟧>nmod(11,13) NOUN.NN_information · ]⁰ ADP.IN_from [<case(14,16) · ]⁰ PRON.PRP$_her [<nmod:poss(15,16) · ⟧>obl(8,16) NOUN.NNS_relatives · ]>punct(3,17) PUNCT.,_, [⁰ · SCONJ.IN_because ⟦· ]⁰ ADV.RB_otherwise [<advmod(19,27) · DET.DT_this ⟦· ⟧det(20,21) ]⁰ NOUN.NN_move [<nsubj(21,27) · ]⁰ AUX.VBD_was [<cop(22,27) · ]⁰ DET.DT_a [<det(23,27) · ]⁰ ADJ.JJ_bad [<amod(24,27) · ]⁰ PUNCT.,_, [<punct(25,27) · ]⁰ ADJ.JJ_bad [<amod(26,27) · ⟧mark(18,27) ]>advcl(3,27) NOUN.NN_tradeoff [⁰ · ]>punct(3,28) PUNCT.-RRB-_) [⁰ · ⟧>punct(3,29) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0004
+# stack_1_size = 3
+# stack_2_size = 1
+# text = (I hope that the US army got an enormous amount of information from her relatives, because otherwise this move was a bad, bad tradeoff).
+1	(	(	PUNCT	-LRB-	_	0	punct	_	SpaceAfter=No|SuperTag⟦
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(2,3)
+3	hope	hope	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧punct(1,3)⟦
+4	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+6	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(6,7)
+7	army	army	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(5,7)]⁰[<nsubj(7,8)
+8	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	ccomp	_	SuperTag⟧mark(4,8)]>ccomp(3,8)[⁰⟦
+9	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+10	enormous	enormous	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(10,11)
+11	amount	amount	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(9,11)]>obj(8,11)[⁰⟦
+12	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(12,13)
+13	information	information	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(11,13)
+14	from	from	ADP	IN	_	0	case	_	SuperTag]⁰[<case(14,16)
+15	her	she	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(15,16)
+16	relatives	relative	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(8,16)
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(3,17)[⁰
+18	because	because	SCONJ	IN	_	0	mark	_	SuperTag⟦
+19	otherwise	otherwise	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(19,27)
+20	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+21	move	move	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(20,21)]⁰[<nsubj(21,27)
+22	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(22,27)
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(23,27)
+24	bad	bad	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag]⁰[<amod(24,27)
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(25,27)
+26	bad	bad	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(26,27)
+27	tradeoff	tradeoff	NOUN	NN	Number=Sing	0	advcl	_	SpaceAfter=No|SuperTag⟧mark(18,27)]>advcl(3,27)[⁰
+28	)	)	PUNCT	-RRB-	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(3,28)[⁰
+29	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(3,29)
+
+# codestring =  DET.DT_The ⟦· ]⁰ PROPN.NNP_US [<compound(2,3) · ⟧det(1,3) NOUN.NNS_troops ⟦· ⟧nsubj(3,4) VERB.VBD_fired ⟦· ADP.IN_into ⟦· ]⁰ DET.DT_the [<det(6,8) · ]⁰ ADJ.JJ_hostile [<amod(7,8) · ⟧case(5,8) ]>obl(4,8) NOUN.NN_crowd [⁰ · ]>punct(4,9) PUNCT.,_, [⁰ · ]>advcl(4,10) VERB.VBG_killing [⁰ ⟦· ⟧>obj(10,11) NUM.CD_4 · ⟧>punct(4,12) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0005
+# stack_1_size = 2
+# stack_2_size = 1
+# text = The US troops fired into the hostile crowd, killing 4.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(2,3)
+3	troops	troops	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧det(1,3)⟦
+4	fired	fire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(3,4)⟦
+5	into	into	ADP	IN	_	0	case	_	SuperTag⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(6,8)
+7	hostile	hostile	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(7,8)
+8	crowd	crowd	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(5,8)]>obl(4,8)[⁰
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(4,9)[⁰
+10	killing	kill	VERB	VBG	VerbForm=Ger	0	advcl	_	SuperTag]>advcl(4,10)[⁰⟦
+11	4	4	NUM	CD	NumType=Card	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(10,11)
+12	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,12)
+
+# codestring =  PRON.PRP_It ⟦· ⟧expl(1,2) VERB.VBZ_seems ⟦· ]>xcomp(2,3) ADJ.JJ_clear [⁰ · ADP.IN_to ⟦· ⟧case(4,5) ]>obl(2,5) PRON.PRP_me [⁰ · SCONJ.IN_that ⟦· DET.DT_the ⟦· ⟧det(7,8) ]⁰ NOUN.NN_manhunt [<nsubj:pass(8,19) ⟦· ADP.IN_for ⟦· ]⁰ ADJ.JJ_high [<amod(10,12) · ]⁰ PROPN.NNP_Baath [<compound(11,12) · ⟧case(9,12) ]>nmod(8,12) NOUN.NNS_officials [⁰ · ]⁰ ADP.IN_in [<case(13,16) · ]⁰ DET.DT_the [<det(14,16) · ]⁰ ADJ.JJ_Sunni [<amod(15,16) · ⟧>nmod(8,16) NOUN.NN_heartland · ]⁰ AUX.VBZ_is [<aux(17,19) · ]⁰ AUX.VBG_being [<aux:pass(18,19) · ⟧mark(6,19) ]>csubj(2,19) VERB.VBN_done [⁰ ⟦· ⟧>xcomp(19,20) ADV.RB_wrong ⟦· ]⁰ PUNCT.,_, [<punct(21,26) · ]⁰ CCONJ.CC_or [<cc(22,26) · ]⁰ ADV.RB_at [<advmod(23,26) ⟦· ⟧>fixed(23,24) ADV.RBS_least · ]⁰ ADP.IN_in [<case(25,26) · ⟧>conj(20,26) NOUN.NNS_ways ⟦· ]⁰ PRON.WDT_that [<nsubj(27,29) · ]⁰ AUX.VBP_are [<cop(28,29) · ⟧>acl:relcl(26,29) ADJ.JJ_bad ⟦· ]⁰ ADP.IN_for [<case(30,32) · ]⁰ PROPN.NNP_US [<compound(31,32) · ⟧>obl(29,32) NOUN.NN_standing ⟦· ]⁰ ADP.IN_with [<case(33,35) · ]⁰ ADJ.JJ_local [<amod(34,35) · ⟧>nmod(32,35) PROPN.NNPS_Iraqis · ⟧>punct(2,36) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040114085100_ENG_20040114_085100-0006
+# stack_1_size = 4
+# stack_2_size = 1
+# text = It seems clear to me that the manhunt for high Baath officials in the Sunni heartland is being done wrong, or at least in ways that are bad for US standing with local Iraqis.
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	expl	_	SuperTag⟦
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧expl(1,2)⟦
+3	clear	clear	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]>xcomp(2,3)[⁰
+4	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	0	obl	_	SuperTag⟧case(4,5)]>obl(2,5)[⁰
+6	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+7	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+8	manhunt	manhunt	NOUN	NN	Number=Sing	0	nsubj:pass	_	SuperTag⟧det(7,8)]⁰[<nsubj:pass(8,19)⟦
+9	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+10	high	high	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(10,12)
+11	Baath	Baath	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(11,12)
+12	officials	official	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(9,12)]>nmod(8,12)[⁰
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(13,16)
+14	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(14,16)
+15	Sunni	sunni	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(15,16)
+16	heartland	heartland	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(8,16)
+17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(17,19)
+18	being	be	AUX	VBG	VerbForm=Ger	0	aux:pass	_	SuperTag]⁰[<aux:pass(18,19)
+19	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	csubj	_	SuperTag⟧mark(6,19)]>csubj(2,19)[⁰⟦
+20	wrong	wrong	ADV	RB	_	0	xcomp	_	SpaceAfter=No|SuperTag⟧>xcomp(19,20)⟦
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(21,26)
+22	or	or	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(22,26)
+23	at	at	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(23,26)⟦
+24	least	least	ADV	RBS	Degree=Sup	0	fixed	_	SuperTag⟧>fixed(23,24)
+25	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(25,26)
+26	ways	way	NOUN	NNS	Number=Plur	0	conj	_	SuperTag⟧>conj(20,26)⟦
+27	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<nsubj(27,29)
+28	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(28,29)
+29	bad	bad	ADJ	JJ	Degree=Pos	0	acl:relcl	_	SuperTag⟧>acl:relcl(26,29)⟦
+30	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<case(30,32)
+31	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(31,32)
+32	standing	standing	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>obl(29,32)⟦
+33	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<case(33,35)
+34	local	local	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(34,35)
+35	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(32,35)
+36	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(2,36)
+
+# codestring =  PROPN.NNP_Google ⟦· ]⁰ AUX.VBZ_has [<aux(2,4) · ]⁰ ADV.RB_finally [<advmod(3,4) · ⟧nsubj(1,4) VERB.VBN_had ⟦· DET.DT_an ⟦· ]⁰ NOUN.NN_analyst [<compound(6,7) · ⟧det(5,7) ]>obj(4,7) NOUN.NN_day [⁰ ⟦· ]>punct(7,8) PUNCT.:_-- [⁰ · ]⁰ DET.DT_a [<det(9,10) · ⟧>appos(7,10) NOUN.NN_chance ⟦· ]⁰ PART.TO_to [<mark(11,12) · ⟧>acl(10,12) VERB.VB_present ⟦· DET.DT_the ⟦· ⟧det(13,14) NOUN.NN_company ⟦· ]>case(14,15) PART.POS_'s [⁰ · ⟧nmod:poss(14,16) ]>obj(12,16) NOUN.NN_story [⁰ · ]⁰ ADP.IN_to [<case(17,21) · ]⁰ DET.DT_the [<det(18,21) · ]⁰ PUNCT.-LRB-_( [<punct(19,21) · ]⁰ ADJ.JJ_miniscule [<amod(20,21) · ⟧>obl(12,21) NOUN.NN_number ⟦· ]⁰ ADP.IN_of [<case(22,24) · ]⁰ PUNCT.-RRB-_) [<punct(23,24) · ⟧>nmod(21,24) NOUN.NNS_people ⟦· ]⁰ PRON.WP_who [<nsubj(25,28) · ]⁰ AUX.VBP_have [<aux(26,28) · ]⁰ PART.RB_n't [<advmod(27,28) · ⟧>acl:relcl(24,28) VERB.VBN_heard ⟦· ⟧>obj(28,29) PRON.PRP_it · ⟧>punct(4,30) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0001
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Google has finally had an analyst day -- a chance to present the company's story to the (miniscule number of) people who haven't heard it.
+1	Google	Google	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(2,4)
+3	finally	finally	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(3,4)
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧nsubj(1,4)⟦
+5	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+6	analyst	analyst	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(6,7)
+7	day	day	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(5,7)]>obj(4,7)[⁰⟦
+8	--	--	PUNCT	:	_	0	punct	_	SuperTag]>punct(7,8)[⁰
+9	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(9,10)
+10	chance	chance	NOUN	NN	Number=Sing	0	appos	_	SuperTag⟧>appos(7,10)⟦
+11	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(11,12)
+12	present	present	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>acl(10,12)⟦
+13	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+14	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧det(13,14)⟦
+15	's	's	PART	POS	_	0	case	_	SuperTag]>case(14,15)[⁰
+16	story	story	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧nmod:poss(14,16)]>obj(12,16)[⁰
+17	to	to	ADP	IN	_	0	case	_	SuperTag]⁰[<case(17,21)
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(18,21)
+19	(	(	PUNCT	-LRB-	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(19,21)
+20	miniscule	miniscule	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(20,21)
+21	number	number	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>obl(12,21)⟦
+22	of	of	ADP	IN	_	0	case	_	SpaceAfter=No|SuperTag]⁰[<case(22,24)
+23	)	)	PUNCT	-RRB-	_	0	punct	_	SuperTag]⁰[<punct(23,24)
+24	people	people	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(21,24)⟦
+25	who	who	PRON	WP	PronType=Rel	0	nsubj	_	SuperTag]⁰[<nsubj(25,28)
+26	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<aux(26,28)
+27	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(27,28)
+28	heard	hear	VERB	VBN	Tense=Past|VerbForm=Part	0	acl:relcl	_	SuperTag⟧>acl:relcl(24,28)⟦
+29	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(28,29)
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,30)
+
+# codestring =  ADV.RB_Usually ⟦· ]⁰ PUNCT.,_, [<punct(2,7) · ]⁰ PRON.DT_these [<nsubj(3,7) · ]⁰ AUX.VBP_are [<cop(4,7) · ]⁰ ADV.RB_just [<advmod(5,7) · ]⁰ DET.DT_a [<det(6,7) · ⟧advmod(1,7) NOUN.NN_chance ⟦· SCONJ.IN_for ⟦· DET.DT_the ⟦· ⟧det(9,10) ]⁰ NOUN.NNS_suckups [<nsubj(10,12) · ]⁰ PART.TO_to [<mark(11,12) · ⟧mark(8,12) ]>acl(7,12) VERB.VB_suck [⁰ ⟦· ⟧>compound:prt(12,13) ADP.RP_up · PUNCT.,_, ⟦· ]⁰ CCONJ.CC_but [<cc(15,21) · DET.DT_this ⟦· ⟧det(16,17) ]⁰ NOUN.NN_time [<obl:tmod(17,21) · ]⁰ NOUN.NNS_people [<nsubj(18,21) · ]⁰ AUX.VBP_are [<cop(19,21) · ]⁰ ADV.RB_actually [<advmod(20,21) · ⟧punct(14,21) ]>conj(7,21) ADJ.JJ_concerned [⁰ ⟦· ]⁰ ADP.IN_about [<case(22,26) · DET.DT_the ⟦· ⟧det(23,24) ]⁰ NOUN.NN_company [<nmod:poss(24,26) ⟦· ⟧>case(24,25) PART.POS_'s · ⟧>obl(21,26) NOUN.NNS_plans · ⟧>punct(7,27) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0002
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Usually, these are just a chance for the suckups to suck up, but this time people are actually concerned about the company's plans.
+1	Usually	usually	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟦
+2	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(2,7)
+3	these	these	PRON	DT	Number=Plur|PronType=Dem	0	nsubj	_	SuperTag]⁰[<nsubj(3,7)
+4	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(4,7)
+5	just	just	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(5,7)
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(6,7)
+7	chance	chance	NOUN	NN	Number=Sing	0	root	_	SuperTag⟧advmod(1,7)⟦
+8	for	for	SCONJ	IN	_	0	mark	_	SuperTag⟦
+9	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+10	suckups	suckup	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧det(9,10)]⁰[<nsubj(10,12)
+11	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(11,12)
+12	suck	suck	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧mark(8,12)]>acl(7,12)[⁰⟦
+13	up	up	ADP	RP	_	0	compound:prt	_	SpaceAfter=No|SuperTag⟧>compound:prt(12,13)
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag⟦
+15	but	but	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(15,21)
+16	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+17	time	time	NOUN	NN	Number=Sing	0	obl:tmod	_	SuperTag⟧det(16,17)]⁰[<obl:tmod(17,21)
+18	people	people	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<nsubj(18,21)
+19	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(19,21)
+20	actually	actually	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(20,21)
+21	concerned	concerned	ADJ	JJ	Degree=Pos	0	conj	_	SuperTag⟧punct(14,21)]>conj(7,21)[⁰⟦
+22	about	about	ADP	IN	_	0	case	_	SuperTag]⁰[<case(22,26)
+23	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+24	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧det(23,24)]⁰[<nmod:poss(24,26)⟦
+25	's	's	PART	POS	_	0	case	_	SuperTag⟧>case(24,25)
+26	plans	plan	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(21,26)
+27	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(7,27)
+
+# codestring =  PRON.PRP_They ⟦· ⟧nsubj(1,2) VERB.VBP_work ⟦· ADP.IN_on ⟦· ]⁰ PROPN.NNP_Wall [<compound(4,5) · ⟧case(3,5) ]>obl(2,5) PROPN.NNP_Street [⁰ · ]>punct(2,6) PUNCT.,_, [⁰ · ADV.IN_after ⟦· ⟧case(7,8) ]>obl(2,8) ADV.RB_all [⁰ · ]>punct(2,9) PUNCT.,_, [⁰ · ADV.RB_so ⟦· ADV.WRB_when ⟦· ]⁰ PRON.PRP_they [<nsubj(12,13) · ⟧mark(11,13) ]⁰ VERB.VBP_hear [<advcl(13,28) ⟦· DET.DT_a ⟦· ⟧det(14,15) ]>obj(13,15) NOUN.NN_company [⁰ ⟦· PRON.WP$_who's ⟦· ]⁰ VERB.VBN_stated [<amod(17,18) · ⟧nmod:poss(16,18) ]⁰ NOUN.NNS_goals [<nsubj(18,19) · ⟧>acl:relcl(15,19) VERB.VBP_include ⟦· ]⁰ PUNCT.``_" [<punct(20,24) · ]⁰ AUX.VB_Do [<aux(21,24) · ]⁰ PART.RB_n't [<advmod(22,24) · ]⁰ AUX.VB_be [<cop(23,24) · ⟧>ccomp(19,24) ADJ.JJ_evil · ]>punct(13,25) PUNCT.,_, [⁰ · ⟧>punct(13,26) PUNCT.''_" · ]⁰ PRON.PRP_they [<nsubj(27,28) · ⟧advmod(10,28) ]>parataxis(2,28) VERB.VBP_imagine [⁰ ⟦· ]⁰ DET.DT_a [<det(29,30) · ⟧>obj(28,30) NOUN.NN_company ⟦· PRON.WP$_who's ⟦· ]⁰ ADJ.JJ_eventually [<amod(32,33) · ⟧nmod:poss(31,33) ]⁰ NOUN.NN_history [<nsubj(33,35) · ]⁰ AUX.MD_will [<aux(34,35) · ⟧>acl:relcl(30,35) VERB.VB_be ⟦· ]⁰ PUNCT.``_" [<punct(36,40) · ]⁰ AUX.VB_Do [<aux(37,40) · ]⁰ PART.RB_n't [<advmod(38,40) · ]⁰ AUX.VB_be [<cop(39,40) · ⟧>ccomp(35,40) ADJ.JJ_profitable · ]>punct(2,41) PUNCT.._. [⁰ · ⟧>punct(2,42) PUNCT.''_" 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0003
+# stack_1_size = 5
+# stack_2_size = 1
+# text = They work on Wall Street, after all, so when they hear a company who's stated goals include "Don't be evil," they imagine a company who's eventually history will be "Don't be profitable."
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag⟦
+2	work	work	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,2)⟦
+3	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+4	Wall	Wall	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(4,5)
+5	Street	Street	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(3,5)]>obl(2,5)[⁰
+6	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(2,6)[⁰
+7	after	after	ADV	IN	_	0	case	_	SuperTag⟦
+8	all	all	ADV	RB	_	0	obl	_	SpaceAfter=No|SuperTag⟧case(7,8)]>obl(2,8)[⁰
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(2,9)[⁰
+10	so	so	ADV	RB	_	0	advmod	_	SuperTag⟦
+11	when	when	ADV	WRB	PronType=Int	0	mark	_	SuperTag⟦
+12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(12,13)
+13	hear	hear	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	advcl	_	SuperTag⟧mark(11,13)]⁰[<advcl(13,28)⟦
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+15	company	company	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(14,15)]>obj(13,15)[⁰⟦
+16	who's	who's	PRON	WP$	PronType=Int	0	nmod:poss	_	SuperTag⟦
+17	stated	state	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<amod(17,18)
+18	goals	goal	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧nmod:poss(16,18)]⁰[<nsubj(18,19)
+19	include	include	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>acl:relcl(15,19)⟦
+20	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(20,24)
+21	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<aux(21,24)
+22	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(22,24)
+23	be	be	AUX	VB	Mood=Imp|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(23,24)
+24	evil	evil	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧>ccomp(19,24)
+25	,	,	PUNCT	,	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(13,25)[⁰
+26	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>punct(13,26)
+27	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(27,28)
+28	imagine	imagine	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧advmod(10,28)]>parataxis(2,28)[⁰⟦
+29	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(29,30)
+30	company	company	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(28,30)⟦
+31	who's	who's	PRON	WP$	PronType=Int	0	nmod:poss	_	SuperTag⟦
+32	eventually	eventually	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(32,33)
+33	history	history	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(31,33)]⁰[<nsubj(33,35)
+34	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(34,35)
+35	be	be	VERB	VB	VerbForm=Inf	0	acl:relcl	_	SuperTag⟧>acl:relcl(30,35)⟦
+36	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(36,40)
+37	Do	do	AUX	VB	VerbForm=Inf	0	aux	_	SpaceAfter=No|SuperTag]⁰[<aux(37,40)
+38	n't	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(38,40)
+39	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<cop(39,40)
+40	profitable	profitable	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧>ccomp(35,40)
+41	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(2,41)[⁰
+42	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>punct(2,42)
+
+# codestring =  PRON.PRP_It ⟦· ]⁰ AUX.VBZ_'s [<cop(2,8) · ]⁰ PART.RB_not [<advmod(3,8) · ADV.RB_quite ⟦· ⟧advmod(4,5) ADV.RB_as ⟦· ]advmod(5,6) ]⁰ ADJ.JJ_freewheeling [<amod(6,8) [⁰ · ]⁰ ]⁰ DET.DT_an [<det(7,8) [⁰ · ]⁰ ⟧nsubj(1,8) NOUN.NN_environment [⁰ ⟦· ]⁰ ]⁰ SCONJ.IN_as [<mark(9,12) [⁰ · ]⁰ ]⁰ PRON.PRP_you [<nsubj(10,12) [⁰ · ]⁰ ]⁰ AUX.MD_'d [<aux(11,12) [⁰ · ]⁰ ⟧>advcl(5,12) VERB.VB_imagine [⁰ · ]>punct(8,13) PUNCT.:_: [⁰ · PROPN.NNP_Sergey ⟦· ]>flat(14,15) PROPN.NNP_Brin [⁰ · ]⁰ AUX.VBZ_has [<aux(16,18) · ]⁰ ADV.RB_actually [<advmod(17,18) · ⟧nsubj(14,18) ]>parataxis(8,18) VERB.VBN_created [⁰ ⟦· ]⁰ DET.DT_a [<det(19,22) · ]⁰ ADJ.JJ_mathematical [<amod(20,22) · ]⁰ PUNCT.``_' [<punct(21,22) · ⟧>obj(18,22) NOUN.NN_proof ⟦· ]>punct(22,23) PUNCT.''_' [⁰ · ]⁰ SCONJ.IN_that [<mark(24,54) · DET.DT_the ⟦· ⟧det(25,26) NOUN.NN_company ⟦· ]>case(26,27) PART.POS_'s [⁰ · NOUN.NN_self ⟦· ]⁰ PUNCT.HYPH_- [<punct(29,30) · ⟧compound(28,30) ]⁰ VERB.VBN_driven [<amod(30,32) · ]⁰ NOUN.NN_research [<compound(31,32) · ⟧nmod:poss(26,32) ]⁰ NOUN.NN_strategy [<nsubj(32,54) ⟦· ]>punct(32,33) PUNCT.,_, [⁰ · ]⁰ PRON.WDT_which [<nsubj(34,35) · ⟧>acl:relcl(32,35) VERB.VBZ_gives ⟦· ]>iobj(35,36) NOUN.NNS_employees [⁰ · ]⁰ NUM.CD_one [<nummod(37,38) · ⟧>obj(35,38) NOUN.NN_day ⟦· DET.DT_a ⟦· ⟧det(39,40) ]>nmod:tmod(38,40) NOUN.NN_week [⁰ · ]⁰ PART.TO_to [<mark(41,42) · ⟧>acl(38,42) VERB.VB_do ⟦· NOUN.NN_research ⟦· ⟧compound(43,44) ]>obj(42,44) NOUN.NNS_projects [⁰ · ]⁰ ADP.IN_on [<case(45,47) · ]⁰ PRON.PRP$_their [<nmod:poss(46,47) · ⟧>obl(42,47) ADJ.JJ_own · ]⁰ PUNCT.,_, [<punct(48,54) · ]⁰ AUX.VBZ_is [<cop(49,54) · ]⁰ DET.DT_a [<det(50,54) · ]⁰ ADJ.JJ_good [<amod(51,54) · ]⁰ PUNCT.,_, [<punct(52,54) · ]⁰ ADJ.JJ_respectable [<amod(53,54) · ⟧>acl(22,54) NOUN.NN_idea · ⟧>punct(8,55) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = crossing (crossing edges (5,12),(8,55)), not projective (crossing)
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0004
+# stack_1_size = 4
+# stack_2_size = 2
+# text = It's not quite as freewheeling an environment as you'd imagine: Sergey Brin has actually created a mathematical 'proof' that the company's self-driven research strategy, which gives employees one day a week to do research projects on their own, is a good, respectable idea .
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SpaceAfter=No|SuperTag⟦
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(2,8)
+3	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(3,8)
+4	quite	quite	ADV	RB	_	0	advmod	_	SuperTag⟦
+5	as	as	ADV	RB	_	0	advmod	_	SuperTag⟧advmod(4,5)⟦
+6	freewheeling	freewheeling	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]advmod(5,6)]⁰[<amod(6,8)[⁰
+7	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰]⁰[<det(7,8)[⁰
+8	environment	environment	NOUN	NN	Number=Sing	0	root	_	SuperTag]⁰⟧nsubj(1,8)[⁰⟦
+9	as	as	SCONJ	IN	_	0	mark	_	SuperTag]⁰]⁰[<mark(9,12)[⁰
+10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	0	nsubj	_	SpaceAfter=No|SuperTag]⁰]⁰[<nsubj(10,12)[⁰
+11	'd	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰]⁰[<aux(11,12)[⁰
+12	imagine	imagine	VERB	VB	VerbForm=Inf	0	advcl	_	SpaceAfter=No|SuperTag]⁰⟧>advcl(5,12)[⁰
+13	:	:	PUNCT	:	_	0	punct	_	SuperTag]>punct(8,13)[⁰
+14	Sergey	Sergey	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+15	Brin	Brin	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(14,15)[⁰
+16	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(16,18)
+17	actually	actually	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(17,18)
+18	created	create	VERB	VBN	Tense=Past|VerbForm=Part	0	parataxis	_	SuperTag⟧nsubj(14,18)]>parataxis(8,18)[⁰⟦
+19	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(19,22)
+20	mathematical	mathematical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(20,22)
+21	'	'	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(21,22)
+22	proof	proof	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(18,22)⟦
+23	'	'	PUNCT	''	_	0	punct	_	SuperTag]>punct(22,23)[⁰
+24	that	that	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(24,54)
+25	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+26	company	company	NOUN	NN	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟧det(25,26)⟦
+27	's	's	PART	POS	_	0	case	_	SuperTag]>case(26,27)[⁰
+28	self	self	NOUN	NN	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+29	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(29,30)
+30	driven	drive	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag⟧compound(28,30)]⁰[<amod(30,32)
+31	research	research	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(31,32)
+32	strategy	strategy	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧nmod:poss(26,32)]⁰[<nsubj(32,54)⟦
+33	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(32,33)[⁰
+34	which	which	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<nsubj(34,35)
+35	gives	give	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>acl:relcl(32,35)⟦
+36	employees	employee	NOUN	NNS	Number=Plur	0	iobj	_	SuperTag]>iobj(35,36)[⁰
+37	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<nummod(37,38)
+38	day	day	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(35,38)⟦
+39	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+40	week	week	NOUN	NN	Number=Sing	0	nmod:tmod	_	SuperTag⟧det(39,40)]>nmod:tmod(38,40)[⁰
+41	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(41,42)
+42	do	do	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>acl(38,42)⟦
+43	research	research	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟦
+44	projects	project	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧compound(43,44)]>obj(42,44)[⁰
+45	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<case(45,47)
+46	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(46,47)
+47	own	own	ADJ	JJ	Degree=Pos	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(42,47)
+48	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(48,54)
+49	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(49,54)
+50	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(50,54)
+51	good	good	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag]⁰[<amod(51,54)
+52	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(52,54)
+53	respectable	respectable	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(53,54)
+54	idea	idea	NOUN	NN	Number=Sing	0	acl	_	SuperTag⟧>acl(22,54)
+55	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(8,55)
+
+# codestring =  VERB.VB_Read ⟦· DET.DT_the ⟦· ]⁰ ADJ.JJ_entire [<amod(3,4) · ⟧det(2,4) ]>obj(1,4) NOUN.NN_article [⁰ · ]>punct(1,5) PUNCT.,_; [⁰ · PRON.EX_there ⟦· ⟧expl(6,7) ]>parataxis(1,7) VERB.VBZ_'s [⁰ ⟦· DET.DT_a ⟦· ⟧det(8,9) ]>nsubj(7,9) NOUN.NN_punchline [⁰ · ]>punct(7,10) PUNCT.,_, [⁰ · ⟧>advmod(7,11) ADV.RB_too · ⟧>punct(1,12) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-blogspot.com_marketview_20050210075500_ENG_20050210_075500-0005
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Read the entire article; there's a punchline, too.
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+3	entire	entire	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(3,4)
+4	article	article	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧det(2,4)]>obj(1,4)[⁰
+5	;	;	PUNCT	,	_	0	punct	_	SuperTag]>punct(1,5)[⁰
+6	there	there	PRON	EX	_	0	expl	_	SpaceAfter=No|SuperTag⟦
+7	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	parataxis	_	SuperTag⟧expl(6,7)]>parataxis(1,7)[⁰⟦
+8	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+9	punchline	punchline	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧det(8,9)]>nsubj(7,9)[⁰
+10	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(7,10)[⁰
+11	too	too	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>advmod(7,11)
+12	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(1,12)
+
+# codestring =  PRON.PRP$_My ⟦· ]⁰ NOUN.NN_opinion [<compound(2,3) · ⟧nmod:poss(1,3) NOUN.NN_piece ⟦· ADP.IN_on ⟦· ]⁰ DET.DT_the [<det(5,6) · ⟧case(4,6) ]>nmod(3,6) NOUN.NNS_implications [⁰ ⟦· ADP.IN_of ⟦· ]⁰ PROPN.NNP_Arafat [<nmod:poss(8,10) ⟦· ⟧>case(8,9) PART.POS_'s · ⟧case(7,10) ]>nmod(6,10) NOUN.NN_passing [⁰ · ]⁰ ADP.IN_for [<case(11,14) · ]⁰ PROPN.NNP_al [<compound(12,14) · ]⁰ PUNCT.HYPH_- [<punct(13,14) · ⟧>nmod(6,14) PROPN.NNP_Qaeda · ]⁰ AUX.VBZ_has [<aux(15,16) · ⟧nsubj(3,16) VERB.VBN_appeared ⟦· ADP.IN_at ⟦· ⟧case(17,18) ]>obl(16,18) PROPN.NNP_Newsday [⁰ · ⟧>punct(16,19) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0001
+# stack_1_size = 4
+# stack_2_size = 1
+# text = My opinion piece on the implications of Arafat's passing for al-Qaeda has appeared at Newsday.
+1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag⟦
+2	opinion	opinion	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(2,3)
+3	piece	piece	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(1,3)⟦
+4	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(5,6)
+6	implications	implication	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(4,6)]>nmod(3,6)[⁰⟦
+7	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+8	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<nmod:poss(8,10)⟦
+9	's	's	PART	POS	_	0	case	_	SuperTag⟧>case(8,9)
+10	passing	passing	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧case(7,10)]>nmod(6,10)[⁰
+11	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<case(11,14)
+12	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<compound(12,14)
+13	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(13,14)
+14	Qaeda	Qaeda	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(6,14)
+15	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(15,16)
+16	appeared	appear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧nsubj(3,16)⟦
+17	at	at	ADP	IN	_	0	case	_	SuperTag⟦
+18	Newsday	Newsday	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(17,18)]>obl(16,18)[⁰
+19	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(16,19)
+
+# codestring =  NOUN.NN_Excerpt ⟦· ⟧>punct(1,2) PUNCT.:_: 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0002
+# stack_1_size = 1
+# stack_2_size = 0
+# text = Excerpt:
+1	Excerpt	excerpt	NOUN	NN	Number=Sing	0	root	_	SpaceAfter=No|SuperTag⟦
+2	:	:	PUNCT	:	_	0	punct	_	SuperTag⟧>punct(1,2)
+
+# codestring =  PUNCT.``_" ⟦· PROPN.NNP_Arafat ⟦· ]>case(2,3) PART.POS_'s [⁰ · ]⁰ ADJ.JJ_secular [<amod(4,5) · ⟧nmod:poss(2,5) ]⁰ NOUN.NN_nationalism [<nsubj(5,7) · ]⁰ AUX.VBD_was [<cop(6,7) · ⟧punct(1,7) ADJ.JJ_supple ⟦· ]>advmod(7,8) ADV.RB_enough [⁰ · PART.TO_to ⟦· ⟧mark(9,10) ]>advcl(7,10) VERB.VB_compromise [⁰ ⟦· ADP.IN_with ⟦· ⟧case(11,12) ]>obl(10,12) PROPN.NNP_Israel [⁰ · ]⁰ CCONJ.CC_and [<cc(13,15) · ]⁰ PART.TO_to [<mark(14,15) · ⟧>conj(10,15) VERB.VB_imagine ⟦· DET.DT_a ⟦· NUM.CD_two ⟦· ]⁰ PUNCT.HYPH_- [<punct(18,19) · ⟧nummod(17,19) ]⁰ NOUN.NN_state [<compound(19,20) · ⟧det(16,20) ]>obj(15,20) NOUN.NN_solution [⁰ · ]>punct(15,21) PUNCT.,_, [⁰ · ]⁰ ADV.RB_even [<advmod(22,28) · ]⁰ SCONJ.IN_if [<mark(23,28) · DET.DT_the ⟦· ⟧det(24,25) ]⁰ NOUN.NN_road [<nsubj(25,28) ⟦· ]⁰ ADP.IN_of [<case(26,27) · ⟧>nmod(25,27) NOUN.NNS_negotiations · ⟧>advcl(15,28) VERB.VBD_remained ⟦· ⟧>xcomp(28,29) ADJ.JJ_rocky · ⟧>punct(7,30) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0003
+# stack_1_size = 4
+# stack_2_size = 1
+# text = "Arafat's secular nationalism was supple enough to compromise with Israel and to imagine a two-state solution, even if the road of negotiations remained rocky.
+1	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag⟦
+2	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+3	's	's	PART	POS	_	0	case	_	SuperTag]>case(2,3)[⁰
+4	secular	secular	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(4,5)
+5	nationalism	nationalism	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(2,5)]⁰[<nsubj(5,7)
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(6,7)
+7	supple	supple	ADJ	JJ	Degree=Pos	0	root	_	SuperTag⟧punct(1,7)⟦
+8	enough	enough	ADV	RB	_	0	advmod	_	SuperTag]>advmod(7,8)[⁰
+9	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+10	compromise	compromise	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧mark(9,10)]>advcl(7,10)[⁰⟦
+11	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+12	Israel	Israel	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧case(11,12)]>obl(10,12)[⁰
+13	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(13,15)
+14	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(14,15)
+15	imagine	imagine	VERB	VB	VerbForm=Inf	0	conj	_	SuperTag⟧>conj(10,15)⟦
+16	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+17	two	two	NUM	CD	NumType=Card	0	nummod	_	SpaceAfter=No|SuperTag⟦
+18	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(18,19)
+19	state	state	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧nummod(17,19)]⁰[<compound(19,20)
+20	solution	solution	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧det(16,20)]>obj(15,20)[⁰
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(15,21)[⁰
+22	even	even	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(22,28)
+23	if	if	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(23,28)
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+25	road	road	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(24,25)]⁰[<nsubj(25,28)⟦
+26	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(26,27)
+27	negotiations	negotiation	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(25,27)
+28	remained	remain	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	advcl	_	SuperTag⟧>advcl(15,28)⟦
+29	rocky	rocky	ADJ	JJ	Degree=Pos	0	xcomp	_	SpaceAfter=No|SuperTag⟧>xcomp(28,29)
+30	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(7,30)
+
+# codestring =  DET.DT_The ⟦· ]⁰ VERB.VBN_continued [<amod(2,4) · ]⁰ ADJ.JJ_Israeli [<amod(3,4) · ⟧det(1,4) NOUN.NN_colonization ⟦· ADP.IN_of ⟦· ]⁰ DET.DT_the [<det(6,9) · ]⁰ VERB.VBN_occupied [<amod(7,9) · ]⁰ PROPN.NNP_Palestinian [<compound(8,9) · ⟧case(5,9) ]>nmod(4,9) PROPN.NNPS_territories [⁰ · ADP.IN_during ⟦· ]⁰ DET.DT_the [<det(11,12) · ⟧case(10,12) ]>nmod(4,12) NOUN.NNS_1990s [⁰ · ⟧nsubj(4,13) VERB.VBD_helped ⟦· ]>punct(13,14) PUNCT.,_, [⁰ · ADP.IN_along ⟦· ]⁰ ADP.IN_with [<case(16,18) · ]⁰ ADJ.JJ_terrorist [<amod(17,18) · ⟧case(15,18) ]>obl(13,18) NOUN.NNS_attacks [⁰ ⟦· ]⁰ ADP.IN_by [<case(19,21) · ]⁰ ADJ.JJ_radical [<amod(20,21) · ⟧>nmod(18,21) NOUN.NNS_groups ⟦· ]⁰ ADJ.JJ_such [<case(22,24) ⟦· ⟧>fixed(22,23) ADP.IN_as · ⟧>nmod(21,24) PROPN.NNP_Hamas · ]>punct(13,25) PUNCT.,_, [⁰ · PART.TO_to ⟦· ⟧mark(26,27) ]>xcomp(13,27) VERB.VB_derail [⁰ ⟦· ]⁰ DET.DT_the [<det(28,30) · ]⁰ NOUN.NN_peace [<compound(29,30) · ⟧>obj(27,30) NOUN.NN_process ⟦· ]>punct(30,31) PUNCT.,_, [⁰ · ]⁰ PRON.WDT_which [<obj(32,36) · ]⁰ PROPN.NNP_Sharon [<nsubj(33,36) · ]⁰ AUX.VBD_had [<aux(34,36) · ]⁰ ADV.RB_always [<advmod(35,36) · ⟧>acl:relcl(30,36) VERB.VBN_opposed · ⟧>punct(13,37) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0004
+# stack_1_size = 3
+# stack_2_size = 1
+# text = The continued Israeli colonization of the occupied Palestinian territories during the 1990s helped, along with terrorist attacks by radical groups such as Hamas, to derail the peace process, which Sharon had always opposed.
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	continued	continue	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<amod(2,4)
+3	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(3,4)
+4	colonization	colonization	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(1,4)⟦
+5	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(6,9)
+7	occupied	occupy	VERB	VBN	Tense=Past|VerbForm=Part	0	amod	_	SuperTag]⁰[<amod(7,9)
+8	Palestinian	Palestinian	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(8,9)
+9	territories	territories	PROPN	NNPS	Number=Plur	0	nmod	_	SuperTag⟧case(5,9)]>nmod(4,9)[⁰
+10	during	during	ADP	IN	_	0	case	_	SuperTag⟦
+11	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(11,12)
+12	1990s	1990	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(10,12)]>nmod(4,12)[⁰
+13	helped	help	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No|SuperTag⟧nsubj(4,13)⟦
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(13,14)[⁰
+15	along	along	ADP	IN	_	0	case	_	SuperTag⟦
+16	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<case(16,18)
+17	terrorist	terrorist	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(17,18)
+18	attacks	attack	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧case(15,18)]>obl(13,18)[⁰⟦
+19	by	by	ADP	IN	_	0	case	_	SuperTag]⁰[<case(19,21)
+20	radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(20,21)
+21	groups	group	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(18,21)⟦
+22	such	such	ADJ	JJ	Degree=Pos	0	case	_	SuperTag]⁰[<case(22,24)⟦
+23	as	as	ADP	IN	_	0	fixed	_	SuperTag⟧>fixed(22,23)
+24	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(21,24)
+25	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(13,25)[⁰
+26	to	to	PART	TO	_	0	mark	_	SuperTag⟦
+27	derail	derail	VERB	VB	VerbForm=Inf	0	xcomp	_	SuperTag⟧mark(26,27)]>xcomp(13,27)[⁰⟦
+28	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(28,30)
+29	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(29,30)
+30	process	process	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(27,30)⟦
+31	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(30,31)[⁰
+32	which	which	PRON	WDT	PronType=Rel	0	obj	_	SuperTag]⁰[<obj(32,36)
+33	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag]⁰[<nsubj(33,36)
+34	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(34,36)
+35	always	always	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(35,36)
+36	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	0	acl:relcl	_	SpaceAfter=No|SuperTag⟧>acl:relcl(30,36)
+37	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(13,37)
+
+# codestring =  PROPN.NNP_Arafat ⟦· ]>case(1,2) PART.POS_'s [⁰ · ⟧nmod:poss(1,3) NOUN.NN_death ⟦· ⟧nsubj(3,4) VERB.VBZ_creates ⟦· DET.DT_a ⟦· ⟧det(5,6) ]>obj(4,6) NOUN.NN_vacuum [⁰ ⟦· ADP.IN_in ⟦· ]⁰ ADJ.JJ_Palestinian [<amod(8,9) · ⟧case(7,9) ]>nmod(6,9) NOUN.NN_leadership [⁰ · ]⁰ PRON.WDT_that [<nsubj:pass(10,15) · ]⁰ AUX.MD_will [<aux(11,15) · ]⁰ PART.RB_not [<advmod(12,15) · ]⁰ ADV.RB_soon [<advmod(13,15) · ]⁰ AUX.VB_be [<aux:pass(14,15) · ⟧>acl:relcl(6,15) VERB.VBN_filled · ⟧>punct(4,16) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0005
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Arafat's death creates a vacuum in Palestinian leadership that will not soon be filled.
+1	Arafat	Arafat	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>case(1,2)[⁰
+3	death	death	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(1,3)⟦
+4	creates	create	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(3,4)⟦
+5	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+6	vacuum	vacuum	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(5,6)]>obj(4,6)[⁰⟦
+7	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+8	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(8,9)
+9	leadership	leadership	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧case(7,9)]>nmod(6,9)[⁰
+10	that	that	PRON	WDT	PronType=Rel	0	nsubj:pass	_	SuperTag]⁰[<nsubj:pass(10,15)
+11	will	will	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(11,15)
+12	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(12,15)
+13	soon	soon	ADV	RB	Degree=Pos	0	advmod	_	SuperTag]⁰[<advmod(13,15)
+14	be	be	AUX	VB	VerbForm=Inf	0	aux:pass	_	SuperTag]⁰[<aux:pass(14,15)
+15	filled	fill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	acl:relcl	_	SpaceAfter=No|SuperTag⟧>acl:relcl(6,15)
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,16)
+
+# codestring =  PROPN.NNP_Sharon ⟦· ]>case(1,2) PART.POS_'s [⁰ · ⟧nmod:poss(1,3) NOUN.NN_assassination ⟦· ADP.IN_of ⟦· ]⁰ ADJ.JJ_major [<amod(5,7) · ]⁰ PROPN.NNP_Hamas [<compound(6,7) · ⟧case(4,7) ]>nmod(3,7) NOUN.NNS_leaders [⁰ · ]⁰ AUX.VBZ_has [<aux(8,10) · ]⁰ ADV.RB_also [<advmod(9,10) · ⟧nsubj(3,10) VERB.VBN_weakened ⟦· NOUN.NN_authority ⟦· ⟧compound(11,12) ]>obj(10,12) NOUN.NNS_structures [⁰ ⟦· ]⁰ ADP.IN_in [<case(13,15) · ]⁰ DET.DT_that [<det(14,15) · ⟧>nmod(12,15) NOUN.NN_party · ⟧>punct(10,16) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0006
+# stack_1_size = 2
+# stack_2_size = 1
+# text = Sharon's assassination of major Hamas leaders has also weakened authority structures in that party.
+1	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag⟦
+2	's	's	PART	POS	_	0	case	_	SuperTag]>case(1,2)[⁰
+3	assassination	assassination	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧nmod:poss(1,3)⟦
+4	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+5	major	major	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(5,7)
+6	Hamas	Hamas	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(6,7)
+7	leaders	leader	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(4,7)]>nmod(3,7)[⁰
+8	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(8,10)
+9	also	also	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(9,10)
+10	weakened	weaken	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧nsubj(3,10)⟦
+11	authority	authority	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟦
+12	structures	structure	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧compound(11,12)]>obj(10,12)[⁰⟦
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(13,15)
+14	that	that	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag]⁰[<det(14,15)
+15	party	party	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(12,15)
+16	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(10,16)
+
+# codestring =  SCONJ.IN_If ⟦· DET.DT_the ⟦· ⟧det(2,3) ]⁰ PROPN.NNPS_Israelis [<nsubj(3,10) ⟦· ]⁰ CCONJ.CC_and [<cc(4,7) · ]⁰ DET.DT_the [<det(5,7) · ]⁰ ADJ.JJ_Palestinian [<amod(6,7) · ⟧>conj(3,7) NOUN.NN_leadership · ]⁰ AUX.MD_can [<aux(8,10) · ]⁰ PART.RB_not [<advmod(9,10) · ⟧mark(1,10) VERB.VB_find ⟦· DET.DT_a ⟦· ⟧det(11,12) ]>obj(10,12) NOUN.NN_way [⁰ ⟦· ]⁰ PART.TO_to [<mark(13,14) · ⟧>acl(12,14) VERB.VB_reinvigorate ⟦· ]⁰ DET.DT_the [<det(15,17) · ]⁰ NOUN.NN_peace [<compound(16,17) · ⟧>obj(14,17) NOUN.NN_process · ]⁰ PUNCT.,_, [<punct(18,25) · ]⁰ NOUN.NNS_cells [<nsubj(19,25) ⟦· ]⁰ ADP.IN_of [<case(20,23) · ]⁰ ADJ.JJ_radical [<amod(21,23) · ]⁰ ADJ.JJ_young [<amod(22,23) · ⟧>nmod(19,23) PROPN.NNPS_Palestinians ⟦· ]⁰ ]⁰ AUX.MD_may [<aux(24,25) [⁰ · ]⁰ ⟧advcl(10,25) VERB.VB_grow [⁰ ⟦· ]>compound:prt(25,26) ADP.RP_up [⁰ · ]⁰ ]⁰ PRON.WDT_that [<nsubj(27,28) [⁰ · ]⁰ ⟧>acl:relcl(23,28) VERB.VBP_look [⁰ ⟦· ADP.IN_to ⟦· ⟧case(29,30) ]>obl(28,30) PROPN.NNP_bin [⁰ ⟦· ⟧>flat(30,31) PROPN.NNP_Laden · ]⁰ ADP.IN_for [<case(32,34) · ]⁰ PRON.PRP$_their [<nmod:poss(33,34) · ⟧>obl(28,34) NOUN.NNS_cues · ⟧>punct(25,35) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = crossing (crossing edges (23,28),(25,35)), not projective (crossing)
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0007
+# stack_1_size = 3
+# stack_2_size = 2
+# text = If the Israelis and the Palestinian leadership cannot find a way to reinvigorate the peace process, cells of radical young Palestinians may grow up that look to bin Laden for their cues.
+1	If	if	SCONJ	IN	_	0	mark	_	SuperTag⟦
+2	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+3	Israelis	Israelis	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧det(2,3)]⁰[<nsubj(3,10)⟦
+4	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(4,7)
+5	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(5,7)
+6	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(6,7)
+7	leadership	leadership	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>conj(3,7)
+8	can	can	AUX	MD	VerbForm=Fin	0	aux	_	SpaceAfter=No|SuperTag]⁰[<aux(8,10)
+9	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(9,10)
+10	find	find	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧mark(1,10)⟦
+11	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+12	way	way	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(11,12)]>obj(10,12)[⁰⟦
+13	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(13,14)
+14	reinvigorate	reinvigorate	VERB	VB	VerbForm=Inf	0	acl	_	SuperTag⟧>acl(12,14)⟦
+15	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(15,17)
+16	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(16,17)
+17	process	process	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(14,17)
+18	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(18,25)
+19	cells	cell	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<nsubj(19,25)⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(20,23)
+21	radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(21,23)
+22	young	young	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(22,23)
+23	Palestinians	Palestinians	PROPN	NNPS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(19,23)⟦
+24	may	may	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰]⁰[<aux(24,25)[⁰
+25	grow	grow	VERB	VB	VerbForm=Inf	0	root	_	SuperTag]⁰⟧advcl(10,25)[⁰⟦
+26	up	up	ADP	RP	_	0	compound:prt	_	SuperTag]>compound:prt(25,26)[⁰
+27	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰]⁰[<nsubj(27,28)[⁰
+28	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag]⁰⟧>acl:relcl(23,28)[⁰⟦
+29	to	to	ADP	IN	_	0	case	_	SuperTag⟦
+30	bin	bin	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧case(29,30)]>obl(28,30)[⁰⟦
+31	Laden	Laden	PROPN	NNP	Number=Sing	0	flat	_	SuperTag⟧>flat(30,31)
+32	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<case(32,34)
+33	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(33,34)
+34	cues	cue	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(28,34)
+35	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(25,35)
+
+# codestring =  ADV.RB_Even ⟦· ]⁰ SCONJ.IN_if [<mark(2,6) · ADJ.JJ_local ⟦· ]⁰ ADJ.JJ_Palestinian [<amod(4,5) · ⟧amod(3,5) ]⁰ NOUN.NNS_leaders [<nsubj(5,6) · ⟧advmod(1,6) VERB.VBP_remain ⟦· ADJ.JJ_strong ⟦· ]amod(7,8) ]>xcomp(6,8) ADJ.JJ_enough [⁰ [⁰ · ]⁰ PART.TO_to [<mark(9,10) · ⟧>advcl(7,10) VERB.VB_keep ⟦· PROPN.NNP_al ⟦· ]⁰ PUNCT.HYPH_- [<punct(12,13) · ⟧compound(11,13) ]>obj(10,13) PROPN.NNP_Qaida [⁰ · ⟧>xcomp(10,14) ADV.RB_out · ]⁰ PUNCT.,_, [<punct(15,22) · DET.DT_the ⟦· ]⁰ VERB.VBG_festering [<amod(17,21) · ADJ.JJ_Israeli ⟦· ]⁰ PUNCT.HYPH_- [<punct(19,20) · ⟧amod(18,20) ]⁰ ADJ.JJ_Palestinian [<amod(20,21) · ⟧det(16,21) ]⁰ NOUN.NN_struggle [<nsubj(21,22) · ⟧advcl(6,22) VERB.VBZ_remains ⟦· ADP.IN_among ⟦· ]⁰ DET.DT_the [<det(24,27) · ]⁰ ADJ.JJS_best [<amod(25,27) · ]⁰ NOUN.NN_recruiting [<compound(26,27) · ⟧case(23,27) ]>obl(22,27) NOUN.NNS_posters [⁰ ⟦· ]⁰ ADP.IN_for [<case(28,31) · ]⁰ PROPN.NNP_al [<compound(29,31) · ]⁰ PUNCT.HYPH_- [<punct(30,31) · ⟧>nmod(27,31) PROPN.NNP_Qaida · ADP.IN_with ⟦· ]⁰ ADJ.JJ_young [<amod(33,35) · ]⁰ ADJ.JJ_Muslim [<amod(34,35) · ⟧case(32,35) ]>obl(22,35) NOUN.NNS_men [⁰ · ⟧>punct(22,36) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = crossing (crossing edges (6,8),(7,10)), not projective (crossing)
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0008
+# stack_1_size = 3
+# stack_2_size = 2
+# text = Even if local Palestinian leaders remain strong enough to keep al-Qaida out, the festering Israeli-Palestinian struggle remains among the best recruiting posters for al-Qaida with young Muslim men.
+1	Even	even	ADV	RB	_	0	advmod	_	SuperTag⟦
+2	if	if	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(2,6)
+3	local	local	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+4	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(4,5)
+5	leaders	leader	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧amod(3,5)]⁰[<nsubj(5,6)
+6	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	advcl	_	SuperTag⟧advmod(1,6)⟦
+7	strong	strong	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+8	enough	enough	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]amod(7,8)]>xcomp(6,8)[⁰[⁰
+9	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(9,10)
+10	keep	keep	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧>advcl(7,10)⟦
+11	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag⟦
+12	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(12,13)
+13	Qaida	Qaida	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧compound(11,13)]>obj(10,13)[⁰
+14	out	out	ADV	RB	_	0	xcomp	_	SpaceAfter=No|SuperTag⟧>xcomp(10,14)
+15	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(15,22)
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+17	festering	fester	VERB	VBG	VerbForm=Ger	0	amod	_	SuperTag]⁰[<amod(17,21)
+18	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SpaceAfter=No|SuperTag⟦
+19	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(19,20)
+20	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧amod(18,20)]⁰[<amod(20,21)
+21	struggle	struggle	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(16,21)]⁰[<nsubj(21,22)
+22	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧advcl(6,22)⟦
+23	among	among	ADP	IN	_	0	case	_	SuperTag⟦
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(24,27)
+25	best	best	ADJ	JJS	Degree=Sup	0	amod	_	SuperTag]⁰[<amod(25,27)
+26	recruiting	recruiting	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(26,27)
+27	posters	poster	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧case(23,27)]>obl(22,27)[⁰⟦
+28	for	for	ADP	IN	_	0	case	_	SuperTag]⁰[<case(28,31)
+29	al	al	PROPN	NNP	Number=Sing	0	compound	_	SpaceAfter=No|SuperTag]⁰[<compound(29,31)
+30	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(30,31)
+31	Qaida	Qaida	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧>nmod(27,31)
+32	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+33	young	young	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(33,35)
+34	Muslim	muslim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(34,35)
+35	men	man	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧case(32,35)]>obl(22,35)[⁰
+36	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(22,36)
+
+# codestring =  VERB.VBG_Resolving ⟦· DET.DT_this ⟦· ⟧det(2,3) ]>obj(1,3) NOUN.NN_conflict [⁰ · ]⁰ AUX.MD_would [<aux(4,9) · ]⁰ AUX.VB_be [<cop(5,9) · ]⁰ DET.DT_the [<det(6,9) · ADV.RBS_most ⟦· ⟧advmod(7,8) ]⁰ ADJ.JJ_effective [<amod(8,9) · ⟧csubj(1,9) NOUN.NN_weapon ⟦· DET.DT_the ⟦· ]⁰ PROPN.NNP_United [<compound(11,12) · ⟧det(10,12) PROPN.NNP_States ⟦· ]⁰ AUX.MD_could [<aux(13,14) · ⟧nsubj(12,14) ]>acl:relcl(9,14) VERB.VB_deploy [⁰ ⟦· ]⁰ ADP.IN_in [<case(15,17) · ]⁰ PRON.PRP$_its [<nmod:poss(16,17) · ⟧>obl(14,17) NOUN.NN_war ⟦· ]⁰ ADP.IN_on [<case(18,19) · ⟧>nmod(17,19) NOUN.NN_terror · ]>punct(9,20) PUNCT.._. [⁰ · ⟧>punct(9,21) PUNCT.''_" 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20041120060600_ENG_20041120_060600-0009
+# stack_1_size = 2
+# stack_2_size = 1
+# text = Resolving this conflict would be the most effective weapon the United States could deploy in its war on terror."
+1	Resolving	resolve	VERB	VBG	VerbForm=Ger	0	csubj	_	SuperTag⟦
+2	this	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+3	conflict	conflict	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(2,3)]>obj(1,3)[⁰
+4	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(4,9)
+5	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<cop(5,9)
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(6,9)
+7	most	most	ADV	RBS	_	0	advmod	_	SuperTag⟦
+8	effective	effective	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧advmod(7,8)]⁰[<amod(8,9)
+9	weapon	weapon	NOUN	NN	Number=Sing	0	root	_	SuperTag⟧csubj(1,9)⟦
+10	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+11	United	United	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(11,12)
+12	States	States	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧det(10,12)⟦
+13	could	could	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(13,14)
+14	deploy	deploy	VERB	VB	VerbForm=Inf	0	acl:relcl	_	SuperTag⟧nsubj(12,14)]>acl:relcl(9,14)[⁰⟦
+15	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(15,17)
+16	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag]⁰[<nmod:poss(16,17)
+17	war	war	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧>obl(14,17)⟦
+18	on	on	ADP	IN	_	0	case	_	SuperTag]⁰[<case(18,19)
+19	terror	terror	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(17,19)
+20	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(9,20)[⁰
+21	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>punct(9,21)
+
+# codestring =  PROPN.NNP_Xinhua ⟦· ⟧nsubj(1,2) VERB.VBZ_reports ⟦· SCONJ.IN_that ⟦· DET.DT_a ⟦· ]⁰ ADJ.JJ_wide [<amod(5,6) · ⟧det(4,6) ]⁰ NOUN.NN_range [<nsubj(6,13) ⟦· ]⁰ ADP.IN_of [<case(7,10) · ]⁰ ADJ.JJ_Iraqi [<amod(8,10) · ]⁰ ADJ.JJ_political [<amod(9,10) · ⟧>nmod(6,10) NOUN.NNS_forces · ADP.IN_on ⟦· ⟧case(11,12) ]⁰ PROPN.NNP_Tuesday [<obl(12,13) · ⟧mark(3,13) ]>ccomp(2,13) VERB.VBD_condemned [⁰ ⟦· ]⁰ PROPN.NNP_Sharon [<nmod:poss(14,16) ⟦· ⟧>case(14,15) PART.POS_'s · ⟧>obj(13,16) NOUN.NN_murder ⟦· ADP.IN_of ⟦· ⟧case(17,18) ]>nmod(16,18) PROPN.NNP_Sheikh [⁰ ⟦· ]>flat(18,19) PROPN.NNP_Ahmed [⁰ · ]>flat(18,20) PROPN.NNP_Yassin [⁰ · ]>punct(18,21) PUNCT.,_, [⁰ · ]⁰ DET.DT_a [<det(22,24) · ]⁰ ADJ.JJ_religious [<amod(23,24) · ⟧>appos(18,24) NOUN.NN_leader ⟦· ]⁰ ADP.IN_of [<case(25,26) · ⟧>nmod(24,26) PROPN.NNP_Hamas · ]>punct(16,27) PUNCT.,_, [⁰ · ]⁰ DET.DT_the [<det(28,29) · ⟧>nmod:tmod(16,29) NOUN.NN_day ⟦· ⟧>advmod(29,30) ADV.RB_before · ⟧>punct(2,31) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0001
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Xinhua reports that a wide range of Iraqi political forces on Tuesday condemned Sharon's murder of Sheikh Ahmed Yassin, a religious leader of Hamas, the day before.
+1	Xinhua	Xinhua	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,2)⟦
+3	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+4	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+5	wide	wide	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(5,6)
+6	range	range	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(4,6)]⁰[<nsubj(6,13)⟦
+7	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(7,10)
+8	Iraqi	iraqi	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(8,10)
+9	political	political	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(9,10)
+10	forces	force	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(6,10)
+11	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+12	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SuperTag⟧case(11,12)]⁰[<obl(12,13)
+13	condemned	condemn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	ccomp	_	SuperTag⟧mark(3,13)]>ccomp(2,13)[⁰⟦
+14	Sharon	Sharon	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<nmod:poss(14,16)⟦
+15	's	's	PART	POS	_	0	case	_	SuperTag⟧>case(14,15)
+16	murder	murder	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(13,16)⟦
+17	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+18	Sheikh	Sheikh	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧case(17,18)]>nmod(16,18)[⁰⟦
+19	Ahmed	Ahmed	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(18,19)[⁰
+20	Yassin	Yassin	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>flat(18,20)[⁰
+21	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(18,21)[⁰
+22	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(22,24)
+23	religious	religious	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(23,24)
+24	leader	leader	NOUN	NN	Number=Sing	0	appos	_	SuperTag⟧>appos(18,24)⟦
+25	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(25,26)
+26	Hamas	Hamas	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(24,26)
+27	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(16,27)[⁰
+28	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(28,29)
+29	day	day	NOUN	NN	Number=Sing	0	nmod:tmod	_	SuperTag⟧>nmod:tmod(16,29)⟦
+30	before	before	ADV	RB	_	0	advmod	_	SpaceAfter=No|SuperTag⟧>advmod(29,30)
+31	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(2,31)
+
+# codestring =  DET.DT_The ⟦· ⟧det(1,2) NOUN.NN_Board ⟦· ADP.IN_of ⟦· ]⁰ ADJ.JJ_Muslim [<amod(4,5) · ⟧case(3,5) ]>nmod(2,5) NOUN.NNS_clerics [⁰ · ADP.IN_in ⟦· ⟧case(6,7) ]>nmod(2,7) PROPN.NNP_Fallujah [⁰ ⟦· ]⁰ ]⁰ PUNCT.,_, [<punct(8,16) [⁰ · NUM.CD_50 ⟦· ⟧nummod(9,10) ]⁰ NOUN.NNS_km [<obl:npmod(10,11) · ⟧>advmod(7,11) ADV.RB_west ⟦· ]⁰ ADP.IN_of [<case(12,13) · ⟧>obl(11,13) PROPN.NNP_Baghdad · ]⁰ PUNCT.,_, [<punct(14,16) · ]⁰ PUNCT.``_" [<punct(15,16) · ⟧nsubj(2,16) VERB.VBD_condemned ⟦· DET.DT_the ⟦· ⟧det(17,18) ]>obj(16,18) NOUN.NN_assassination [⁰ · CCONJ.CC_and ⟦· ⟧cc(19,20) ]>conj(16,20) VERB.VBD_promised [⁰ ⟦· ]⁰ ADJ.JJ_immediate [<amod(21,22) · ⟧>obj(20,22) NOUN.NN_revenge ⟦· ]⁰ ADP.IN_against [<case(23,26) · ]⁰ DET.DT_the [<det(24,26) · ]⁰ NOUN.NN_coalition [<compound(25,26) · ⟧>nmod(22,26) NOUN.NNS_soldiers ⟦· ]⁰ ADP.IN_in [<case(27,28) · ⟧>nmod(26,28) PROPN.NNP_Iraq · ]>punct(16,29) PUNCT.._. [⁰ · ⟧>punct(16,30) PUNCT.''_" 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = crossing (crossing edges (7,11),(8,16)), not projective (crossing)
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0002
+# stack_1_size = 3
+# stack_2_size = 2
+# text = The Board of Muslim clerics in Fallujah, 50 km west of Baghdad, "condemned the assassination and promised immediate revenge against the coalition soldiers in Iraq."
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	Board	board	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(1,2)⟦
+3	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+4	Muslim	muslim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(4,5)
+5	clerics	cleric	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(3,5)]>nmod(2,5)[⁰
+6	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+7	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧case(6,7)]>nmod(2,7)[⁰⟦
+8	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰]⁰[<punct(8,16)[⁰
+9	50	50	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+10	km	km	NOUN	NNS	Number=Plur	0	obl:npmod	_	SuperTag⟧nummod(9,10)]⁰[<obl:npmod(10,11)
+11	west	west	ADV	RB	_	0	advmod	_	SuperTag⟧>advmod(7,11)⟦
+12	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(12,13)
+13	Baghdad	Baghdad	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(11,13)
+14	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(14,16)
+15	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(15,16)
+16	condemned	condemn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(2,16)⟦
+17	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+18	assassination	assassination	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(17,18)]>obj(16,18)[⁰
+19	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+20	promised	promise	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	conj	_	SuperTag⟧cc(19,20)]>conj(16,20)[⁰⟦
+21	immediate	immediate	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(21,22)
+22	revenge	revenge	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(20,22)⟦
+23	against	against	ADP	IN	_	0	case	_	SuperTag]⁰[<case(23,26)
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(24,26)
+25	coalition	coalition	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(25,26)
+26	soldiers	soldier	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(22,26)⟦
+27	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(27,28)
+28	Iraq	Iraq	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(26,28)
+29	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(16,29)[⁰
+30	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>punct(16,30)
+
+# codestring =  PROPN.NNP_Ash ⟦· ]>punct(1,2) PUNCT.HYPH_- [⁰ · ]>flat(1,3) PROPN.NNP_Sharq [⁰ · ]>flat(1,4) PROPN.NNP_al [⁰ · ]>punct(1,5) PUNCT.HYPH_- [⁰ · ]>flat(1,6) PROPN.NNP_Awsat [⁰ · ⟧nsubj(1,7) VERB.VBZ_reports ⟦· SCONJ.IN_that ⟦· ]⁰ PROPN.NNP_Fallujah [<nsubj:pass(9,11) · ]⁰ AUX.VBD_was [<aux:pass(10,11) · ⟧mark(8,11) ]>ccomp(7,11) VERB.VBN_closed [⁰ ⟦· ]>obl:tmod(11,12) PROPN.NNP_Tuesday [⁰ · ]⁰ ADP.IN_in [<case(13,16) · ]⁰ DET.DT_a [<det(14,16) · ]⁰ ADJ.JJ_general [<amod(15,16) · ⟧>obl(11,16) NOUN.NN_strike · ⟧>punct(7,17) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0003
+# stack_1_size = 2
+# stack_2_size = 1
+# text = Ash-Sharq al-Awsat reports that Fallujah was closed Tuesday in a general strike.
+1	Ash	Ash	PROPN	NNP	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟦
+2	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(1,2)[⁰
+3	Sharq	Sharq	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(1,3)[⁰
+4	al	al	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>flat(1,4)[⁰
+5	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(1,5)[⁰
+6	Awsat	Awsat	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(1,6)[⁰
+7	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,7)⟦
+8	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+9	Fallujah	Fallujah	PROPN	NNP	Number=Sing	0	nsubj:pass	_	SuperTag]⁰[<nsubj:pass(9,11)
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	aux:pass	_	SuperTag]⁰[<aux:pass(10,11)
+11	closed	close	VERB	VBN	Tense=Past|VerbForm=Part	0	ccomp	_	SuperTag⟧mark(8,11)]>ccomp(7,11)[⁰⟦
+12	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl:tmod	_	SuperTag]>obl:tmod(11,12)[⁰
+13	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(13,16)
+14	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(14,16)
+15	general	general	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(15,16)
+16	strike	strike	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(11,16)
+17	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(7,17)
+
+# codestring =  PROPN.NNP_US ⟦· ⟧compound(1,2) NOUN.NNS_troops ⟦· ]>advmod(2,3) ADV.RB_there [⁰ · ⟧nsubj(2,4) VERB.VBD_clashed ⟦· ADP.IN_with ⟦· ⟧case(5,6) ]>obl(4,6) NOUN.NNS_guerrillas [⁰ · ADP.IN_in ⟦· ]⁰ DET.DT_a [<det(8,9) · ⟧case(7,9) ]>obl(4,9) NOUN.NN_fight [⁰ ⟦· ]⁰ PRON.WDT_that [<nsubj(10,11) · ⟧>acl:relcl(9,11) VERB.VBD_left ⟦· NUM.CD_one ⟦· ⟧nummod(12,13) ]>obj(11,13) PROPN.NNP_Iraqi [⁰ · ⟧>xcomp(11,14) ADJ.JJ_dead · ⟧>punct(4,15) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0004
+# stack_1_size = 3
+# stack_2_size = 1
+# text = US troops there clashed with guerrillas in a fight that left one Iraqi dead.
+1	US	US	PROPN	NNP	Number=Sing	0	compound	_	SuperTag⟦
+2	troops	troops	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧compound(1,2)⟦
+3	there	there	ADV	RB	PronType=Dem	0	advmod	_	SuperTag]>advmod(2,3)[⁰
+4	clashed	clash	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(2,4)⟦
+5	with	with	ADP	IN	_	0	case	_	SuperTag⟦
+6	guerrillas	guerrilla	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧case(5,6)]>obl(4,6)[⁰
+7	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+8	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(8,9)
+9	fight	fight	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(7,9)]>obl(4,9)[⁰⟦
+10	that	that	PRON	WDT	PronType=Rel	0	nsubj	_	SuperTag]⁰[<nsubj(10,11)
+11	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>acl:relcl(9,11)⟦
+12	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag⟦
+13	Iraqi	Iraqi	PROPN	NNP	Number=Sing	0	obj	_	SuperTag⟧nummod(12,13)]>obj(11,13)[⁰
+14	dead	dead	ADJ	JJ	Degree=Pos	0	xcomp	_	SpaceAfter=No|SuperTag⟧>xcomp(11,14)
+15	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(4,15)
+
+# codestring =  ADP.IN_In ⟦· ⟧case(1,2) PROPN.NNP_Ramadi ⟦· ]⁰ PUNCT.,_, [<punct(3,5) · ]⁰ PRON.EX_there [<expl(4,5) · ⟧obl(2,5) VERB.VBD_was ⟦· DET.DT_a ⟦· ]⁰ ADJ.JJ_big [<amod(7,8) · ⟧det(6,8) ]>nsubj(5,8) NOUN.NN_demonstration [⁰ · ⟧>punct(5,9) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0005
+# stack_1_size = 2
+# stack_2_size = 1
+# text = In Ramadi, there was a big demonstration.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	Ramadi	Ramadi	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(1,2)⟦
+3	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(3,5)
+4	there	there	PRON	EX	_	0	expl	_	SuperTag]⁰[<expl(4,5)
+5	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧obl(2,5)⟦
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+7	big	big	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(7,8)
+8	demonstration	demonstration	NOUN	NN	Number=Sing	0	nsubj	_	SpaceAfter=No|SuperTag⟧det(6,8)]>nsubj(5,8)[⁰
+9	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(5,9)
+
+# codestring =  ADJ.JJ_Radical ⟦· ]⁰ ADJ.JJ_Shiite [<amod(2,3) · ⟧amod(1,3) NOUN.NN_cleric ⟦· ⟧compound(3,4) PROPN.NNP_Muqtada ⟦· ]>flat(4,5) PROPN.NNP_al [⁰ · ]>punct(4,6) PUNCT.HYPH_- [⁰ · ]>flat(4,7) PROPN.NNP_Sadr [⁰ · ⟧nsubj(4,8) VERB.VBD_said ⟦· DET.DT_the ⟦· ⟧det(9,10) NOUN.NN_attack ⟦· ]⁰ AUX.VBD_was [<cop(11,13) · ]⁰ PUNCT.``_" [<punct(12,13) · ⟧nsubj(10,13) ]>ccomp(8,13) ADJ.JJ_criminal [⁰ ⟦· ]>punct(13,14) PUNCT.''_" [⁰ · ]⁰ CCONJ.CC_and [<cc(15,21) · ]⁰ SCONJ.IN_that [<mark(16,21) · ]⁰ PUNCT.``_" [<punct(17,21) · DET.DT_the ⟦· ⟧det(18,19) ]⁰ PROPN.NNPS_Zionists [<nsubj(19,21) · ]⁰ AUX.VBP_have [<aux(20,21) · ⟧>conj(13,21) VERB.VBN_left ⟦· ADV.RB_only ⟦· ]⁰ NUM.CD_one [<nummod(23,24) · ⟧advmod(22,24) ]>obj(21,24) NOUN.NN_choice [⁰ ⟦· ADP.IN_for ⟦· ]⁰ DET.DT_the [<det(26,27) · ⟧case(25,27) ]>nmod(24,27) PROPN.NNPS_Arabs [⁰ · ]>punct(24,28) PUNCT.,_, [⁰ · ⟧>appos(24,29) PRON.DT_that ⟦· ]⁰ ADP.IN_of [<case(30,31) · ⟧>nmod(29,31) NOUN.NN_fighting ⟦· ]⁰ CCONJ.CC_and [<cc(32,33) · ⟧>conj(31,33) NOUN.NN_jihad · ⟧>punct(21,34) PUNCT.''_" · ⟧>punct(8,35) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0006
+# stack_1_size = 4
+# stack_2_size = 1
+# text = Radical Shiite cleric Muqtada al-Sadr said the attack was "criminal" and that "the Zionists have left only one choice for the Arabs, that of fighting and jihad".
+1	Radical	radical	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟦
+2	Shiite	shiite	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(2,3)
+3	cleric	cleric	NOUN	NN	Number=Sing	0	compound	_	SuperTag⟧amod(1,3)⟦
+4	Muqtada	Muqtada	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧compound(3,4)⟦
+5	al	al	PROPN	NNP	Number=Sing	0	flat	_	SpaceAfter=No|SuperTag]>flat(4,5)[⁰
+6	-	-	PUNCT	HYPH	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(4,6)[⁰
+7	Sadr	Sadr	PROPN	NNP	Number=Sing	0	flat	_	SuperTag]>flat(4,7)[⁰
+8	said	say	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(4,8)⟦
+9	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+10	attack	attack	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(9,10)⟦
+11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(11,13)
+12	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(12,13)
+13	criminal	criminal	ADJ	JJ	Degree=Pos	0	ccomp	_	SpaceAfter=No|SuperTag⟧nsubj(10,13)]>ccomp(8,13)[⁰⟦
+14	"	"	PUNCT	''	_	0	punct	_	SuperTag]>punct(13,14)[⁰
+15	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(15,21)
+16	that	that	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(16,21)
+17	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(17,21)
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+19	Zionists	Zionists	PROPN	NNPS	Number=Plur	0	nsubj	_	SuperTag⟧det(18,19)]⁰[<nsubj(19,21)
+20	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(20,21)
+21	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	conj	_	SuperTag⟧>conj(13,21)⟦
+22	only	only	ADV	RB	_	0	advmod	_	SuperTag⟦
+23	one	one	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<nummod(23,24)
+24	choice	choice	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧advmod(22,24)]>obj(21,24)[⁰⟦
+25	for	for	ADP	IN	_	0	case	_	SuperTag⟦
+26	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(26,27)
+27	Arabs	Arabs	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧case(25,27)]>nmod(24,27)[⁰
+28	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(24,28)[⁰
+29	that	that	PRON	DT	Number=Sing|PronType=Dem	0	appos	_	SuperTag⟧>appos(24,29)⟦
+30	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(30,31)
+31	fighting	fighting	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(29,31)⟦
+32	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(32,33)
+33	jihad	jihad	NOUN	NN	Number=Sing	0	conj	_	SpaceAfter=No|SuperTag⟧>conj(31,33)
+34	"	"	PUNCT	''	_	0	punct	_	SpaceAfter=No|SuperTag⟧>punct(21,34)
+35	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(8,35)
+
+# codestring =  DET.DT_The ⟦· ]⁰ ADJ.JJ_interim [<amod(2,4) · ]⁰ PROPN.NNP_Governing [<compound(3,4) · ⟧det(1,4) PROPN.NNP_Council ⟦· ⟧nsubj(4,5) VERB.VBD_issued ⟦· DET.DT_a ⟦· ⟧det(6,7) ]>obj(5,7) NOUN.NN_communique [⁰ ⟦· ⟧>acl(7,8) VERB.VBG_saying ⟦· ]>punct(8,9) PUNCT.,_, [⁰ · ]>punct(8,10) PUNCT.``_" [⁰ · ]⁰ PRON.PRP_It [<nsubj(11,14) · ]⁰ AUX.VBZ_is [<cop(12,14) · ]⁰ DET.DT_a [<det(13,14) · ⟧>ccomp(8,14) NOUN.NN_proof ⟦· ]⁰ ADP.IN_of [<case(15,17) · ]⁰ DET.DT_the [<det(16,17) · ⟧>nmod(14,17) NOUN.NN_emptiness ⟦· ADP.IN_of ⟦· ]⁰ DET.DT_the [<det(19,21) · ]⁰ ADJ.JJ_Israeli [<amod(20,21) · ⟧case(18,21) ]>nmod(17,21) NOUN.NN_authority [⁰ · ]⁰ CCONJ.CC_and [<cc(22,24) · ]⁰ DET.DT_a [<det(23,24) · ⟧>conj(17,24) NOUN.NN_destruction ⟦· ]⁰ ADP.IN_of [<case(25,28) · ]⁰ DET.DT_the [<det(26,28) · ]⁰ NOUN.NN_peace [<compound(27,28) · ⟧>nmod(24,28) NOUN.NNS_endeavors ⟦· ]⁰ ADP.IN_in [<case(29,31) · ]⁰ DET.DT_the [<det(30,31) · ⟧>nmod(28,31) NOUN.NN_region · ]>punct(5,32) PUNCT.._. [⁰ · ]>punct(5,33) PUNCT.._. [⁰ · ⟧>punct(5,34) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0007
+# stack_1_size = 3
+# stack_2_size = 1
+# text = The interim Governing Council issued a communique saying, "It is a proof of the emptiness of the Israeli authority and a destruction of the peace endeavors in the region . . .
+1	The	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+2	interim	interim	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(2,4)
+3	Governing	Governing	PROPN	NNP	Number=Sing	0	compound	_	SuperTag]⁰[<compound(3,4)
+4	Council	Council	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟧det(1,4)⟦
+5	issued	issue	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(4,5)⟦
+6	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag⟦
+7	communique	communique	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧det(6,7)]>obj(5,7)[⁰⟦
+8	saying	say	VERB	VBG	VerbForm=Ger	0	acl	_	SpaceAfter=No|SuperTag⟧>acl(7,8)⟦
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(8,9)[⁰
+10	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(8,10)[⁰
+11	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	0	nsubj	_	SuperTag]⁰[<nsubj(11,14)
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	cop	_	SuperTag]⁰[<cop(12,14)
+13	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(13,14)
+14	proof	proof	NOUN	NN	Number=Sing	0	ccomp	_	SuperTag⟧>ccomp(8,14)⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(15,17)
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(16,17)
+17	emptiness	emptiness	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(14,17)⟦
+18	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+19	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(19,21)
+20	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(20,21)
+21	authority	authority	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧case(18,21)]>nmod(17,21)[⁰
+22	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(22,24)
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(23,24)
+24	destruction	destruction	NOUN	NN	Number=Sing	0	conj	_	SuperTag⟧>conj(17,24)⟦
+25	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(25,28)
+26	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(26,28)
+27	peace	peace	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(27,28)
+28	endeavors	endeavor	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧>nmod(24,28)⟦
+29	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(29,31)
+30	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(30,31)
+31	region	region	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(28,31)
+32	.	.	PUNCT	.	_	0	punct	_	SuperTag]>punct(5,32)[⁰
+33	.	.	PUNCT	.	_	0	punct	_	SuperTag]>punct(5,33)[⁰
+34	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(5,34)
+
+# codestring =  DET.DT_This ⟦· ⟧det(1,2) NOUN.NN_operation ⟦· ]⁰ AUX.MD_would [<aux(3,5) · ]⁰ ADV.RB_only [<advmod(4,5) · ⟧nsubj(2,5) VERB.VB_consolidate ⟦· DET.DT_the ⟦· ]⁰ ADJ.JJ_terrorist [<amod(7,8) · ⟧det(6,8) ]>obj(5,8) NOUN.NNS_acts [⁰ ⟦· ]⁰ ADP.IN_in [<case(9,11) · ]⁰ DET.DT_the [<det(10,11) · ⟧>nmod(8,11) NOUN.NN_world · CCONJ.CC_and ⟦· ]⁰ AUX.MD_would [<aux(13,15) · ]⁰ PART.RB_not [<advmod(14,15) · ⟧cc(12,15) ]>conj(5,15) VERB.VB_bring [⁰ ⟦· ]>obj(15,16) NOUN.NN_peace [⁰ · ]⁰ ADP.IN_to [<case(17,19) · ]⁰ DET.DT_the [<det(18,19) · ⟧>obl(15,19) NOUN.NN_region · ]⁰ PUNCT.,_, [<punct(20,24) · ]⁰ PUNCT.''_" [<punct(21,24) · DET.DT_the ⟦· ⟧det(22,23) ]⁰ NOUN.NN_message [<nsubj(23,24) · ⟧ccomp(5,24) VERB.VBD_claimed ⟦· ⟧>punct(24,25) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0008
+# stack_1_size = 2
+# stack_2_size = 1
+# text = This operation would only consolidate the terrorist acts in the world and would not bring peace to the region," the message claimed.
+1	This	this	DET	DT	Number=Sing|PronType=Dem	0	det	_	SuperTag⟦
+2	operation	operation	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(1,2)⟦
+3	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(3,5)
+4	only	only	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(4,5)
+5	consolidate	consolidate	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧nsubj(2,5)⟦
+6	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+7	terrorist	terrorist	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(7,8)
+8	acts	act	NOUN	NNS	Number=Plur	0	obj	_	SuperTag⟧det(6,8)]>obj(5,8)[⁰⟦
+9	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(9,11)
+10	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(10,11)
+11	world	world	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧>nmod(8,11)
+12	and	and	CCONJ	CC	_	0	cc	_	SuperTag⟦
+13	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(13,15)
+14	not	not	PART	RB	_	0	advmod	_	SuperTag]⁰[<advmod(14,15)
+15	bring	bring	VERB	VB	VerbForm=Inf	0	conj	_	SuperTag⟧cc(12,15)]>conj(5,15)[⁰⟦
+16	peace	peace	NOUN	NN	Number=Sing	0	obj	_	SuperTag]>obj(15,16)[⁰
+17	to	to	ADP	IN	_	0	case	_	SuperTag]⁰[<case(17,19)
+18	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(18,19)
+19	region	region	NOUN	NN	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧>obl(15,19)
+20	,	,	PUNCT	,	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(20,24)
+21	"	"	PUNCT	''	_	0	punct	_	SuperTag]⁰[<punct(21,24)
+22	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+23	message	message	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(22,23)]⁰[<nsubj(23,24)
+24	claimed	claim	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SpaceAfter=No|SuperTag⟧ccomp(5,24)⟦
+25	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(24,25)
+
+# codestring =  PROPN.NNP_Xinhua ⟦· ⟧nsubj(1,2) VERB.VBD_alleged ⟦· SCONJ.IN_that ⟦· ]⁰ PUNCT.``_" [<punct(4,18) · ]⁰ ADJ.JJ_Many [<nsubj(5,18) ⟦· ]⁰ ADP.IN_of [<case(6,8) · ]⁰ DET.DT_the [<det(7,8) · ⟧>nmod(5,8) PROPN.NNPS_Iraqis ⟦· ]>punct(8,9) PUNCT.,_, [⁰ · ]⁰ PRON.WP_who [<nsubj(10,11) · ⟧>acl:relcl(8,11) VERB.VBP_suffer ⟦· ]⁰ DET.DT_the [<det(12,14) · ]⁰ ADJ.JJ_American [<amod(13,14) · ⟧>obj(11,14) NOUN.NN_occupation ⟦· ]⁰ ADP.IN_of [<case(15,16) · ⟧>nmod(14,16) PROPN.NNP_Iraq · ]⁰ PUNCT.,_, [<punct(17,18) · ⟧mark(3,18) ]>ccomp(2,18) VERB.VBP_relate [⁰ ⟦· PRON.PRP$_their ⟦· ⟧nmod:poss(19,20) ]>obj(18,20) NOUN.NN_case [⁰ · ]⁰ ADP.IN_with [<case(21,22) · ⟧>obl(18,22) PRON.DT_that ⟦· ]⁰ ADP.IN_of [<case(23,26) · ]⁰ DET.DT_the [<det(24,26) · ]⁰ ADJ.JJ_Palestinian [<amod(25,26) · ⟧>nmod(22,26) NOUN.NNS_people ⟦· ]>punct(26,27) PUNCT.,_, [⁰ · ]⁰ ADP.IN_under [<case(28,31) · ]⁰ DET.DT_the [<det(29,31) · ]⁰ ADJ.JJ_Israeli [<amod(30,31) · ⟧>nmod(26,31) NOUN.NN_occupation · ]>punct(2,32) PUNCT.._. [⁰ · ⟧>punct(2,33) PUNCT.''_" 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0009
+# stack_1_size = 3
+# stack_2_size = 1
+# text = Xinhua alleged that "Many of the Iraqis, who suffer the American occupation of Iraq, relate their case with that of the Palestinian people, under the Israeli occupation."
+1	Xinhua	Xinhua	PROPN	NNP	Number=Sing	0	nsubj	_	SuperTag⟦
+2	alleged	allege	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	SuperTag⟧nsubj(1,2)⟦
+3	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+4	"	"	PUNCT	``	_	0	punct	_	SpaceAfter=No|SuperTag]⁰[<punct(4,18)
+5	Many	many	ADJ	JJ	Degree=Pos	0	nsubj	_	SuperTag]⁰[<nsubj(5,18)⟦
+6	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(6,8)
+7	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(7,8)
+8	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(5,8)⟦
+9	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(8,9)[⁰
+10	who	who	PRON	WP	PronType=Rel	0	nsubj	_	SuperTag]⁰[<nsubj(10,11)
+11	suffer	suffer	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	acl:relcl	_	SuperTag⟧>acl:relcl(8,11)⟦
+12	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(12,14)
+13	American	american	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(13,14)
+14	occupation	occupation	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧>obj(11,14)⟦
+15	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(15,16)
+16	Iraq	Iraq	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(14,16)
+17	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(17,18)
+18	relate	relate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	ccomp	_	SuperTag⟧mark(3,18)]>ccomp(2,18)[⁰⟦
+19	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	0	nmod:poss	_	SuperTag⟦
+20	case	case	NOUN	NN	Number=Sing	0	obj	_	SuperTag⟧nmod:poss(19,20)]>obj(18,20)[⁰
+21	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<case(21,22)
+22	that	that	PRON	DT	Number=Sing|PronType=Dem	0	obl	_	SuperTag⟧>obl(18,22)⟦
+23	of	of	ADP	IN	_	0	case	_	SuperTag]⁰[<case(23,26)
+24	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(24,26)
+25	Palestinian	palestinian	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(25,26)
+26	people	people	NOUN	NNS	Number=Plur	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(22,26)⟦
+27	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(26,27)[⁰
+28	under	under	ADP	IN	_	0	case	_	SuperTag]⁰[<case(28,31)
+29	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(29,31)
+30	Israeli	israeli	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(30,31)
+31	occupation	occupation	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(26,31)
+32	.	.	PUNCT	.	_	0	punct	_	SpaceAfter=No|SuperTag]>punct(2,32)[⁰
+33	"	"	PUNCT	''	_	0	punct	_	SuperTag⟧>punct(2,33)
+
+# codestring =  ADP.IN_In ⟦· ]⁰ DET.DT_an [<det(2,5) · ADV.RB_apparently ⟦· ⟧advmod(3,4) ]⁰ ADJ.JJ_unrelated [<amod(4,5) · ⟧case(1,5) NOUN.NNS_incidents ⟦· ]⁰ PUNCT.,_, [<punct(6,11) · DET.DT_some ⟦· ]⁰ NUM.CD_eleven [<nummod(8,9) · ⟧det(7,9) ]⁰ PROPN.NNPS_Iraqis [<nsubj:pass(9,11) · ]⁰ AUX.VBD_were [<aux:pass(10,11) · ⟧obl(5,11) VERB.VBN_killed ⟦· ADP.IN_by ⟦· ⟧case(12,13) ]>obl(11,13) NOUN.NNS_snipers [⁰ · ADP.IN_on ⟦· ⟧case(14,15) ]>obl(11,15) PROPN.NNP_Tuesday [⁰ · ]>punct(11,16) PUNCT.,_, [⁰ · VERB.VBG_including ⟦· ]⁰ DET.DT_a [<det(18,19) · ⟧case(17,19) ]>obl(11,19) NOUN.NN_group [⁰ ⟦· ADP.IN_of ⟦· ]⁰ NOUN.NN_police [<compound(21,22) · ⟧case(20,22) ]>nmod(19,22) NOUN.NNS_trainees [⁰ · ADP.IN_in ⟦· ]⁰ DET.DT_a [<det(24,25) · ⟧case(23,25) ]>nmod(19,25) NOUN.NN_bus [⁰ · ADP.IN_near ⟦· ⟧case(26,27) ]>nmod(19,27) PROPN.NNP_Hilla [⁰ · ]⁰ CCONJ.CC_and [<cc(28,30) · ]⁰ NUM.CD_two [<nummod(29,30) · ⟧>conj(19,30) NOUN.NNS_police ⟦· ]⁰ ADP.IN_in [<case(31,32) · ⟧>nmod(30,32) PROPN.NNP_Kirkuk · ⟧>punct(11,33) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# properties = noncrossing, projective 
+# sent_id = weblog-juancole.com_juancole_20040324065800_ENG_20040324_065800-0010
+# stack_1_size = 3
+# stack_2_size = 1
+# text = In an apparently unrelated incidents, some eleven Iraqis were killed by snipers on Tuesday, including a group of police trainees in a bus near Hilla and two police in Kirkuk.
+1	In	in	ADP	IN	_	0	case	_	SuperTag⟦
+2	an	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(2,5)
+3	apparently	apparently	ADV	RB	_	0	advmod	_	SuperTag⟦
+4	unrelated	unrelated	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧advmod(3,4)]⁰[<amod(4,5)
+5	incidents	incident	NOUN	NNS	Number=Plur	0	obl	_	SpaceAfter=No|SuperTag⟧case(1,5)⟦
+6	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(6,11)
+7	some	some	DET	DT	_	0	det	_	SuperTag⟦
+8	eleven	eleven	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<nummod(8,9)
+9	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	0	nsubj:pass	_	SuperTag⟧det(7,9)]⁰[<nsubj:pass(9,11)
+10	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	aux:pass	_	SuperTag]⁰[<aux:pass(10,11)
+11	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	SuperTag⟧obl(5,11)⟦
+12	by	by	ADP	IN	_	0	case	_	SuperTag⟦
+13	snipers	sniper	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧case(12,13)]>obl(11,13)[⁰
+14	on	on	ADP	IN	_	0	case	_	SuperTag⟦
+15	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	obl	_	SpaceAfter=No|SuperTag⟧case(14,15)]>obl(11,15)[⁰
+16	,	,	PUNCT	,	_	0	punct	_	SuperTag]>punct(11,16)[⁰
+17	including	include	VERB	VBG	VerbForm=Ger	0	case	_	SuperTag⟦
+18	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(18,19)
+19	group	group	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧case(17,19)]>obl(11,19)[⁰⟦
+20	of	of	ADP	IN	_	0	case	_	SuperTag⟦
+21	police	police	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(21,22)
+22	trainees	trainee	NOUN	NNS	Number=Plur	0	nmod	_	SuperTag⟧case(20,22)]>nmod(19,22)[⁰
+23	in	in	ADP	IN	_	0	case	_	SuperTag⟦
+24	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(24,25)
+25	bus	bus	NOUN	NN	Number=Sing	0	nmod	_	SuperTag⟧case(23,25)]>nmod(19,25)[⁰
+26	near	near	ADP	IN	_	0	case	_	SuperTag⟦
+27	Hilla	Hilla	PROPN	NNP	Number=Sing	0	nmod	_	SuperTag⟧case(26,27)]>nmod(19,27)[⁰
+28	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(28,30)
+29	two	two	NUM	CD	NumType=Card	0	nummod	_	SuperTag]⁰[<nummod(29,30)
+30	police	police	NOUN	NNS	Number=Plur	0	conj	_	SuperTag⟧>conj(19,30)⟦
+31	in	in	ADP	IN	_	0	case	_	SuperTag]⁰[<case(31,32)
+32	Kirkuk	Kirkuk	PROPN	NNP	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧>nmod(30,32)
+33	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(11,33)
+
+# codestring =  ADV.RB_Ever ⟦· ]⁰ ADP.IN_since [<case(2,5) · ]⁰ DET.DT_the [<det(3,5) · ]⁰ ADJ.JJ_first [<amod(4,5) · ⟧advmod(1,5) NOUN.NNS_whispers ⟦· ADP.IN_about ⟦· ]⁰ PROPN.NNP_Google [<nmod:poss(7,9) ⟦· ⟧>case(7,8) PART.POS_'s · ⟧case(6,9) ]>nmod(5,9) NOUN.NN_IPO [⁰ · ]⁰ PUNCT.,_, [<punct(10,14) · ADJ.JJS_most ⟦· ⟧amod(11,12) ]⁰ NOUN.NNS_investors [<nsubj(12,14) · ]⁰ AUX.VBP_have [<aux(13,14) · ⟧obl(5,14) VERB.VBN_feared ⟦· SCONJ.IN_that ⟦· DET.DT_the ⟦· ⟧det(16,17) ]⁰ NOUN.NN_stock [<nsubj(17,19) · ]⁰ AUX.MD_would [<aux(18,19) · ⟧mark(15,19) ]>ccomp(14,19) VERB.VB_come [⁰ ⟦· ]>xcomp(19,20) ADJ.JJ_public [⁰ · ]⁰ ADP.IN_at [<case(21,26) · ]⁰ DET.PDT_such [<det:predet(22,26) ⟦· ]⁰ ]⁰ DET.DT_a [<det(23,26) [⁰ · ADV.RB_ridiculously ⟦· ⟧advmod(24,25) ]⁰ ]⁰ ADJ.JJ_high [<amod(25,26) [⁰ · ]⁰ ⟧>obl(19,26) NOUN.NN_price [⁰ · ]⁰ SCONJ.IN_that [<mark(27,47) · ]⁰ PUNCT.,_, [<punct(28,47) · ADV.RB_even ⟦· ]⁰ ADP.IN_with [<case(30,35) · ]⁰ DET.DT_a [<det(31,35) · ADV.RB_spectacularly ⟦· ⟧advmod(32,33) ]⁰ ADJ.JJ_profitable [<amod(33,35) · ]⁰ NOUN.NN_business [<compound(34,35) · ⟧advmod(29,35) ]⁰ NOUN.NN_model [<obl(35,47) ⟦· ]⁰ CCONJ.CC_and [<cc(36,40) · ]⁰ DET.DT_some [<det(37,40) · ADV.RB_nearly ⟦· ⟧advmod(38,39) ]⁰ ADJ.JJ_flawless [<amod(39,40) · ⟧>conj(35,40) NOUN.NN_execution · ]⁰ PUNCT.,_, [<punct(41,47) · DET.DT_the ⟦· ⟧det(42,43) ]⁰ NOUN.NN_price [<nsubj(43,47) · ]⁰ AUX.MD_would [<aux(44,47) · ]⁰ AUX.VB_be [<cop(45,47) · ]⁰ ADV.RB_too [<advmod(46,47) · ⟧>advcl(22,47) ADJ.JJ_high ⟦· ]⁰ SCONJ.IN_for [<mark(48,51) · ]⁰ NOUN.NNS_investors [<nsubj(49,51) · ]⁰ PART.TO_to [<mark(50,51) · ⟧>advcl(47,51) VERB.VB_make ⟦· ]⁰ DET.DT_a [<det(52,54) · ]⁰ ADJ.JJ_real [<amod(53,54) · ⟧>obj(51,54) NOUN.NN_profit · ⟧>punct(14,55) PUNCT.._. 
+# command_line_options =  --conll --deprel --indices --pos --prop --stat --string --trace
+# newdoc id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900
+# properties = crossing (crossing edges (19,26),(22,47)), not projective (crossing)
+# sent_id = weblog-blogspot.com_marketview_20040611132900_ENG_20040611_132900-0001
+# stack_1_size = 4
+# stack_2_size = 2
+# text = Ever since the first whispers about Google's IPO, most investors have feared that the stock would come public at such a ridiculously high price that, even with a spectacularly profitable business model and some nearly flawless execution, the price would be too high for investors to make a real profit.
+1	Ever	ever	ADV	RB	_	0	advmod	_	SuperTag⟦
+2	since	since	ADP	IN	_	0	case	_	SuperTag]⁰[<case(2,5)
+3	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag]⁰[<det(3,5)
+4	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	0	amod	_	SuperTag]⁰[<amod(4,5)
+5	whispers	whisper	NOUN	NNS	Number=Plur	0	obl	_	SuperTag⟧advmod(1,5)⟦
+6	about	about	ADP	IN	_	0	case	_	SuperTag⟦
+7	Google	Google	PROPN	NNP	Number=Sing	0	nmod:poss	_	SpaceAfter=No|SuperTag]⁰[<nmod:poss(7,9)⟦
+8	's	's	PART	POS	_	0	case	_	SuperTag⟧>case(7,8)
+9	IPO	ipo	NOUN	NN	Number=Sing	0	nmod	_	SpaceAfter=No|SuperTag⟧case(6,9)]>nmod(5,9)[⁰
+10	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(10,14)
+11	most	most	ADJ	JJS	Degree=Sup	0	amod	_	SuperTag⟦
+12	investors	investor	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag⟧amod(11,12)]⁰[<nsubj(12,14)
+13	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(13,14)
+14	feared	fear	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	SuperTag⟧obl(5,14)⟦
+15	that	that	SCONJ	IN	_	0	mark	_	SuperTag⟦
+16	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+17	stock	stock	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(16,17)]⁰[<nsubj(17,19)
+18	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(18,19)
+19	come	come	VERB	VB	VerbForm=Inf	0	ccomp	_	SuperTag⟧mark(15,19)]>ccomp(14,19)[⁰⟦
+20	public	public	ADJ	JJ	Degree=Pos	0	xcomp	_	SuperTag]>xcomp(19,20)[⁰
+21	at	at	ADP	IN	_	0	case	_	SuperTag]⁰[<case(21,26)
+22	such	such	DET	PDT	_	0	det:predet	_	SuperTag]⁰[<det:predet(22,26)⟦
+23	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰]⁰[<det(23,26)[⁰
+24	ridiculously	ridiculously	ADV	RB	_	0	advmod	_	SuperTag⟦
+25	high	high	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧advmod(24,25)]⁰]⁰[<amod(25,26)[⁰
+26	price	price	NOUN	NN	Number=Sing	0	obl	_	SuperTag]⁰⟧>obl(19,26)[⁰
+27	that	that	SCONJ	IN	_	0	mark	_	SpaceAfter=No|SuperTag]⁰[<mark(27,47)
+28	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(28,47)
+29	even	even	ADV	RB	_	0	advmod	_	SuperTag⟦
+30	with	with	ADP	IN	_	0	case	_	SuperTag]⁰[<case(30,35)
+31	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(31,35)
+32	spectacularly	spectacularly	ADV	RB	_	0	advmod	_	SuperTag⟦
+33	profitable	profitable	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧advmod(32,33)]⁰[<amod(33,35)
+34	business	business	NOUN	NN	Number=Sing	0	compound	_	SuperTag]⁰[<compound(34,35)
+35	model	model	NOUN	NN	Number=Sing	0	obl	_	SuperTag⟧advmod(29,35)]⁰[<obl(35,47)⟦
+36	and	and	CCONJ	CC	_	0	cc	_	SuperTag]⁰[<cc(36,40)
+37	some	some	DET	DT	_	0	det	_	SuperTag]⁰[<det(37,40)
+38	nearly	nearly	ADV	RB	_	0	advmod	_	SuperTag⟦
+39	flawless	flawless	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag⟧advmod(38,39)]⁰[<amod(39,40)
+40	execution	execution	NOUN	NN	Number=Sing	0	conj	_	SpaceAfter=No|SuperTag⟧>conj(35,40)
+41	,	,	PUNCT	,	_	0	punct	_	SuperTag]⁰[<punct(41,47)
+42	the	the	DET	DT	Definite=Def|PronType=Art	0	det	_	SuperTag⟦
+43	price	price	NOUN	NN	Number=Sing	0	nsubj	_	SuperTag⟧det(42,43)]⁰[<nsubj(43,47)
+44	would	would	AUX	MD	VerbForm=Fin	0	aux	_	SuperTag]⁰[<aux(44,47)
+45	be	be	AUX	VB	VerbForm=Inf	0	cop	_	SuperTag]⁰[<cop(45,47)
+46	too	too	ADV	RB	_	0	advmod	_	SuperTag]⁰[<advmod(46,47)
+47	high	high	ADJ	JJ	Degree=Pos	0	advcl	_	SuperTag⟧>advcl(22,47)⟦
+48	for	for	SCONJ	IN	_	0	mark	_	SuperTag]⁰[<mark(48,51)
+49	investors	investor	NOUN	NNS	Number=Plur	0	nsubj	_	SuperTag]⁰[<nsubj(49,51)
+50	to	to	PART	TO	_	0	mark	_	SuperTag]⁰[<mark(50,51)
+51	make	make	VERB	VB	VerbForm=Inf	0	advcl	_	SuperTag⟧>advcl(47,51)⟦
+52	a	a	DET	DT	Definite=Ind|PronType=Art	0	det	_	SuperTag]⁰[<det(52,54)
+53	real	real	ADJ	JJ	Degree=Pos	0	amod	_	SuperTag]⁰[<amod(53,54)
+54	profit	profit	NOUN	NN	Number=Sing	0	obj	_	SpaceAfter=No|SuperTag⟧>obj(51,54)
+55	.	.	PUNCT	.	_	0	punct	_	SuperTag⟧>punct(14,55)
+
+# all graphs    100.0%       41 (with ellipsis 0)
+# external      100.0%       41 (with crossing 5)
+#         1         2         3         4         5 
+#         2        12        19         6         1 
+#         2        14        33        39        40 
+#     4.88%    34.15%    80.49%    95.12%    97.56% 
+# noncrossing    87.8%       36 (with not weak projective 0)
+#         1         2         3         4         5 
+#         2        12        16         4         1 
+#         2        14        30        34        35 
+#     4.88%    34.15%    73.17%    82.93%    85.37% 
+# nx & w.proj    87.8%       36
+#         1         2         3         4         5 
+#         2        12        16         4         1 
+#         2        14        30        34        35 
+#     4.88%    34.15%    73.17%    82.93%    85.37% 
+# 
