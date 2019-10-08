@@ -1,4 +1,4 @@
-# User's guide for conllenc.py v.1 (c) 2019 Anssi Yli-Jyrä
+# User's guide for conllenc.py v.1 
 
 "supertag encoder and decoder of dependency graphs" 
 - currently restricted to (primary) dependencies in CoNLL-U files
@@ -122,4 +122,12 @@
 - the CoNLL input does not handle ellipsis tokens (lacking precise specifications)
 - the CoNLL input does not handle semantic graph banks (fix in parallel versions)
 - the one-line encoding does not contain all information (lacking motivation)
+
+### Copyright 
+
+(c) 2019 Anssi Yli-Jyrä
+
+### License
+
+Apache License
 
