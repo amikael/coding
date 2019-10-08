@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# check for the latest release at:  https://github.com/amikael/coding
+
 # conllenc.py v.1 (c) 2019 Anssi Yli-Jyrä
 #
 #    "supertag encoder and decoder of dependency graphs" 
