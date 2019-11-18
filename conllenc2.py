@@ -55,6 +55,7 @@ parser.add_argument('--voc-action', action='count', help='Print tag vocabulary',
 parser.add_argument('--prop-action', action='count', help='Print computed properties for each graph', dest="prop")
 parser.add_argument('--stats-action', action='count', help='Print statistics at the end', dest="stat")
 parser.add_argument('--string-action', action='count', help='Produce the one-line encoding format', dest="string")
+parser.add_argument('--wrap-string-action', action='count', help='Produce the one-line encoding format', dest="wrap")
 parser.add_argument('--misc-action', action='count', help='Produce encoding in MISC field', dest="misc")
 parser.add_argument('--head-action', action='count', help='Restore HEADs from encoding', dest="head")
 parser.add_argument('--nosupertags-action', action='count', help='Removes supertags from MISC field', dest="nosupertags")
@@ -64,7 +65,6 @@ parser.add_argument('--nocodestring-action', action='count', help='Removes metaf
 parser.add_argument('--indices-modif', action='count', help='Add edge indices to printed brackets', dest="indices")
 parser.add_argument('--deprel-modif', action='count', help='Encode also the DEPREL', dest="deprel")
 parser.add_argument('--pos-modif', action='store', help='Encode also the UPOS/XPOS', dest="uposxpos")
-parser.add_argument('--wrap-modif', action='count', help='Split encoded string into lines', dest="wrap")
 parser.add_argument('--oldproj-modif', action='count', help='--proj with zeroless bracketing', dest="oldproj")
 parser.add_argument('--shifted-modif', action='count', help='word boundary shifted between closing and opening brackets', dest="shifted")
 #
@@ -73,6 +73,8 @@ parser.add_argument('--version', action='count', help='Print version number')
 args = parser.parse_args()
 if args.oldproj:
     args.proj = True
+if args.wrap:
+    args.string = True
 if args.input:
     args.filename += [args.input]
 if args.filename == []:
@@ -383,13 +385,10 @@ def parse_node(node):
     # fulltag _token
     elems = [e for e in node.split("\t") if e != ""]
     if len(elems) != 3:
-        print("error: the line does not parse to 3 columns: "+elems, file=sys.stderr)
+        print("error: the line does not parse to 3 columns: ", elems, file=sys.stderr)
         exit(1)
     token, pos, fulltag = elems
-    if args.uposxpos == "XPOS":
-        upos, xpos = "_", pos
-    else:
-        upos, xpos = pos, "_"
+    upos, xpos = pos, pos
     (deprel,supertag) = parse_fulltag(fulltag)
     return (token,fulltag,upos,xpos,deprel,supertag)
     
@@ -507,19 +506,6 @@ def print_statline(max_thickness,thicknesses,all,ofile):
         print("{:8.2f}%".format(perc), end=" ", file=ofile)
     print("", file=ofile)
             
-def print_sentence(sentence,ofile):
-    if args.string:
-        if args.prop:
-            print("#", sentence.meta_value("properties"), "\n", file=ofile)
-        if args.wrap:
-            print("\n".join(sentence.meta_value("codestring").split(dot)), file=ofile)
-            print("", file=ofile)
-        else:
-            print(" ".join(sentence.meta_value("codestring").split("\t")), file=ofile)
-    elif args.head or args.misc or not args.stat and not args.voc:
-        print(sentence.conll(), file=ofile)
-        print("", file=ofile)
-
 class Sent:
     def __init__(self, sentence):
         self.sentence = sentence
@@ -582,6 +568,8 @@ class Sent:
                 for i in deps:
                     deps[i].sort()
             return deps
+        
+        fixes = "(this should report the fixes made)..."
         # compute the inverse of the head function
         head = {}
         for tok in self.sentence:
@@ -591,6 +579,11 @@ class Sent:
                 head[i] = h        
         deps = compute_deps(head)
         reached, root, roots = set([]), 0, []
+        for tok in self.sentence:
+            if tok.deprel == 'root' or tok.deprel == 'ROOT':
+                if tint(tok.head) != 0:
+                    fixes += "set "+tok.id+" as the root,"
+                root = tint(tok.id)
         # fact 1: input with projective bracketing (≈ one stack) gives noncrossing graphs
         # fact 2: no node has two heads; it is either a node of a tree or a cycle
         for i in range(1,len(self.sentence)+1):
@@ -630,6 +623,7 @@ class Sent:
         # fact 7: the connected tree will be projective if the input is noncrossing
         # if the input encoded a nonprojective rooted tree already, it has not changed
         self.store_heads(head)
+        return fixes
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
@@ -680,13 +674,27 @@ class Sent:
         supertags = "".join(codestr).split(dot)
         for supertag, token in zip(supertags, self.sentence):
             token.misc['SuperTag'+supertag] = None
+    def print_sentence(self,ofile):
+        if args.string:
+            if args.prop:
+                print("#", self.sentence.meta_value("properties"), "\n", file=ofile)
+            if args.wrap:
+                print("\n".join(self.sentence.meta_value("codestring").split(dot)), file=ofile)
+                print("", file=ofile)
+            else:
+                print(' '.join(self.sentence.meta_value("codestring").split("\t")), file=ofile)
+                print("", file=ofile)
+        elif args.head or args.misc or not args.stat and not args.voc:
+            print(self.sentence.conll(), file=ofile)
+            print("", file=ofile)
+
     def process_sent(self, stats, ofile):
         if args.head or args.instring:
             codestring = (self.sentence.meta_value("codestring") 
                           if args.instring else
                           supertags_to_codestr(self.sentence))
             self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestring))
-        self.postprocess_heads()
+        self.sentence.set_meta("fixes",self.postprocess_heads())
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
             (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
             self.set_meta_codestring(codestr)
@@ -703,7 +711,7 @@ class Sent:
                 self.sentence_rm_heads()
             if args.nocodestring and self.sentence.meta_present('codestring'):
                 self.sentence._meta.pop('codestring')
-            print_sentence(self.sentence, ofile)
+            self.print_sentence(ofile)
             return 1
         return 0
       
@@ -763,18 +771,20 @@ def read_encoded_corpus_from_file(file):
     contents = open(file,"r")
     codestr = ""
     for codestrpart in contents:
-        if args.wrap:
-            if codestrpart != "\n":
-                if codestr:
-                    codestr += dot
-                codestr += codestrpart[:-1]
-                continue
-        elif codestr[-1] == '\n':
-            codestr = codestr[:-1]
-        sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
-        sentence.set_meta("codestring"," ".join(codestr.split("\t")))
-        corpus.insert(corpus.__len__(),sentence)
-        codestr = ""
+        if codestrpart != "\n": # not yet finished the sentence
+            codestr += codestrpart
+            continue
+        if len(codestr) > 1:
+            if codestr[-1] == '\n':
+                codestr = codestr[:-1]
+            codestr = dot.join(codestr.split("\n"))
+            if dot in codestr:
+                codestr = "\t".join(codestr.split(" "))
+            sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
+            sentence.set_meta("codestring"," ".join(codestr.split("\t")))
+#            print(sentence.conll())
+            corpus.insert(corpus.__len__(),sentence)
+            codestr = ""
     return corpus
 
 def read_conll_corpus_from_file(file):
@@ -797,6 +807,15 @@ def read_conll_corpus_from_file(file):
         conll = ""
     return corpus
 
+def entropy_of_distr(voc):
+    cross_sum = 0
+    for i in voc:
+        cross_sum += voc[i]
+    entropy = 0
+    for i in voc:
+        entropy -= voc[i] * math.log(voc[i] / cross_sum) / math.log(2)
+    print("# UNIGRAM ENTROPY OF TAGGING: ",entropy," ({} bits per tag, total {} tags)".format(entropy/cross_sum,cross_sum))
+
 def main():
     stats = Stats()
     ofile = open(args.output,"w") if args.output else open("/dev/stdout","w")
@@ -814,15 +833,10 @@ def main():
     if args.voc:
         print("# VOCABULARY: (size {})".format(len(stats.voc)), file=ofile)
         print("# ", stats.voc, file=ofile)
-        cross_sum = 0
-        for i in stats.voc:
-            cross_sum += stats.voc[i]
-        entropy = 0
-        for i in stats.voc:
-            entropy -= stats.voc[i] * math.log(stats.voc[i] / cross_sum) / math.log(2)
-        print("# UNIGRAM ENTROPY OF TAGGING: ",entropy," ({} bits per tag, total {} tags)".format(entropy/cross_sum,cross_sum))
+        entropy_of_distr(stats.voc)
         if len(stats.minivoc):
             print("# MINIVOCABULARY: (size {})".format(len(stats.minivoc)), file=ofile)
             print("# ", stats.minivoc, file=ofile)
+            entropy_of_distr(stats.minivoc)
 
 main()
