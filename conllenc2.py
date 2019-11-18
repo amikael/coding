@@ -55,16 +55,17 @@ parser.add_argument('--voc-action', action='count', help='Print tag vocabulary',
 parser.add_argument('--prop-action', action='count', help='Print computed properties for each graph', dest="prop")
 parser.add_argument('--stats-action', action='count', help='Print statistics at the end', dest="stat")
 parser.add_argument('--string-action', action='count', help='Produce the one-line encoding format', dest="string")
-parser.add_argument('--wrap-string-action', action='count', help='Produce the one-line encoding format', dest="wrap")
+parser.add_argument('--wrap-action', action='count', help='Produce the wrapped encoding format', dest="wrap")
 parser.add_argument('--misc-action', action='count', help='Produce encoding in MISC field', dest="misc")
 parser.add_argument('--head-action', action='count', help='Restore HEADs from encoding', dest="head")
 parser.add_argument('--nosupertags-action', action='count', help='Removes supertags from MISC field', dest="nosupertags")
 parser.add_argument('--noheads-action', action='count', help='Removes heads from HEAD field', dest="noheads")
-parser.add_argument('--nocodestring-action', action='count', help='Removes metafield', dest="nocodestring")
+parser.add_argument('--nocode-action', action='count', help='Removes codestring metafield', dest="nocodestring")
 #
 parser.add_argument('--indices-modif', action='count', help='Add edge indices to printed brackets', dest="indices")
 parser.add_argument('--deprel-modif', action='count', help='Encode also the DEPREL', dest="deprel")
 parser.add_argument('--pos-modif', action='store', help='Encode also the UPOS/XPOS', dest="uposxpos")
+parser.add_argument('--fixes-modif', action='count', help='Report postprocessing fixes', dest="fixes")
 parser.add_argument('--oldproj-modif', action='count', help='--proj with zeroless bracketing', dest="oldproj")
 parser.add_argument('--shifted-modif', action='count', help='word boundary shifted between closing and opening brackets', dest="shifted")
 #
@@ -569,7 +570,7 @@ class Sent:
                     deps[i].sort()
             return deps
         
-        fixes = "(this should report the fixes made)..."
+        fixes = ""
         # compute the inverse of the head function
         head = {}
         for tok in self.sentence:
@@ -581,8 +582,6 @@ class Sent:
         reached, root, roots = set([]), 0, []
         for tok in self.sentence:
             if tok.deprel == 'root' or tok.deprel == 'ROOT':
-                if tint(tok.head) != 0:
-                    fixes += "set "+tok.id+" as the root,"
                 root = tint(tok.id)
         # fact 1: input with projective bracketing (≈ one stack) gives noncrossing graphs
         # fact 2: no node has two heads; it is either a node of a tree or a cycle
@@ -590,7 +589,8 @@ class Sent:
             # i is a root for a tree:
             if i not in head:
                 # pick the first root as the root for the sentence
-                root = root if root else i
+                if not root:
+                    root = i
                 # reach all nodes of the tree
                 reach(i,reached)
         # cut the cycles to reach all nodes making the leftmost node of the cycle their root
@@ -599,11 +599,14 @@ class Sent:
         # fact 5: after this, there is a root for the sentence
         for i in range(1,len(self.sentence)+1):
             if i not in reached:
+                fixes += "cut the head link of {}, ".format(i)
                 head.pop(i)        # break remaining cycles
                 # if we did not find ANY root, choose the first word as root
                 root = root if root else i
                 # reach all nodes of the cycle
                 reach(i,reached)
+        if root not in head or head[root]:
+            fixes += "set {} as the root, ".format(root)
         head[root] = 0
         # recompute the inverse of the head function
         deps = compute_deps(head)
@@ -615,15 +618,18 @@ class Sent:
             # we look the leftmost node of each tree
             c = leftcorner(i)
             if c > 1:
+                fixes += "made {} dependent of {}, ".format(i,c-1)
                 head[i] = c-1  
             else:
-                # look right; make c+1 as head of i
-                head[i] = rightcorner(i)+1
+                fixes += "made {} dependent of {}, ".format(i,c+1)
+                c = rightcorner(i)
+                head[i] = c+1
         # fact 6: we have a connected graph that is a rooted tree
         # fact 7: the connected tree will be projective if the input is noncrossing
         # if the input encoded a nonprojective rooted tree already, it has not changed
         self.store_heads(head)
-        return fixes
+        if fixes and args.fixes:
+            self.sentence.set_meta("fixes",fixes[1:-2])
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
@@ -694,7 +700,7 @@ class Sent:
                           if args.instring else
                           supertags_to_codestr(self.sentence))
             self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestring))
-        self.sentence.set_meta("fixes",self.postprocess_heads())
+        self.postprocess_heads()
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
             (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
             self.set_meta_codestring(codestr)
