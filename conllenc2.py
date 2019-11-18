@@ -736,16 +736,37 @@ def read_encoded_corpus_from_file(file):
         codestr = ""
     return corpus
 
+def read_conll_corpus_from_file(file):
+    corpus = pyconll.unit.Conll("")
+    contents = open(file,"r")
+    conll = ""
+    for conllpart in contents:
+        if conllpart != "\n": # not yet finished the sentence
+            for p in conllpart:
+                if p in "\t#": # keep meta lines and keep CoNLL lines
+                    break
+                if p in ".-": # through away ellipses and multiwords
+                    conllpart = ""
+                    break
+            conll += conllpart
+            continue
+        sentence = pyconll.unit.Sentence(conll)
+        # enc_ellipses(sentence)
+        corpus.insert(corpus.__len__(),sentence)
+        conll = ""
+    return corpus
+
 def main():
     stats = Stats()
     ofile = open(args.output,"w") if args.output else open("/dev/stdout","w")
     for f in args.filename:
         if f == '-':
             f = '/dev/stdin'
+        # it would be better to process one sentence at a time, but...
         if args.instring:
             corpus = read_encoded_corpus_from_file(f)
         else:
-            corpus = pyconll.load_from_file(f)
+            corpus = read_conll_corpus_from_file(f) # pyconll.load_from_file(f)
         stats.process_corpus(corpus, ofile)
     if args.stat:
         stats.print(ofile)
