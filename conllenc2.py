@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
+# check for the latest release at:  https://github.com/amikael/coding
+
 # conllenc2.py v.2.0 (c) 2019 Anssi Yli-Jyrä
 #
 #    "supertag encoder and decoder of dependency graphs" 
-#    - converts between the HEAD column and SuperTags in MISC column and dep2label like output
+#    - converts between the HEAD column and SuperTags in MISC column and NCRF++ like formats 
 #      but with the new rope decomposition -based bracketing
 #    - based on depconv.py  v.0.1 (c) 2015-2019 Anssi Yli-Jyrä 
 #    - based on conllenc.py v.1.0 (c) 2019      Anssi Yli-Jyrä
 #    - supporting also graph property annotation, codestring extraction and statistics
-#
-# check for the latest release at:  https://github.com/amikael/coding
 #
 # Typical input file:
 #
@@ -61,7 +61,8 @@ parser.add_argument('--nocodestring-action', action='count', help='Removes metaf
 #
 parser.add_argument('--indices-modif', action='count', help='Add edge indices to printed brackets', dest="indices")
 parser.add_argument('--deprel-modif', action='count', help='Encode also the DEPREL', dest="deprel")
-parser.add_argument('--pos-modif', action='store', help='Encode also the POS/XPOS', dest="uposxpos")
+parser.add_argument('--pos-modif', action='store', help='Encode also the UPOS/XPOS', dest="uposxpos")
+parser.add_argument('--wrap-modif', action='count', help='Split encoded string into lines', dest="wrap")
 parser.add_argument('--oldproj-modif', action='count', help='--proj with zeroless bracketing', dest="oldproj")
 parser.add_argument('--shifted-modif', action='count', help='word boundary shifted between closing and opening brackets', dest="shifted")
 #
@@ -350,9 +351,9 @@ def encode_ropedecomp_as_codestring(ropedecomp,Elabel,sentence):
     for (tok,tag) in zip(sentence,st.split("·")):
         pos = tok.upos if args.uposxpos == "UPOS" else tok.xpos
         pos = "_" if pos == None else pos
-        frm = tok.form if tok.form != None else "_" 
-        tags += spc + "_" + frm + " " + pos + "_" + tag + "_" + tok.deprel
-        spc  = " · "
+        assert(tok.form != None)   # frm = tok.form if tok.form != None else "(None)" 
+        tags += spc + tok.form + "\t" + pos + "\t" + tag + "_" + tok.deprel
+        spc  = "·"
     return (tags,thickness,depth2,nonx)
 
 def generic_encode(sentence):
@@ -369,28 +370,23 @@ def parse_fulltag(fulltag):
     # format2  HEADOFFSET_DEPREL - not implemented
     # format3  POS_POSOFFSET_DEPREL - not implemented
     # format4  SUPERTAG_DEPREL - not implemented
-    # format5: POS_SUPERTAG_DEPREL:
+    # format5: SUPERTAG_DEPREL:
     subtags = fulltag.split("_")
-    print(subtags)
-    assert(len(subtags) == 3)
-    (pos,supertag,deprel) = subtags
-    if args.uposxpos == "XPOS":
-        upos, xpos = "_", pos
-    else:
-        upos, xpos = pos, "_"
-    return (upos,xpos,deprel,supertag)
+    assert(len(subtags) == 2)
+    (supertag,deprel) = subtags
+    return (deprel,supertag)
 
 def parse_node(node):
     # _token fulltag 
     # fulltag _token
-    elems = [e for e in node.split(" ") if e != ""]
-    assert(len(elems) == 2)
-    if elems[0][0] == '_' and elems[1][0] != '_':
-        token, fulltag = elems[0][1:], elems[1]
+    elems = [e for e in node.split("\t") if e != ""]
+    assert(len(elems) == 3)
+    token, pos, fulltag = elems
+    if args.uposxpos == "XPOS":
+        upos, xpos = "_", pos
     else:
-        assert(elems[1][0] == '_' and elems[0][0] != '_')
-        token, fulltag = elems[1][1:], elems[2]
-    (upos,xpos,deprel,supertag) = parse_fulltag(fulltag)
+        upos, xpos = pos, "_"
+    (deprel,supertag) = parse_fulltag(fulltag)
     return (token,fulltag,upos,xpos,deprel,supertag)
     
 def codestr_to_conll(codestr):
@@ -431,10 +427,11 @@ def map_digraph_and_prc_to_ropedecomp(Vn, A, R): # max_vertex, proper rope cover
     AL   = [(i,j) for (i,j) in AT if i<j and i in Ri and (i,j) not in ILA]
     IRA  = [(i, Rmap[j]) for (i,j) in IR]
     AR   = [(i,j) for (i,j) in A  if i<j and i in Ri and (i,j) not in IRA]
+    AL.sort()
+    AR.sort()
+    RD   = RopeDecomp(Vn,R,AL,AR,IL,IR)
     if args.tests:
-        AL.sort()
-        AR.sort()
-        (Vnx,Ax) = undo_rope_decomposition(Vn,R,AL,AR,IL,IR)
+        (Vnx,Ax) = RD.undo()
         assert(Vn == Vnx)
         assert(A == Ax)
     return RopeDecomp(Vn,R,AL,AR,IL,IR)
@@ -510,7 +507,11 @@ def print_sentence(sentence,ofile):
     if args.string:
         if args.prop:
             print("#", sentence.meta_value("properties"), "\n", file=ofile)
-        print(sentence.meta_value("codestring"), file=ofile)
+        if args.wrap:
+            print("\n".join(sentence.meta_value("codestring").split("·")), file=ofile)
+            print("", file=ofile)
+        else:
+            print(" ".join(sentence.meta_value("codestring").split("\t")), file=ofile)
     elif args.head or args.misc or not args.stat and not args.voc:
         print(sentence.conll(), file=ofile)
         print("", file=ofile)
@@ -715,18 +716,27 @@ class Stats:
 def read_encoded_corpus_from_file(file):
     corpus = pyconll.unit.Conll("")
     contents = open(file,"r")
-    for codestr in contents:
-        if codestr[-1] == '\n':
+    codestr = ""
+    for codestrpart in contents:
+        print("debug=",codestr)
+        if args.wrap:
+            if codestrpart != "\n":
+                if codestr:
+                    codestr += "·"
+                codestr += codestrpart[:-1]
+                continue
+        elif codestr[-1] == '\n':
             codestr = codestr[:-1]
         sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
-        sentence.set_meta("codestring",codestr)
+        sentence.set_meta("codestring"," ".join(codestr.split("\t")))
         print(sentence.conll())
         corpus.insert(corpus.__len__(),sentence)
+        codestr = ""
     return corpus
 
 def main():
     stats = Stats()
-    ofile = open(args.output,"w") if args.output else open("/dev/stdout/","w")
+    ofile = open(args.output,"w") if args.output else open("/dev/stdout","w")
     for f in args.filename:
         if f == '-':
             f = '/dev/stdin'
