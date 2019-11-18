@@ -629,7 +629,7 @@ class Sent:
         # if the input encoded a nonprojective rooted tree already, it has not changed
         self.store_heads(head)
         if fixes and args.fixes:
-            self.sentence.set_meta("fixes",fixes[1:-2])
+            self.sentence.set_meta("fixes",fixes[0:-2])
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
@@ -640,8 +640,6 @@ class Sent:
                 if not (len(tag) >= len('SuperTag') and tag[0:len('SuperTag')] == 'SuperTag'):
                     misc[tag] = tok.misc[tag]
             tok.misc = misc
-    def set_meta_codestring(self, codestr):
-        self.sentence.set_meta("codestring",codestr) # "".join(codestr))
     def process_properties(self,stats,thickness,depth2,nonx,A):
         (verinonx,nonxfailure) = is_nonx(A)
         assert(verinonx == nonx)
@@ -688,9 +686,11 @@ class Sent:
                 print("\n".join(self.sentence.meta_value("codestring").split(dot)), file=ofile)
                 print("", file=ofile)
             else:
-                print(' '.join(self.sentence.meta_value("codestring").split("\t")), file=ofile)
+                print(" ".join(self.sentence.meta_value("codestring").split("\t")), file=ofile)
                 print("", file=ofile)
         elif args.head or args.misc or not args.stat and not args.voc:
+            if self.sentence.meta_present("codestring"):
+                self.sentence.set_meta('codestring'," ".join(self.sentence.meta_value("codestring").split("\t")))
             print(self.sentence.conll(), file=ofile)
             print("", file=ofile)
 
@@ -703,7 +703,7 @@ class Sent:
         self.postprocess_heads()
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
             (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
-            self.set_meta_codestring(codestr)
+            self.sentence.set_meta('codestring',codestr)
             if args.misc:
                 self.codestr_to_misc(codestr)
             if stats.going_to_process_properties:
