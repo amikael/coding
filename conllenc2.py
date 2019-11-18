@@ -525,6 +525,28 @@ class Sent:
         self.sentence = sentence
         self.printable = True
     def ropedecomp_to_heads(self, ropedecomp):
+        Rmap = {i:j for (i,j) in ropedecomp.R}
+        AIR = [(i,Rmap[j]) for (i,j) in ropedecomp.IR] + ropedecomp.AR
+        AIL = [(i,Rmap[j]) for (i,j) in ropedecomp.IL] + ropedecomp.AL
+        # turn arcs to head links: => enforce one_headedness, ignoring the additional edge links
+        head = {}
+        for (i,j) in AIR:
+            #print((i,j))
+            if j not in head or head[j] > i:  # postprocess: choose the first head
+                head[j] = i
+        for (i,j) in AIL:
+            #print((i,j))
+            if i not in head or head[i] > j:  # postprocess: choose the first head
+                head[i] = j
+        self.store_heads(head)
+    def store_heads(self,head):
+        # store to CoNLL data model: 
+        for tok in self.sentence:
+            i = tint(tok.id)
+            if i in head:
+                tok.head = "{}".format(head[i])
+    def postprocess_heads(self):
+        # how to ensure projectivity:
         # - noncrossing       holds by tag vocabulary
         # - weak projectivity holds by tag vocabulary
         # - one-headedness    holds by tag vocabulary for unshifted and projective
@@ -543,7 +565,13 @@ class Sent:
                 for j in deps[i]:
                     lc = min(lc,leftcorner(j))
             return lc
-        def makedeps(head):
+        def rightcorner(i):
+            rc = i
+            if i in deps:
+                for j in deps[i]:
+                    rc = min(rc,rightcorner(j))
+            return rc
+        def compute_deps(head):
             deps = {}
             for i in head:
                 j = head[i]
@@ -551,45 +579,57 @@ class Sent:
                     deps[j] += [i]
                 else:
                     deps[j] = [i]
-            for i in deps:
-                deps[i].sort()
+                for i in deps:
+                    deps[i].sort()
             return deps
-
-        Rmap = {i:j for (i,j) in ropedecomp.R}
-        AIR = [(i,Rmap[j]) for (i,j) in ropedecomp.IR] + ropedecomp.AR
-        AIL = [(i,Rmap[j]) for (i,j) in ropedecomp.IL] + ropedecomp.AL
-
-        # turn arcs to head links: => enforce one_headedness, ignoring the additional edge links
+        # compute the inverse of the head function
         head = {}
-        for (i,j) in AIR:
-            if j not in head or head[j] > i:  # postprocess: choose the first head
-                head[j] = i
-        for (i,j) in AIL:
-            if i not in head or head[i] > j:  # postprocess: choose the first head
-                head[i] = j
-        deps = makedeps(head)
-        
-        reached, root = set([]), 0
-        for i in range(1,tint(self.sentence[-1].id)+1):
-            if i not in head:      # reach trees if any
-                reach(i,reached)
-                root = root if root else i
-        for i in range(1,tint(self.sentence[-1].id)+1):
-            if i not in reached:
-                root = root if root else i
-                head.pop(i)        # break remaining cycles
-                reach(i,reached)
-        deps = makedeps(head)
-        for i in range(1,tint(self.sentence[-1].id)+1):
-            if i not in head and i != root:
-                h = 1 if i == 1 else leftcorner(i)-1
-                # print(i," has been assigned a new head: ",h)
-                head[i] = h # connect forest
-        # store to CoNLL data model: 
         for tok in self.sentence:
             i = tint(tok.id)
-            if i in head:
-                tok.head = "{}".format(head[i])
+            h = tint(tok.head)
+            if h:
+                head[i] = h        
+        deps = compute_deps(head)
+        reached, root, roots = set([]), 0, []
+        # fact 1: input with projective bracketing (≈ one stack) gives noncrossing graphs
+        # fact 2: no node has two heads; it is either a node of a tree or a cycle
+        for i in range(1,len(self.sentence)+1):
+            # i is a root for a tree:
+            if i not in head:
+                # pick the first root as the root for the sentence
+                root = root if root else i
+                # reach all nodes of the tree
+                reach(i,reached)
+        # cut the cycles to reach all nodes making the leftmost node of the cycle their root
+        # fact 3: these cycles are noncrossing
+        # fact 4: cutting makes the cycles nonbranching projective trees 
+        # fact 5: after this, there is a root for the sentence
+        for i in range(1,len(self.sentence)+1):
+            if i not in reached:
+                head.pop(i)        # break remaining cycles
+                # if we did not find ANY root, choose the first word as root
+                root = root if root else i
+                # reach all nodes of the cycle
+                reach(i,reached)
+        head[root] = 0
+        # recompute the inverse of the head function
+        deps = compute_deps(head)
+        # connect roots of isolated trees to a neighbouring tree
+        for i in range(1,len(self.sentence)+1):
+            # to connect the trees whose roots are not the sentence root
+            if i in head or i == root:
+                continue
+            # we look the leftmost node of each tree
+            c = leftcorner(i)
+            if c > 1:
+                head[i] = c-1  
+            else:
+                # look right; make c+1 as head of i
+                head[i] = rightcorner(i)+1
+        # fact 6: we have a connected graph that is a rooted tree
+        # fact 7: the connected tree will be projective if the input is noncrossing
+        # if the input encoded a nonprojective rooted tree already, it has not changed
+        self.store_heads(head)
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
@@ -646,12 +686,12 @@ class Sent:
                           if args.instring else
                           supertags_to_codestr(self.sentence))
             self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestring))
+        self.postprocess_heads()
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
             (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
             self.set_meta_codestring(codestr)
             if args.misc:
-                pass
-            self.codestr_to_misc(codestr)
+                self.codestr_to_misc(codestr)
             if stats.going_to_process_properties:
                 self.process_properties(stats,thickness,depth2,nonx,A)
             if self.printable and args.voc:
@@ -672,6 +712,7 @@ class Stats:
         self.sents = self.bads = self.all = self.nonxes = self.projs = self.printed = 0
         self.max_thickness = self.max_depth2 = 0
         self.thicknesses, self.thicknesses_nx, self.thicknesses_pj = [0]*21, [0]*21, [0]*21
+        self.going_to_postprocess = args.instring or args.head or args.misc
         self.going_to_produce_supertags  = args.string or args.misc
         self.going_to_process_properties = (args.prop or args.stat or args.nonx or args.proj or 
                                             args.thick > 0 or args.tests or args.voc)
@@ -750,9 +791,9 @@ def read_conll_corpus_from_file(file):
                     break
             conll += conllpart
             continue
-        sentence = pyconll.unit.Sentence(conll)
-        # enc_ellipses(sentence)
-        corpus.insert(corpus.__len__(),sentence)
+        if '\t' in conll:
+            sentence = pyconll.unit.Sentence(conll)
+            corpus.insert(corpus.__len__(),sentence)
         conll = ""
     return corpus
 
