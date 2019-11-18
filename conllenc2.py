@@ -718,7 +718,6 @@ def read_encoded_corpus_from_file(file):
     contents = open(file,"r")
     codestr = ""
     for codestrpart in contents:
-        print("debug=",codestr)
         if args.wrap:
             if codestrpart != "\n":
                 if codestr:
@@ -729,7 +728,6 @@ def read_encoded_corpus_from_file(file):
             codestr = codestr[:-1]
         sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
         sentence.set_meta("codestring"," ".join(codestr.split("\t")))
-        print(sentence.conll())
         corpus.insert(corpus.__len__(),sentence)
         codestr = ""
     return corpus
