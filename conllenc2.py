@@ -666,7 +666,7 @@ class Sent:
     def process_tag_vocabulary(self,stats,codestr):
         nodes = codestr.split(dot)
         for node in nodes:
-            (token,token,fulltag,upos,xpos,deprel,supertag) = parse_node(node)
+            (token,fulltag,upos,xpos,deprel,supertag) = parse_node(node)
             if fulltag not in stats.voc:
                 stats.voc[fulltag] = 1
             else:
