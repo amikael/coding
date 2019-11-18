@@ -37,6 +37,8 @@ import argparse
 import string
 import math
 
+dot = "#·#"
+
 parser = argparse.ArgumentParser()
 parser.add_argument('filename', help='Specified input files',nargs='*')
 parser.add_argument('--input', help='Specified input file', dest="input")
@@ -294,7 +296,7 @@ def encode_ropedecomp_as_codestring(ropedecomp,Elabel,sentence):
     for [token,j] in [[tok,tint(tok.id)] for tok in sentence if "-" not in tok.id]:  # NEXT
         i = -1
         if not args.shifted and token != sentence[0]:
-            st += "·"
+            st += dot
         thickness = max(thickness, len(S1))
         ii = [i for (i,jp) in ALR if jp == j] + [h for (jp,h) in ILR if jp == j]
         if ii:
@@ -323,7 +325,7 @@ def encode_ropedecomp_as_codestring(ropedecomp,Elabel,sentence):
         depth2 = max(depth2, len(S2))
         nonx = nonx and depth2 <= 1
         if args.shifted and token != sentence[-1]:
-            st += "·"
+            st += dot
         while S2: # INSERT            
             (i,left) = S2.pop(0)
             # This code assumes no edge is bidirectional
@@ -348,12 +350,12 @@ def encode_ropedecomp_as_codestring(ropedecomp,Elabel,sentence):
             S1.append((j,True)) # expecting left-side brackets ⟦]]]...
             #print("shift",S1,"   ",S2)
     tags, spc = "", ""
-    for (tok,tag) in zip(sentence,st.split("·")):
+    for (tok,tag) in zip(sentence,st.split(dot)):
         pos = tok.upos if args.uposxpos == "UPOS" else tok.xpos
         pos = "_" if pos == None else pos
         assert(tok.form != None)   # frm = tok.form if tok.form != None else "(None)" 
-        tags += spc + tok.form + "\t" + pos + "\t" + tag + "_" + tok.deprel
-        spc  = "·"
+        tags += spc + tok.form + "\t" + pos + "\t" + tag + "{}" + tok.deprel
+        spc  = dot
     return (tags,thickness,depth2,nonx)
 
 def generic_encode(sentence):
@@ -371,7 +373,7 @@ def parse_fulltag(fulltag):
     # format3  POS_POSOFFSET_DEPREL - not implemented
     # format4  SUPERTAG_DEPREL - not implemented
     # format5: SUPERTAG_DEPREL:
-    subtags = fulltag.split("_")
+    subtags = fulltag.split("{}")
     assert(len(subtags) == 2)
     (supertag,deprel) = subtags
     return (deprel,supertag)
@@ -380,7 +382,9 @@ def parse_node(node):
     # _token fulltag 
     # fulltag _token
     elems = [e for e in node.split("\t") if e != ""]
-    assert(len(elems) == 3)
+    if len(elems) != 3:
+        print("error: the line does not parse to 3 columns: "+elems, file=sys.stderr)
+        exit(1)
     token, pos, fulltag = elems
     if args.uposxpos == "XPOS":
         upos, xpos = "_", pos
@@ -390,7 +394,7 @@ def parse_node(node):
     return (token,fulltag,upos,xpos,deprel,supertag)
     
 def codestr_to_conll(codestr):
-    id, positions, conll = 1, codestr.split("·"), ""
+    id, positions, conll = 1, codestr.split(dot), ""
     for fulltag in positions:
         (token,fulltag,upos,xpos,deprel,supertag) = parse_node(fulltag)
         conll += "{}\t{}\t{}\t{}\t{}\t_\t0\t{}\t_\t_\n".format(id,token,token,upos,xpos,deprel)
@@ -406,7 +410,7 @@ def supertags_to_codestr(sentence):
             if len(tag) > len('SuperTag') and tag[0:len('SuperTag')] == 'SuperTag':
                 code = tag[len('SuperTag'):]
                 codestr += spc + code
-                spc = "·"
+                spc = dot
     return codestr
 
 def map_digraph_and_prc_to_ropedecomp(Vn, A, R): # max_vertex, proper rope cover, all arcs
@@ -447,13 +451,13 @@ def decode_codestr_to_ropedecomp(codestr):
         S1.append(i)
         return i
 
-    codestr = re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|·",codestr)
+    codestr = re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,codestr)
     offset = 1 if args.shifted else 0
     Vn, S1, S2, AL, AR, IL, IR, A, R = [1], [], [], [], [], [], [], [], []
     j, root, nopass = 1, 0, False
     for a in codestr:
         # print(a)
-        if "·" in a:
+        if dot in a:
             while S2 != []:
                 insert_(S1,S2) #print("added ⦗₀")
             j, Vn, nopass = j+1, Vn + [j+1], True
@@ -508,7 +512,7 @@ def print_sentence(sentence,ofile):
         if args.prop:
             print("#", sentence.meta_value("properties"), "\n", file=ofile)
         if args.wrap:
-            print("\n".join(sentence.meta_value("codestring").split("·")), file=ofile)
+            print("\n".join(sentence.meta_value("codestring").split(dot)), file=ofile)
             print("", file=ofile)
         else:
             print(" ".join(sentence.meta_value("codestring").split("\t")), file=ofile)
@@ -620,7 +624,7 @@ class Sent:
             value += "auxiliary stack size {}"  .format(depth2)
             self.sentence.set_meta("properties",value)
     def process_tag_vocabulary(self,stats,codestr):
-        nodes = codestr.split(" · ")
+        nodes = codestr.split(dot)
         for node in nodes:
             (token,token,fulltag,upos,xpos,deprel,supertag) = parse_node(node)
             if fulltag not in stats.voc:
@@ -632,8 +636,8 @@ class Sent:
             else:
                 stats.minivoc[supertag] += 1                    
     def codestr_to_misc(self, codestr):
-        codestr = re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|·)(?:\([0-9]+,[0-9]+\))?)",codestr)
-        supertags = "".join(codestr).split("·")
+        codestr = re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
+        supertags = "".join(codestr).split(dot)
         for supertag, token in zip(supertags, self.sentence):
             token.misc['SuperTag'+supertag] = None
     def process_sent(self, stats, ofile):
@@ -721,7 +725,7 @@ def read_encoded_corpus_from_file(file):
         if args.wrap:
             if codestrpart != "\n":
                 if codestr:
-                    codestr += "·"
+                    codestr += dot
                 codestr += codestrpart[:-1]
                 continue
         elif codestr[-1] == '\n':
