@@ -51,6 +51,7 @@ parser.add_argument('--all-cond', action='count', help='No statistics on special
 parser.add_argument('--nonx-cond', action='count', help='Restrict input to noncrossing graphs', dest="nonx")
 parser.add_argument('--proj-cond', action='count', help='Restrict input to weakly projective, rooted graphs', dest="proj")
 #
+parser.add_argument('--gold-action', action='count', help='Print as if decoding', dest="gold")
 parser.add_argument('--voc-action', action='count', help='Print tag vocabulary', dest="voc")
 parser.add_argument('--prop-action', action='count', help='Print computed properties for each graph', dest="prop")
 parser.add_argument('--stats-action', action='count', help='Print statistics at the end', dest="stat")
@@ -62,6 +63,7 @@ parser.add_argument('--nosupertags-action', action='count', help='Removes supert
 parser.add_argument('--noheads-action', action='count', help='Removes heads from HEAD field', dest="noheads")
 parser.add_argument('--nocode-action', action='count', help='Removes codestring metafield', dest="nocodestring")
 #
+parser.add_argument('--raw-modif', action='count', help='Do not enforce treeness', dest="raw")
 parser.add_argument('--enproj-modif', action='count', help='"\'En\'projectivize" the input', dest="enproj")
 parser.add_argument('--indices-modif', action='count', help='Add edge indices to printed brackets', dest="indices")
 parser.add_argument('--deprel-modif', action='count', help='Encode also the DEPREL', dest="deprel")
@@ -217,36 +219,61 @@ def is_nonx(arcs):
                 return (False," (crossing edges ({},{}),({},{}))".format(i,j,k,rmost[k]))
     return (True,"")
 
-def is_nonx_wproj_with_root(sentence,arcs,nonx):
-    # this is conjunction of three properties:
-    #  - noncrossing (because we wanted to have nested statistics)
-    #  - head is not covered by a daughter's dependency 
+def is_wproj(sentence,arcs):
+    #  - head is not in the middle way of a daughter's properly longer dependency 
     #    ('weakly projective', see Yli-Jyrä and Gómez-Rodríguez 2017
-    #  - root is not covered by any dependency
-    # if the graph is a tree, this coincides with 'projective tree'
-    #
-    # note that projetivity does not imply treeness (see Yli-Jyrä 2005)!
+    # note 1: projetivity does not imply treeness (see Yli-Jyrä 2005)!
+    # note 2: nonx and weak projectivity and treeness imply projectivity
     if arcs == []:
         return (True,"")
-    if not nonx:
-        return (False," (crossing)")
-    head, root = {}, 0
-    for tok in sentence:
-        head[tint(tok.id)] = tint(tok.head)
-        if tint(tok.head) == 0:
-            if root:
-                return (False," (no unique root)")                
-            root = tint(tok.id)
+    head = compute_head(sentence)
     for (h,d) in arcs:
         if h < head[h] and head[h] < d:
-            return (False," (not weakly projective ({},{},{}))".format(h,head[h],d))
+            return (False," ({},{},{}))".format(h,head[h],d))
         if d < head[h] and head[h] < h:
-            return (False," (not weakly projective ({},{},{}))".format(d,head[h],h))
+            return (False," ({},{},{}))".format(d,head[h],h))
         (i,j) = (min(h,d),max(h,d))
-        if i < root and root < j:
-            return (False," (root covered ({},{},{}))".format(i,root,j))
     return (True,"")
-
+def find_first_zero(sentence):
+    for tok in sentence:
+        if tok.head == "0":
+            return tint(tok.id)
+    return 0
+def compute_head(sentence):
+    head = {}
+    for tok in sentence:
+        head[tint(tok.id)] = tint(tok.head)
+    return head
+def compute_deps(head,n):
+    deps = {}
+    for i in range(0,n+1):
+        deps[i] = set([])
+    for i in head:
+        j = head[i]
+        deps[j].add(i)
+    for i in deps:
+        deps[i] = sorted(list(deps[i]))
+    return deps
+def is_acyclic_and_connected(sentence):
+    def reach(i,reached):
+        if i not in reached:
+            reached.add(i)
+            if i in deps:
+                for j in deps[i]:
+                    reach(j,reached)
+    root = find_first_zero(sentence)
+    assert(root)
+    head = compute_head(sentence)
+    deps = compute_deps(head,len(sentence))
+    conn = len(deps[0]) == 1
+    connfailure = " (multiple roots)" if conn else ""
+    reached = set([])
+    reach(0,reached)
+    for i in range(1,len(sentence)):
+        if not i in reached:
+            # cyclic is always disconnected from root
+            return (False,False," ({} not reachable)".format(i))
+    return (True,conn,connfailure)
 
 def is_bad(sentence):
     for token in sentence:
@@ -535,7 +562,6 @@ def extract_codestr(codestr):
     return re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,cs)
 #return re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
 
-
 class Sent:
     def __init__(self, sentence):
         self.sentence = sentence
@@ -549,22 +575,21 @@ class Sent:
         AIR = [(i,Rmap[j]) for (i,j) in ropedecomp.IR] + ropedecomp.AR
         AIL = [(i,Rmap[j]) for (i,j) in ropedecomp.IL] + ropedecomp.AL
         # turn arcs to head links: => enforce one_headedness, ignoring the additional edge links
-        head = {}
+        head = { i:0 for i in range(1,len(self.sentence)+1) }
         for (i,j) in AIR:
             #print((i,j))
-            if j not in head or head[j] > i:  # postprocess: choose the first head
+            if head[j] == 0 or head[j] > i:  # postprocess: choose the first head
                 head[j] = i
         for (i,j) in AIL:
             #print((i,j))
-            if i not in head or head[i] > j:  # postprocess: choose the first head
+            if head[i] == 0 or head[i] > j:  # postprocess: choose the first head
                 head[i] = j
         self.store_heads(head)
     def store_heads(self,head):
         # store to CoNLL data model: 
         for tok in self.sentence:
             i = tint(tok.id)
-            if i in head:
-                tok.head = "{}".format(head[i])
+            tok.head = "{}".format(head[i])
     def postprocess_heads(self):
         # how to ensure projectivity:
         # - noncrossing       holds by tag vocabulary
@@ -616,27 +641,29 @@ class Sent:
             rc = i
             if i in deps:
                 for j in deps[i]:
-                    rc = min(rc,rightcorner(j))
+                    rc = max(rc,rightcorner(j))
             return rc
-        def compute_deps(head,n):
-            deps = {}
-            for i in range(0,n+1):
-                deps[i] = set([])
-            for i in head:
-                j = head[i]
-                deps[j].add(i)
-            for i in deps:
-                deps[i] = sorted(list(deps[i]))
-            return deps
+        def attach(i):
+            # print("we need to attach {} somewhere....".format(i))
+            # we look the leftmost node of each tree
+            c = leftcorner(i)
+            if c > 1:
+                # print("... attach to left")
+                return c-1
+            c = rightcorner(i) + 1
+            if c < len(self.sentence):
+                # print("... cannot attach to left")
+                return c
+            else: 
+                # print("... cannot attach to left nor right")
+                # since root and i are rooting different trees, we can
+                # attach i to the root without making cycles
+                return root
 
         self.fixes = ""
         # compute the inverse of the head function
-        head = {}
-        for tok in self.sentence:
-            i = tint(tok.id)
-            h = tint(tok.head)
-            if h:
-                head[i] = h        
+        head = compute_head(self.sentence)
+        # print(self.sentence.conll())
         deps = compute_deps(head,len(self.sentence))
         reached, root = set([]), 0
         for tok in self.sentence:
@@ -646,7 +673,7 @@ class Sent:
         # fact 2: no node has two heads; it is either a node of a tree or a cycle
         for i in range(1,len(self.sentence)+1):
             # i is a root for a tree:
-            if i not in head:
+            if head[i] == 0:
                 # pick the first root as the root for the sentence
                 if not root:
                     root = i
@@ -659,12 +686,12 @@ class Sent:
         for i in range(1,len(self.sentence)+1):
             if i not in reached:
                 self.fixes += "cut the head link of {}, ".format(i)
-                head.pop(i)        # break remaining cycles
+                head[i] = 0        # break remaining cycles
                 # if we did not find ANY root, choose the first word as root
                 root = root if root else i
                 # reach all nodes of the cycle
                 reach(i,reached)
-        if root not in head or head[root] != 0:
+        if head[root] != 0:
             self.fixes += "set {} as root, ".format(root)
         head[root] = 0
         # recompute the inverse of the head function
@@ -672,17 +699,12 @@ class Sent:
         # connect roots of isolated trees to a neighbouring tree
         for i in range(1,len(self.sentence)+1):
             # to connect the trees whose roots are not the sentence root
-            if i in head or i == root:
+            if head[i] or i == root:
                 continue
-            # we look the leftmost node of each tree
-            c = leftcorner(i)
-            if c > 1:
-                self.fixes += "made {} dependent of {}, ".format(i,c-1)
-                head[i] = c-1  
-            else:
-                self.fixes += "made {} dependent of {}, ".format(i,c+1)
-                c = rightcorner(i)
-                head[i] = c+1
+            to = attach(i)
+            self.fixes += "made {} dependent of {}, ".format(i,to)
+            # print("... made {} dependent of {} ".format(i,to))
+            head[i] = to
         # fact 6: we have a connected graph that is a rooted tree
         # fact 7: the connected tree will be projective if the input is noncrossing
         # if the input encoded a nonprojective rooted tree already, it has not changed
@@ -706,21 +728,30 @@ class Sent:
     def process_properties(self,stats,thickness,depth2,nonx,A):
         (verinonx,nonxfailure) = is_nonx(A)
         assert(verinonx == nonx)
-        (veriproj,projfailure) = is_nonx_wproj_with_root(self.sentence,A,verinonx)
+        (veriproj,projfailure) = is_wproj(self.sentence,A)
+        (veriacyc,vericonn,acycconnfailure) = is_acyclic_and_connected(self.sentence)
         stats.update(thickness,depth2,verinonx,veriproj)
         self.printable = ((not args.nonx or verinonx) and 
-                          (not args.proj or veriproj) and
+                          (not args.proj or veriproj and verinonx) and
                           (args.thick == 0 or args.thick < thickness))
-        if args.prop:
+        if args.prop and not args.gold:
             value = ""
             if verinonx:
                 value = "noncrossing, "
             else:
                 value = "crossing{}, ".format(nonxfailure)
-            if veriproj:
+            if veriproj and verinonx:
                 value += "projective, "
+            elif veriproj:
+                value += "weakly projective, "
             else:
-                value += "nonprojective{}, ".format(projfailure)
+                value += "not weakly projective{}, ".format(projfailure)
+            if vericonn and veriacyc: 
+                value += "tree, "
+            elif veriacyc:
+                value += "forest{}, ".format(acycconnfailure)
+            else:
+                value += "cyclic{}, ".format(acycconnfailure)
             value += "rope thickness {}, ".format(thickness)
             value += "auxiliary stack size {}"  .format(depth2)
             self.sentence.set_meta("properties",value)
@@ -756,7 +787,20 @@ class Sent:
                 self.sentence.set_meta('codestring'," ".join(self.sentence.meta_value("codestring").split("\t")))
             print(self.sentence.conll(), file=ofile)
             print("", file=ofile)
-
+    def goldify(self):
+        for tok in self.sentence:
+            tok.lemma = tok.form
+            pos = tok.upos if args.uposxpos == "UPOS" else tok.xpos
+            tok.upos = tok.xpos = pos
+            tok.deps = {}
+            tok.misc = {}
+            if self.sentence.meta_present('codestring'):
+                self.sentence._meta.pop('codestring')
+            if self.sentence.meta_present('fixes'):
+                self.sentence._meta.pop('fixes')
+            if self.sentence.meta_present('properties'):
+                self.sentence._meta.pop('properties')
+        
     def process_sent(self, stats, ofile):
 #        if args.enproj: # and not self.sentence.meta_present('codestring'):
 #            (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
@@ -766,10 +810,14 @@ class Sent:
                           if args.instring else
                           supertags_to_codestr(self.sentence))
             self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestring))
-        self.postprocess_heads()
+        if not args.raw or args.enproj:
+            self.postprocess_heads()
+        if args.gold:
+            self.goldify()
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
             (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
-            self.sentence.set_meta('codestring',codestr)
+            if not args.gold:
+                self.sentence.set_meta('codestring',codestr)
             if args.misc:
                 self.codestr_to_misc(codestr)
             if stats.going_to_process_properties:
