@@ -62,6 +62,7 @@ parser.add_argument('--nosupertags-action', action='count', help='Removes supert
 parser.add_argument('--noheads-action', action='count', help='Removes heads from HEAD field', dest="noheads")
 parser.add_argument('--nocode-action', action='count', help='Removes codestring metafield', dest="nocodestring")
 #
+parser.add_argument('--enproj-modif', action='count', help='"\'En\'projectivize" the input', dest="enproj")
 parser.add_argument('--indices-modif', action='count', help='Add edge indices to printed brackets', dest="indices")
 parser.add_argument('--deprel-modif', action='count', help='Encode also the DEPREL', dest="deprel")
 parser.add_argument('--pos-modif', action='store', help='Encode also the UPOS/XPOS', dest="uposxpos")
@@ -472,6 +473,8 @@ def decode_codestr_to_ropedecomp(codestr):
                 AR,AL = (AR+[(i,j)],AL) if '>' in a else (AR,AL+[(i,j)]) if '<' in a else (AR,AL)
         elif "]" in a or "⦘" in a:
             if S1 != []: # popping from nonempty list
+                if args.enproj and S2 != []: # noncrossing
+                    continue # a bad cure: this causes the last '[' to mismatch...
                 i = pass_(S1,S2)
                 nopass = False
                 AR,AL = (AR+[(i,j)],AL) if ">" in a else (AR,AL+[(i,j)]) if "<" in a else (AR,AL)
@@ -674,6 +677,12 @@ class Sent:
             else:
                 stats.minivoc[supertag] += 1                    
     def codestr_to_misc(self, codestr):
+        lines = codestr.split(dot)
+        cs = []
+        for line in lines:
+            a,b,c = line.split("\t")
+            cs += [c]
+        codestr = dot.join(cs)
         codestr = re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
         supertags = "".join(codestr).split(dot)
         for supertag, token in zip(supertags, self.sentence):
@@ -809,6 +818,14 @@ def read_conll_corpus_from_file(file):
             continue
         if '\t' in conll:
             sentence = pyconll.unit.Sentence(conll)
+            # take away 10.1 etc from deps
+            for node in sentence:
+                deps = node.deps
+                newdeps = {}
+                for d in deps:
+                    if '.' not in d:
+                        newdeps[d] = deps[d]
+                node.deps = newdeps
             corpus.insert(corpus.__len__(),sentence)
         conll = ""
     return corpus
