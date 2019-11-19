@@ -453,12 +453,13 @@ def decode_codestr_to_ropedecomp(codestr):
         S1.append(i)
         return i
 
+    #print(codestr)
     codestr = extract_codestr(codestr)
+    #print(codestr)
     offset = 1 if args.shifted else 0
     Vn, S1, S2, AL, AR, IL, IR, A, R = [1], [], [], [], [], [], [], [], []
     j, root, nopass = 1, 0, False
     for a in codestr:
-        print(a, S1, S2)
         if dot in a:
             while S2 != []:
                 insert_(S1,S2) #print("added ⦗₀")
@@ -491,6 +492,14 @@ def decode_codestr_to_ropedecomp(codestr):
 #                continue
             i = insert_(S1,S2)
             IR,IL = (IR+[(j-offset,i)],IL) if ">" in a else (IR,IL+[(j-offset,i)]) if "<" in a else (IR,IL)
+    while S2 != []: 
+        i = pass_(S1,S2)
+        nopass = False
+        AR,AL = (AR+[(i,j)],AL) if ">" in a else (AR,AL+[(i,j)]) if "<" in a else (AR,AL)
+    while S1 != []: 
+        i = S1.pop()
+        R += [(i,j)]
+        AR,AL = (AR+[(i,j)],AL) if '>' in a else (AR,AL+[(i,j)]) if '<' in a else (AR,AL)        
     return RopeDecomp(Vn, sorted(R), sorted(AL), sorted(AR), sorted(IL), sorted(IR))
 
 def print_statline(max_thickness,thicknesses,all,ofile):
@@ -522,7 +531,8 @@ def extract_codestr(codestr):
         a,b,c = line.split("\t")
         cs += [c]
     cs = dot.join(cs)
-    return re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,codestr)
+    #print(cs)
+    return re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,cs)
 #return re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
 
 
@@ -532,6 +542,9 @@ class Sent:
         self.printable = True
         self.fixes = ""
     def ropedecomp_to_heads(self, ropedecomp):
+        #print(ropedecomp.R)
+        #print(ropedecomp.IL)
+        #print(ropedecomp.IR)
         Rmap = {i:j for (i,j) in ropedecomp.R}
         AIR = [(i,Rmap[j]) for (i,j) in ropedecomp.IR] + ropedecomp.AR
         AIL = [(i,Rmap[j]) for (i,j) in ropedecomp.IL] + ropedecomp.AL
@@ -874,14 +887,14 @@ def read_conll_corpus_from_file(file):
         conll = ""
     return corpus
 
-def entropy_of_distr(voc):
+def entropy_of_distr(voc, ofile):
     cross_sum = 0
     for i in voc:
         cross_sum += voc[i]
     entropy = 0
     for i in voc:
         entropy -= voc[i] * math.log(voc[i] / cross_sum) / math.log(2)
-    print("# UNIGRAM ENTROPY OF TAGGING: ",entropy," ({} bits per tag, total {} tags)".format(entropy/cross_sum,cross_sum))
+    print("# UNIGRAM ENTROPY OF TAGGING: ",entropy," ({} bits per tag, total {} tags)".format(entropy/cross_sum,cross_sum), file=ofile)
 
 def main():
     stats = Stats()
