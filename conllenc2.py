@@ -530,6 +530,7 @@ class Sent:
     def __init__(self, sentence):
         self.sentence = sentence
         self.printable = True
+        self.fixes = ""
     def ropedecomp_to_heads(self, ropedecomp):
         Rmap = {i:j for (i,j) in ropedecomp.R}
         AIR = [(i,Rmap[j]) for (i,j) in ropedecomp.IR] + ropedecomp.AR
@@ -560,24 +561,32 @@ class Sent:
         # - acyclicity        holds by cycle cutting
         # - one-rootedness    holds by forest connection
 
-        def lifter(deps,zoom_path,head,fixes):
-            for d in deps[zoom_path[0][1]]:
-                # print(head[d], ":", deps[zoom_path[0][1]], "  ",zoom_path, "d ",d)
+        def lifter(deps,zoom_path,head):
+            dd = deps[zoom_path[0][1]]
+            for i in range(0,len(dd)):
+                d = dd[i]
+                #print(head[d], ":", deps[zoom_path[0][1]], "  ",zoom_path, "d ",d)
                 lift = 0
                 while d < zoom_path[lift][0] or zoom_path[lift][2] < d:
                     lift += 1
                 if head[d] != zoom_path[lift][1]:
-                    fixes += "lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1])
-                    # print("lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1]))
+                    self.fixes += "lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1])
+                    #print("lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1]))
                 head[d] = zoom_path[lift][1]
                 if d < head[d]:
-                    next = (zoom_path[lift][0],d,head[d])
+                    next = [zoom_path[lift][0],d,head[d]]
                 else:
-                    next = (head[d],d,zoom_path[lift][2])
-                # print(d, head[d], "next ",next)
-                lifter(deps,[next] + zoom_path[lift:],head,fixes)
-        def make_proj(deps,root,n,head,fixes):
-            lifter(deps,[(1,root,n)],head,fixes)
+                    next = [head[d],d,zoom_path[lift][2]]
+                if i+1 < len(dd):
+                    if dd[i+1] < next[2]:
+                        next[2] = dd[i+1]
+                if 0 < i:
+                    if next[0] < dd[i-1]:
+                        next[0] = dd[i-1]
+                #print(d, head[d], "next ",next)
+                lifter(deps,[next] + zoom_path[lift:],head)
+        def make_proj(deps,root,n,head):
+            lifter(deps,[(1,root,n)],head)
         def reach(i,reached):
             if i not in reached:
                 reached.add(i)
@@ -606,8 +615,8 @@ class Sent:
             for i in deps:
                 deps[i] = sorted(list(deps[i]))
             return deps
-        
-        fixes = ""
+
+        self.fixes = ""
         # compute the inverse of the head function
         head = {}
         for tok in self.sentence:
@@ -643,7 +652,7 @@ class Sent:
                 # reach all nodes of the cycle
                 reach(i,reached)
         if root not in head or head[root] != 0:
-            fixes += "set {} as root, ".format(root)
+            self.fixes += "set {} as root, ".format(root)
         head[root] = 0
         # recompute the inverse of the head function
         deps = compute_deps(head,len(self.sentence))
@@ -667,10 +676,10 @@ class Sent:
         # to make it projective, we need to enforce heads within the projective ranges
         deps = compute_deps(head,len(self.sentence))
         if args.enproj:
-            make_proj(deps,root,len(self.sentence),head,fixes)
+            make_proj(deps,root,len(self.sentence),head)
         self.store_heads(head)
-        if fixes and args.fixes:
-            self.sentence.set_meta("fixes",fixes[0:-2])
+        if self.fixes and args.fixes:
+            self.sentence.set_meta("fixes",self.fixes[0:-2])
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
