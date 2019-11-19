@@ -392,6 +392,7 @@ def parse_node(node):
     token, pos, fulltag = elems
     upos, xpos = pos, pos
     (deprel,supertag) = parse_fulltag(fulltag)
+    # print((token,fulltag,upos,xpos,deprel,supertag))
     return (token,fulltag,upos,xpos,deprel,supertag)
     
 def codestr_to_conll(codestr):
@@ -452,12 +453,12 @@ def decode_codestr_to_ropedecomp(codestr):
         S1.append(i)
         return i
 
-    codestr = re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,codestr)
+    codestr = extract_codestr(codestr)
     offset = 1 if args.shifted else 0
     Vn, S1, S2, AL, AR, IL, IR, A, R = [1], [], [], [], [], [], [], [], []
     j, root, nopass = 1, 0, False
     for a in codestr:
-        # print(a)
+        print(a, S1, S2)
         if dot in a:
             while S2 != []:
                 insert_(S1,S2) #print("added ⦗₀")
@@ -467,14 +468,16 @@ def decode_codestr_to_ropedecomp(codestr):
                 insert_(S1,S2) #print("added ⦗₀")
             S1.append(j-offset)
         elif "⟧" in a: 
+#            if S2 != [] and args.enproj:
+#                S2 = []
             if S1 != []: # popping from nonempty list
                 i = S1.pop()
                 R += [(i,j)]
                 AR,AL = (AR+[(i,j)],AL) if '>' in a else (AR,AL+[(i,j)]) if '<' in a else (AR,AL)
         elif "]" in a or "⦘" in a:
             if S1 != []: # popping from nonempty list
-                if args.enproj and S2 != []: # noncrossing
-                    continue # a bad cure: this causes the last '[' to mismatch...
+#                if args.enproj and S2 != []: # noncrossing
+#                    continue
                 i = pass_(S1,S2)
                 nopass = False
                 AR,AL = (AR+[(i,j)],AL) if ">" in a else (AR,AL+[(i,j)]) if "<" in a else (AR,AL)
@@ -484,6 +487,8 @@ def decode_codestr_to_ropedecomp(codestr):
             if nopass and S2 == [] and S1 != []: # recover from empty S2
                 pass_(S1,S2) #print("added ⦘₀")
                 nopass = False
+#            if S2 == [] and args.enproj:
+#                continue
             i = insert_(S1,S2)
             IR,IL = (IR+[(j-offset,i)],IL) if ">" in a else (IR,IL+[(j-offset,i)]) if "<" in a else (IR,IL)
     return RopeDecomp(Vn, sorted(R), sorted(AL), sorted(AR), sorted(IL), sorted(IR))
@@ -510,6 +515,17 @@ def print_statline(max_thickness,thicknesses,all,ofile):
         print("{:8.2f}%".format(perc), end=" ", file=ofile)
     print("", file=ofile)
             
+def extract_codestr(codestr):
+    lines = codestr.split(dot)
+    cs = []
+    for line in lines:
+        a,b,c = line.split("\t")
+        cs += [c]
+    cs = dot.join(cs)
+    return re.findall("⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot,codestr)
+#return re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
+
+
 class Sent:
     def __init__(self, sentence):
         self.sentence = sentence
@@ -543,6 +559,25 @@ class Sent:
         #                     holds by heads filling priority 
         # - acyclicity        holds by cycle cutting
         # - one-rootedness    holds by forest connection
+
+        def lifter(deps,zoom_path,head,fixes):
+            for d in deps[zoom_path[0][1]]:
+                # print(head[d], ":", deps[zoom_path[0][1]], "  ",zoom_path, "d ",d)
+                lift = 0
+                while d < zoom_path[lift][0] or zoom_path[lift][2] < d:
+                    lift += 1
+                if head[d] != zoom_path[lift][1]:
+                    fixes += "lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1])
+                    # print("lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1]))
+                head[d] = zoom_path[lift][1]
+                if d < head[d]:
+                    next = (zoom_path[lift][0],d,head[d])
+                else:
+                    next = (head[d],d,zoom_path[lift][2])
+                # print(d, head[d], "next ",next)
+                lifter(deps,[next] + zoom_path[lift:],head,fixes)
+        def make_proj(deps,root,n,head,fixes):
+            lifter(deps,[(1,root,n)],head,fixes)
         def reach(i,reached):
             if i not in reached:
                 reached.add(i)
@@ -561,16 +596,15 @@ class Sent:
                 for j in deps[i]:
                     rc = min(rc,rightcorner(j))
             return rc
-        def compute_deps(head):
+        def compute_deps(head,n):
             deps = {}
+            for i in range(0,n+1):
+                deps[i] = set([])
             for i in head:
                 j = head[i]
-                if j in deps:
-                    deps[j] += [i]
-                else:
-                    deps[j] = [i]
-                for i in deps:
-                    deps[i].sort()
+                deps[j].add(i)
+            for i in deps:
+                deps[i] = sorted(list(deps[i]))
             return deps
         
         fixes = ""
@@ -581,8 +615,8 @@ class Sent:
             h = tint(tok.head)
             if h:
                 head[i] = h        
-        deps = compute_deps(head)
-        reached, root, roots = set([]), 0, []
+        deps = compute_deps(head,len(self.sentence))
+        reached, root = set([]), 0
         for tok in self.sentence:
             if tok.deprel == 'root' or tok.deprel == 'ROOT':
                 root = tint(tok.id)
@@ -608,11 +642,11 @@ class Sent:
                 root = root if root else i
                 # reach all nodes of the cycle
                 reach(i,reached)
-        if root not in head or head[root]:
-            fixes += "set {} as the root, ".format(root)
+        if root not in head or head[root] != 0:
+            fixes += "set {} as root, ".format(root)
         head[root] = 0
         # recompute the inverse of the head function
-        deps = compute_deps(head)
+        deps = compute_deps(head,len(self.sentence))
         # connect roots of isolated trees to a neighbouring tree
         for i in range(1,len(self.sentence)+1):
             # to connect the trees whose roots are not the sentence root
@@ -630,6 +664,10 @@ class Sent:
         # fact 6: we have a connected graph that is a rooted tree
         # fact 7: the connected tree will be projective if the input is noncrossing
         # if the input encoded a nonprojective rooted tree already, it has not changed
+        # to make it projective, we need to enforce heads within the projective ranges
+        deps = compute_deps(head,len(self.sentence))
+        if args.enproj:
+            make_proj(deps,root,len(self.sentence),head,fixes)
         self.store_heads(head)
         if fixes and args.fixes:
             self.sentence.set_meta("fixes",fixes[0:-2])
@@ -660,7 +698,7 @@ class Sent:
             if veriproj:
                 value += "projective, "
             else:
-                value += "not projective{}, ".format(projfailure)
+                value += "nonprojective{}, ".format(projfailure)
             value += "rope thickness {}, ".format(thickness)
             value += "auxiliary stack size {}"  .format(depth2)
             self.sentence.set_meta("properties",value)
@@ -677,13 +715,7 @@ class Sent:
             else:
                 stats.minivoc[supertag] += 1                    
     def codestr_to_misc(self, codestr):
-        lines = codestr.split(dot)
-        cs = []
-        for line in lines:
-            a,b,c = line.split("\t")
-            cs += [c]
-        codestr = dot.join(cs)
-        codestr = re.findall("((?:⦗₀|\[\⁰|<⦗|\[<|⦗>|\[|⦘₀|\]\⁰|⦘>|\]>|<⦘|\]|⟧>|<⟧|⟧|⟦>|<⟦|⟦|"+dot+")(?:\([0-9]+,[0-9]+\))?)",codestr)
+        codestr = extract_codestr(codestr)
         supertags = "".join(codestr).split(dot)
         for supertag, token in zip(supertags, self.sentence):
             token.misc['SuperTag'+supertag] = None
@@ -704,6 +736,9 @@ class Sent:
             print("", file=ofile)
 
     def process_sent(self, stats, ofile):
+#        if args.enproj: # and not self.sentence.meta_present('codestring'):
+#            (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
+#            self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestr))
         if args.head or args.instring:
             codestring = (self.sentence.meta_value("codestring") 
                           if args.instring else
@@ -735,9 +770,9 @@ class Stats:
         self.sents = self.bads = self.all = self.nonxes = self.projs = self.printed = 0
         self.max_thickness = self.max_depth2 = 0
         self.thicknesses, self.thicknesses_nx, self.thicknesses_pj = [0]*21, [0]*21, [0]*21
-        self.going_to_postprocess = args.instring or args.head or args.misc
-        self.going_to_produce_supertags  = args.string or args.misc
-        self.going_to_process_properties = (args.prop or args.stat or args.nonx or args.proj or 
+        self.going_to_postprocess = args.instring or args.head or args.misc or args.enproj
+        self.going_to_produce_supertags  = args.string or args.misc 
+        self.going_to_process_properties = (args.prop or args.stat or args.nonx or args.proj or args.enproj or
                                             args.thick > 0 or args.tests or args.voc)
         self.voc, self.minivoc = {}, {}
     def update(self,thickness,depth2,verinonx,veriproj):
@@ -796,7 +831,7 @@ def read_encoded_corpus_from_file(file):
             if dot in codestr:
                 codestr = "\t".join(codestr.split(" "))
             sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
-            sentence.set_meta("codestring"," ".join(codestr.split("\t")))
+            sentence.set_meta("codestring","\t".join(codestr.split("\t")))
 #            print(sentence.conll())
             corpus.insert(corpus.__len__(),sentence)
             codestr = ""
