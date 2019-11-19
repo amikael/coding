@@ -645,7 +645,7 @@ class Sent:
         # fact 5: after this, there is a root for the sentence
         for i in range(1,len(self.sentence)+1):
             if i not in reached:
-                fixes += "cut the head link of {}, ".format(i)
+                self.fixes += "cut the head link of {}, ".format(i)
                 head.pop(i)        # break remaining cycles
                 # if we did not find ANY root, choose the first word as root
                 root = root if root else i
@@ -664,10 +664,10 @@ class Sent:
             # we look the leftmost node of each tree
             c = leftcorner(i)
             if c > 1:
-                fixes += "made {} dependent of {}, ".format(i,c-1)
+                self.fixes += "made {} dependent of {}, ".format(i,c-1)
                 head[i] = c-1  
             else:
-                fixes += "made {} dependent of {}, ".format(i,c+1)
+                self.fixes += "made {} dependent of {}, ".format(i,c+1)
                 c = rightcorner(i)
                 head[i] = c+1
         # fact 6: we have a connected graph that is a rooted tree
