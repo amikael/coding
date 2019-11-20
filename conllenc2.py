@@ -36,6 +36,7 @@ import sys
 import argparse
 import string
 import math
+import random
 
 dot = "#·#"
 
@@ -49,8 +50,10 @@ parser.add_argument('--max-cond', action='store', help='Stop after printing n se
 parser.add_argument('--thick-cond', action='store', help='Sets minimum rope thickness', type=int, default=0, dest="thick")
 parser.add_argument('--all-cond', action='count', help='No statistics on special classes of graphs', dest="all")
 parser.add_argument('--nonx-cond', action='count', help='Restrict input to noncrossing graphs', dest="nonx")
-parser.add_argument('--proj-cond', action='count', help='Restrict input to weakly projective, rooted graphs', dest="proj")
+parser.add_argument('--proj-cond', action='count', help='Restrict input to projective trees', dest="proj")
+parser.add_argument('--nonproj-cond', action='count', help='Restrict input to nonprojective graphs', dest="nonproj")
 #
+parser.add_argument('--random-action', action='count', help='Creates random arcs', dest="random")
 parser.add_argument('--gold-action', action='count', help='Print as if decoding', dest="gold")
 parser.add_argument('--voc-action', action='count', help='Print tag vocabulary', dest="voc")
 parser.add_argument('--prop-action', action='count', help='Print computed properties for each graph', dest="prop")
@@ -206,6 +209,7 @@ def is_nonx(arcs):
     if arcs == []:
         return (True," (no arcs)")
     rmost = {}
+    arcs = [(i,j) for (i,j) in arcs if i != 0 and j != 0]
     for (i,j) in arcs:
         (i,j) = (min(i,j),max(i,j))
         if i not in rmost:
@@ -249,29 +253,66 @@ def compute_deps(head,n):
     for i in range(0,n+1):
         deps[i] = set([])
     for i in head:
-        j = head[i]
-        deps[j].add(i)
+        if i > 0:
+            j = head[i]
+            deps[j].add(i)
     for i in deps:
         deps[i] = sorted(list(deps[i]))
     return deps
+def compute_head_and_deps(sentence):
+    head = compute_head(sentence)
+    deps = compute_deps(head,len(sentence))
+    return (head,deps)
+def reach(deps,i,reached):
+    if i not in reached:
+        reached.add(i)
+        if i in deps:
+            for j in deps[i]:
+                reach(deps,j,reached)
+def leftcorner(deps,i):
+    lc = i
+    for j in deps[i]:
+        #print(" in left corner {} going to child {} of {} ".format(i,j,deps[i]))
+        lc = min(lc,leftcorner(deps,j))
+    return lc
+def rightcorner(deps,i):
+    rc = i
+    for j in deps[i]:
+        #print(" in right corner {} going to child {} of {} ".format(i,j,deps[i]))
+        rc = max(rc,rightcorner(deps,j))
+    return rc
+def attach(deps,i,n):
+    # print("we need to attach {} somewhere....".format(i))
+    # we look the leftmost node of each tree
+    c = leftcorner(deps,i)
+    if c > 1:
+        # print("... attach to left")
+        return c-1
+    c = rightcorner(deps,i) + 1
+    if c <= n:
+        # print("... attach to right")
+        return c
+    else: 
+        # print("... cannot attach to left nor right")
+        # since root and i are rooting different trees, we can
+        # attach i to the root without making cycles
+        # but now we create crossing because root is inside
+        return 0
 def is_acyclic_and_connected(sentence):
-    def reach(i,reached):
-        if i not in reached:
-            reached.add(i)
-            if i in deps:
-                for j in deps[i]:
-                    reach(j,reached)
     root = find_first_zero(sentence)
-    assert(root)
+    if not root:
+        return (False,False," (no root)")        
     head = compute_head(sentence)
     deps = compute_deps(head,len(sentence))
     conn = len(deps[0]) == 1
-    connfailure = " (multiple roots)" if conn else ""
+    connfailure = " (multiple roots {})".format(deps[0]) if not conn else ""
     reached = set([])
-    reach(0,reached)
+    for i in deps[0]:
+        reach(deps,i,reached)
     for i in range(1,len(sentence)):
         if not i in reached:
             # cyclic is always disconnected from root
+            # print(" {} not reachable from root -> cyclic ".format(i))
             return (False,False," ({} not reachable)".format(i))
     return (True,conn,connfailure)
 
@@ -469,6 +510,33 @@ def map_digraph_and_prc_to_ropedecomp(Vn, A, R): # max_vertex, proper rope cover
         assert(A == Ax)
     return RopeDecomp(Vn,R,AL,AR,IL,IR)
 
+def cut_cycles(n,head,deps,fixes):
+    # fact 1: input with projective bracketing (≈ one stack) gives noncrossing graphs
+    # fact 2: no node has two heads; it is either a node of a tree or a cycle
+    reached = set([])
+    for i in deps[0]:
+        reach(deps,i,reached)
+    # cut the cycles to reach all nodes making the leftmost node of the cycle their root
+    # fact 3: these cycles are noncrossing
+    # fact 4: cutting makes the cycles nonbranching projective trees 
+    # fact 5: after this, there is a root for the sentence to be found
+    for i in range(1,n+1):
+        if i not in reached:
+            fixes += "cut the head link of {}, ".format(i)
+            assert(i in deps[head[i]])
+            deps[head[i]].remove(i)
+            head[i] = 0                        # cut cycles and introduce root
+            deps[0] = sorted(deps[0]+[i]) 
+            # self.deps = compute_deps(self.head,len(self.sentence))
+            # reach all nodes of the cycle
+            reach(deps,i,reached)
+    reached = set([])
+    for i in deps[0]:
+        reach(deps,i,reached)
+    for i in range(1,n+1):
+        assert(i in reached)
+    return (head,deps,fixes)
+
 def decode_codestr_to_ropedecomp(codestr):
 
     def pass_(S1,S2):
@@ -529,28 +597,7 @@ def decode_codestr_to_ropedecomp(codestr):
         AR,AL = (AR+[(i,j)],AL) if '>' in a else (AR,AL+[(i,j)]) if '<' in a else (AR,AL)        
     return RopeDecomp(Vn, sorted(R), sorted(AL), sorted(AR), sorted(IL), sorted(IR))
 
-def print_statline(max_thickness,thicknesses,all,ofile):
-    if max_thickness == 0:
-        return
-    print("# thickness   1 ", end="", file=ofile)
-    for i in range(2,max_thickness+1):
-        print("{:9d}".format(i), end=" ", file=ofile)
-    print("\n# N   ", end="", file=ofile)
-    for i in range(1,max_thickness+1):
-        print("{:9d}".format(thicknesses[i]), end=" ", file=ofile)
-    print("\n# cumN", end="", file=ofile)
-    sum = 0 
-    for i in range(1,max_thickness+1):
-        sum += thicknesses[i]
-        print("{:9d}".format(sum), end=" ", file=ofile)
-    print("\n# %   ", end="", file=ofile)
-    sum = 0 
-    for i in range(1,max_thickness+1):
-        sum += thicknesses[i]
-        perc = (100.0 * sum) / all
-        print("{:8.2f}%".format(perc), end=" ", file=ofile)
-    print("", file=ofile)
-            
+           
 def extract_codestr(codestr):
     lines = codestr.split(dot)
     cs = []
@@ -590,7 +637,12 @@ class Sent:
         for tok in self.sentence:
             i = tint(tok.id)
             tok.head = "{}".format(head[i])
-    def postprocess_heads(self):
+    def rm_self_loops(self):
+        for tok in self.sentence:
+            if tok.id == tok.head:
+                tok.head = "0"
+                   
+    def postprocess_heads(self, ofile):
         # how to ensure projectivity:
         # - noncrossing       holds by tag vocabulary
         # - weak projectivity holds by tag vocabulary
@@ -599,122 +651,166 @@ class Sent:
         # - acyclicity        holds by cycle cutting
         # - one-rootedness    holds by forest connection
 
-        def lifter(deps,zoom_path,head):
-            dd = deps[zoom_path[0][1]]
-            for i in range(0,len(dd)):
-                d = dd[i]
-                #print(head[d], ":", deps[zoom_path[0][1]], "  ",zoom_path, "d ",d)
-                lift = 0
-                while d < zoom_path[lift][0] or zoom_path[lift][2] < d:
-                    lift += 1
-                if head[d] != zoom_path[lift][1]:
-                    self.fixes += "lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1])
-                    #print("lifted {} from {} to {}, ".format(d,head[d],zoom_path[lift][1]))
-                head[d] = zoom_path[lift][1]
-                if d < head[d]:
-                    next = [zoom_path[lift][0],d,head[d]]
+           
+        def _make_nonx():
+            # almost linear time encoder
+            rbrack = { i:"" for i in range(0,self.n+1) }
+            lbrack = { i:"" for i in range(0,self.n+1) }
+            for i in range(1,self.n+1): # encoder
+                if self.head[i] == 0:
+                    continue
+                if self.head[i] < i:
+                    lbrack[self.head[i]] = lbrack[self.head[i]] + "[{}-{}".format(self.head[i],i)
+                    rbrack[i]            = rbrack[i] + ">{},{}".format(self.head[i],i)
                 else:
-                    next = [head[d],d,zoom_path[lift][2]]
-                if i+1 < len(dd):
-                    if dd[i+1] < next[2]:
-                        next[2] = dd[i+1]
-                if 0 < i:
-                    if next[0] < dd[i-1]:
-                        next[0] = dd[i-1]
-                #print(d, head[d], "next ",next)
-                lifter(deps,[next] + zoom_path[lift:],head)
-        def make_proj(deps,root,n,head):
-            lifter(deps,[(1,root,n)],head)
-        def reach(i,reached):
-            if i not in reached:
-                reached.add(i)
-                if i in deps:
-                    for j in deps[i]:
-                        reach(j,reached)
-        def leftcorner(i):
-            lc = i
-            if i in deps:
-                for j in deps[i]:
-                    lc = min(lc,leftcorner(j))
-            return lc
-        def rightcorner(i):
-            rc = i
-            if i in deps:
-                for j in deps[i]:
-                    rc = max(rc,rightcorner(j))
-            return rc
-        def attach(i):
-            # print("we need to attach {} somewhere....".format(i))
-            # we look the leftmost node of each tree
-            c = leftcorner(i)
-            if c > 1:
-                # print("... attach to left")
-                return c-1
-            c = rightcorner(i) + 1
-            if c < len(self.sentence):
-                # print("... cannot attach to left")
-                return c
-            else: 
-                # print("... cannot attach to left nor right")
-                # since root and i are rooting different trees, we can
-                # attach i to the root without making cycles
-                return root
+                    lbrack[i]            = "<{}-{}".format(i,self.head[i]) + lbrack[i]
+                    rbrack[self.head[i]] = "]{}-{}".format(i,self.head[i]) + rbrack[self.head[i]] 
+            str = ""
+            for i in range(0,self.n+1):
+                if str != "":
+                    str += " "
+                str += rbrack[i] + lbrack[i]
+            #print(str)
+            i, stack, head2 = 1, [], { i:0 for i in range(0,self.n+1) }
+            for c in str: # decoder
+                if c not in "<[]> ":
+                    continue
+                #print(i, c, stack)
+                if c == '<':
+                    stack.append(-i)
+                elif c == '[':
+                    stack.append(i)
+                elif c == '>':
+                    d = abs(stack.pop())
+                    head2[d] = i 
+                    #print("   A  head[{}]={}".format(d, i))
+                elif c == ']':
+                    d = abs(stack.pop())
+                    if head2[d] != 0:
+                        #print("   C  head[{}]={}".format(i, d))
+                        head2[i] = d
+                    else:
+                        head2[d] = i
+                        #print("   B  head[{}]={}".format(d, i))
+                elif c == " ":
+                    i += 1
+            for i in range(1,self.n+1):
+                if head2[i] != self.head[i]:
+                    self.fixes += "moved {} from {} to {}, ".format(i,self.head[i],head2[i])
+            self.head = head2
+            #print(head2)
+            #print(self.head)
+            self.deps = compute_deps(self.head,self.n)
+            self.store_heads(self.head)
+            assert(is_nonx(arcs(self.sentence))[0])
 
-        self.fixes = ""
-        # compute the inverse of the head function
-        head = compute_head(self.sentence)
-        # print(self.sentence.conll())
-        deps = compute_deps(head,len(self.sentence))
-        reached, root = set([]), 0
-        for tok in self.sentence:
-            if tok.deprel == 'root' or tok.deprel == 'ROOT':
-                root = tint(tok.id)
-        # fact 1: input with projective bracketing (≈ one stack) gives noncrossing graphs
-        # fact 2: no node has two heads; it is either a node of a tree or a cycle
-        for i in range(1,len(self.sentence)+1):
-            # i is a root for a tree:
-            if head[i] == 0:
-                # pick the first root as the root for the sentence
-                if not root:
-                    root = i
-                # reach all nodes of the tree
-                reach(i,reached)
-        # cut the cycles to reach all nodes making the leftmost node of the cycle their root
-        # fact 3: these cycles are noncrossing
-        # fact 4: cutting makes the cycles nonbranching projective trees 
-        # fact 5: after this, there is a root for the sentence
-        for i in range(1,len(self.sentence)+1):
-            if i not in reached:
-                self.fixes += "cut the head link of {}, ".format(i)
-                head[i] = 0        # break remaining cycles
-                # if we did not find ANY root, choose the first word as root
-                root = root if root else i
-                # reach all nodes of the cycle
-                reach(i,reached)
-        if head[root] != 0:
-            self.fixes += "set {} as root, ".format(root)
-        head[root] = 0
-        # recompute the inverse of the head function
-        deps = compute_deps(head,len(self.sentence))
-        # connect roots of isolated trees to a neighbouring tree
-        for i in range(1,len(self.sentence)+1):
-            # to connect the trees whose roots are not the sentence root
-            if head[i] or i == root:
-                continue
-            to = attach(i)
-            self.fixes += "made {} dependent of {}, ".format(i,to)
-            # print("... made {} dependent of {} ".format(i,to))
-            head[i] = to
-        # fact 6: we have a connected graph that is a rooted tree
-        # fact 7: the connected tree will be projective if the input is noncrossing
-        # if the input encoded a nonprojective rooted tree already, it has not changed
-        # to make it projective, we need to enforce heads within the projective ranges
-        deps = compute_deps(head,len(self.sentence))
+            # idea: muunna graafi () vanhalle sulutukselle
+            # koodaa suluista takaisin graafiksi 
+        def span(deps,i):
+            return [leftcorner(deps,i),rightcorner(deps,i)]
+        def _set_root_as_root():
+            # "If no token is the real root (no head is the dummy
+            # root), we search for candidates by relying on the three
+            # most likely labels for each token.1 If none is found, we
+            # assign it to the first token of the sentence."
+            root_tagged   = { tint(tok.id) for tok in self.sentence if tok.deprel in ["root","ROOT"]}
+            root_zerohead = { r for r in range(1,self.n+1) if self.head[r] == 0 }
+            if root_tagged:
+                self.root = sorted(list(root_tagged))[0] 
+            elif root_zerohead:
+                self.root = sorted(root_zerohead)[0]
+            else:
+                self.root = 1
+            if self.head[self.root] != 0:
+                self.deps[self.head[self.root]].remove(self.root)
+                self.fixes += "set {} as root, ".format(self.root)
+                self.head[self.root] = 0
+                self.deps[0] = sorted(self.deps[0] + [self.root])
+                self.store_heads(self.head)
+
+        def _make_proj():
+
+            def projectivize(root, indent):
+                spans = [[root,root,[root]]] # [leftnode,rightnode,[nodes]]
+                # print(indent,"NOW IN SUBTREE {} WITH CHILDREN {}".format(root,_deps[root]))
+                for i in _deps[root]:
+                    spans += projectivize(i, indent + "   ")
+                # print(indent,"NOW BACK IN SUBTREE {} WITH CHILDREN {}".format(root,_deps[root]))
+                spans = sorted(spans)
+                # print(indent,"- RAW SPANS ",spans)
+                newspans = []
+                while spans:
+                    newspan = spans.pop(0)
+                    if newspans and newspans[-1][1] + 1 == newspan[0]:
+                        newspans[-1][1]  = newspan[1]
+                        newspans[-1][2] += newspan[2]
+                    else:
+                        newspans += [newspan]
+                # print(indent,"- PACKED SPANS ",newspans)
+                for newspan in newspans:
+                    if root in newspan[2]:
+                        for i in newspan[2]:
+                            # print(" setting head {} for {} ".format(root,i))
+                            if i != root:
+                                _head[i] = root
+                        newspan[2] = [root]
+                # print(indent,"- RETURNING ",newspans)
+                return newspans
+
+            _head = self.head
+            _deps = self.deps
+            spans = projectivize(self.root, "")
+            assert(len(spans) == 1)
+            assert(len(spans[0][2]) == 1)
+            self.head = _head
+            self.deps = compute_deps(self.head,self.n)
+            self.store_heads(self.head)
+
+        def _cut_cycles():
+            self.head,self.deps,self.fixes = cut_cycles(self.n,self.head,self.deps,self.fixes)
+            self.store_heads(self.head)
+            assert(is_acyclic_and_connected(self.sentence)[0])
+
+        def _connect_trees():
+            for i in self.deps[0][:]:
+                # "Some of the predicted head indexes might be out of
+                # bounds.  If so, we attach those tokens to the real
+                # root. If a cycle exists, we do the same for the
+                # leftmost token in the cycle."
+                if i != self.root:
+                    self.head[i]  = self.root
+                    self.deps[0].remove(i)
+                    self.deps[self.root] = sorted(self.deps[self.root] + [i])
+                    self.fixes += "made {} dependent of {}, ".format(i,self.root)
+                    # print("... made {} dependent of {} ".format(i,self.root), file=ofile)
+            self.store_heads(self.head)
+            assert(is_acyclic_and_connected(self.sentence) == (True,True,""))
+
+        self.fixes = ""        
+        self.root  = 0
+        self.n     = len(self.sentence)
+        self.rm_self_loops()
+        self.head, self.deps = compute_head_and_deps(self.sentence)
+
+        # enforce noncrossing
         if args.enproj:
-            make_proj(deps,root,len(self.sentence),head)
-        self.store_heads(head)
+            _make_nonx()
+            assert(is_nonx(arcs(self.sentence))[0])
+
+        # enforce forest
+        _cut_cycles()
+        _set_root_as_root() # enforce a root
+        _connect_trees()    # connect roots of isolated trees to a neighbouring tree
+        assert(is_acyclic_and_connected(self.sentence) == (True,True,""))
+
+        if args.enproj: # this is needed for training projective parsing with nonprojective gold data
+            _make_proj() 
+            assert(is_nonx(arcs(self.sentence))[0])
+            assert(is_acyclic_and_connected(self.sentence) == (True,True,""))
+        
         if self.fixes and args.fixes:
             self.sentence.set_meta("fixes",self.fixes[0:-2])
+
     def sentence_rm_heads(self):
         for token in self.sentence:
             token.head = "0"
@@ -730,10 +826,12 @@ class Sent:
         assert(verinonx == nonx)
         (veriproj,projfailure) = is_wproj(self.sentence,A)
         (veriacyc,vericonn,acycconnfailure) = is_acyclic_and_connected(self.sentence)
-        stats.update(thickness,depth2,verinonx,veriproj)
         self.printable = ((not args.nonx or verinonx) and 
-                          (not args.proj or veriproj and verinonx) and
+                          (not args.proj or veriproj and verinonx and veriacyc and vericonn) and
+                          (not args.nonproj or not (veriproj and verinonx and veriacyc and vericonn)) and
                           (args.thick == 0 or args.thick < thickness))
+        stats.update(thickness,depth2,verinonx,veriproj,vericonn and veriacyc,veriacyc,
+                     verinonx and veriproj and vericonn and veriacyc)
         if args.prop and not args.gold:
             value = ""
             if verinonx:
@@ -800,7 +898,19 @@ class Sent:
                 self.sentence._meta.pop('fixes')
             if self.sentence.meta_present('properties'):
                 self.sentence._meta.pop('properties')
-        
+    def random_graph(self):
+        n = len(self.sentence)
+        r = random.randint(1,n)
+        i = 0
+        for tok in self.sentence:
+            i += 1
+            if i == r:
+                tok.head = "0"
+            else:
+                h = random.randint(0,n-1)
+                if h >= i:
+                    h += 1
+                tok.head = "{}".format(h)
     def process_sent(self, stats, ofile):
 #        if args.enproj: # and not self.sentence.meta_present('codestring'):
 #            (codestr,thickness,depth2,nonx,A) = generic_encode(self.sentence)
@@ -810,8 +920,11 @@ class Sent:
                           if args.instring else
                           supertags_to_codestr(self.sentence))
             self.ropedecomp_to_heads(decode_codestr_to_ropedecomp(codestring))
+        if args.random:
+            self.random_graph()
+        save = self.sentence
         if not args.raw or args.enproj:
-            self.postprocess_heads()
+            self.postprocess_heads(ofile)
         if args.gold:
             self.goldify()
         if stats.going_to_produce_supertags or stats.going_to_process_properties:
@@ -838,16 +951,25 @@ class Sent:
 class Stats:
     def __init__(self):
         self.sents = self.bads = self.all = self.nonxes = self.projs = self.printed = 0
-        self.max_thickness = self.max_depth2 = 0
-        self.thicknesses, self.thicknesses_nx, self.thicknesses_pj = [0]*21, [0]*21, [0]*21
+        self.max_thickness = self.max_depth2 = self.trees = self.forests = self.wprojtrees = self.projtrees = 0
+        self.thicknesses, self.thicknesses_nx, self.thicknesses_pj = [0]*1000, [0]*1000, [0]*1000
         self.going_to_postprocess = args.instring or args.head or args.misc or args.enproj
         self.going_to_produce_supertags  = args.string or args.misc 
-        self.going_to_process_properties = (args.prop or args.stat or args.nonx or args.proj or args.enproj or
+        self.going_to_process_properties = (args.prop or args.stat or args.nonx or args.proj or args.nonproj or args.enproj or
                                             args.thick > 0 or args.tests or args.voc)
         self.voc, self.minivoc = {}, {}
-    def update(self,thickness,depth2,verinonx,veriproj):
+
+    def update(self,thickness,depth2,verinonx,veriproj,tree,forest,wprojtree):
         self.max_thickness = max(thickness, self.max_thickness)
         self.max_depth2 = max(depth2, self.max_depth2)
+        if forest:
+            self.forests += 1
+        if tree:
+            self.trees += 1
+        if wprojtree:
+            self.wprojtrees += 1
+        if wprojtree and verinonx and tree:
+            self.projtrees += 1
         self.thicknesses[thickness] += 1
         if verinonx:
             self.thicknesses_nx[thickness] += 1
@@ -855,14 +977,44 @@ class Stats:
         if verinonx and veriproj:
             self.thicknesses_pj[thickness] += 1
             self.projs += 1
+
     def print(self,ofile):
+
+        def print_statline(max_thickness,thicknesses,all,ofile):
+            if max_thickness == 0:
+                return
+            print("# thickness   1 ", end="", file=ofile)
+            for i in range(2,max_thickness+1):
+                print("{:9d}".format(i), end=" ", file=ofile)
+            print("\n# N   ", end="", file=ofile)
+            for i in range(1,max_thickness+1):
+                print("{:9d}".format(thicknesses[i]), end=" ", file=ofile)
+            print("\n# cumN", end="", file=ofile)
+            sum = thicknesses[0]
+            for i in range(1,max_thickness+1):
+                sum += thicknesses[i]
+                print("{:9d}".format(sum), end=" ", file=ofile)
+            print("\n# %   ", end="", file=ofile)
+            sum = thicknesses[0]
+            for i in range(1,max_thickness+1):
+                sum += thicknesses[i]
+                perc = (100.0 * sum) / all
+                print("{:8.2f}%".format(perc), end=" ", file=ofile)
+            print("", file=ofile)
+
         print("# STATISTICS:", file=ofile)
+        print("# max thickness {}".format(self.max_thickness), file=ofile)
         if self.sents-self.all > 0:
             print("# all graphs  "," {:5.1f}%  {:7d} (with ellipsis {:d})".
                   format(100.0 * self.sents / self.sents, self.sents, self.sents-self.all), file=ofile)
             print("#   (the current script cannot process ellipsis)")
         print("# processed   "," {:5.1f}%  {:7d} (with crossing {:d})".
               format(100.0 * self.all / self.sents, self.all, self.all-self.nonxes), file=ofile)
+        print("# number of forests        ({}%) {}".format(100.0 * self.forests/self.sents, self.forests,), file=ofile)
+        print("# number of trees          ({}%) {}".format(100.0 * self.trees/self.sents, self.trees), file=ofile)
+        print("# number of wproj. trees   ({}%) {}".format(100.0 * self.wprojtrees/self.sents, self.wprojtrees), file=ofile)
+        print("# number of proj. trees    ({}%) {}".format(100.0 * self.projtrees/self.sents, self.projtrees), file=ofile)
+        print("# number of printables     ({}%) {}".format(100.0 * self.printed/self.sents, self.printed), file=ofile)
         if not args.nonx and not args.proj:
             print_statline(self.max_thickness,self.thicknesses, self.all, ofile)
         if not args.proj and not args.all:
@@ -902,7 +1054,7 @@ def read_encoded_corpus_from_file(file):
                 codestr = "\t".join(codestr.split(" "))
             sentence = pyconll.unit.Sentence(codestr_to_conll(codestr))
             sentence.set_meta("codestring","\t".join(codestr.split("\t")))
-#            print(sentence.conll())
+            # print(sentence.conll())
             corpus.insert(corpus.__len__(),sentence)
             codestr = ""
     return corpus
