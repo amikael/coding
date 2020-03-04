@@ -1,6 +1,6 @@
 # coding
 
-An encoding/decoding for arboitrary graphs over linear order.  
+An encoding/decoding for arbitrary graphs over linear order.  
 
 ### conllenc.py
 
