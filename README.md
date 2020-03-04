@@ -1,7 +1,6 @@
 # coding
 
-An encoding/decoding for arboitrary graphs over linear order.  How to cite: Anssi Yli-Jyrä 2019. Transition-Based Coding and Formal Language Theory for Ordered Digraphs.   *Proceedings of the 14th International Conference on Finite-State Methods and Natural Language Processing*.  23–25 September, 2019, Dresden, Germany. SIGFSM. Association for Computational Linguistics. URL: https://www.aclweb.org/anthology/W19-3115/
-
+An encoding/decoding for arboitrary graphs over linear order.  
 
 ### conllenc.py
 
