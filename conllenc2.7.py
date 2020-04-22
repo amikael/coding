@@ -2,7 +2,7 @@
 
 # check for the latest release at:  https://github.com/amikael/coding
 
-# conllenc2.py v.2.0 (c) 2019 Anssi Yli-Jyrä
+# conllenc2.7.py v.2.7 (c) 2019 Anssi Yli-Jyrä
 #
 #    "supertag encoder and decoder of dependency graphs" 
 #    - converts between the HEAD column and SuperTags in MISC column and NCRF++ like formats 
