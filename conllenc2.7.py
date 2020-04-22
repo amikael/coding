@@ -1,4 +1,4 @@
-#!/opt/local/bin python3
+#!/usr/bin/env python3
 
 # check for the latest release at:  https://github.com/amikael/coding
 
@@ -593,8 +593,8 @@ def decode_codestr_to_ropedecomp(codestr):
 
     while S1:                      # while S1 nonempty
         i = S1.pop()               #    reduce i from S1
-        continue                   # the following was arbitrary
         R += [(i,j)]               #    add rope and edge (i,j)
+        continue                   # the following was arbitrary
         AR,AL = (AR+[(i,j)],AL) if '>' in a else (AR,AL+[(i,j)]) if '<' in a else (AR,AL)        
 
     return RopeDecomp(Vn, sorted(R), sorted(AL), sorted(AR), sorted(IL), sorted(IR))
